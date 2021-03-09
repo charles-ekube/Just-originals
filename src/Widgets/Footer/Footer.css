@@ -1,0 +1,32 @@
+.footer-container {
+    background: #7008F4;
+    height: 349.96px;
+    padding: 57px 136px 26px 136px;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+}
+.footer-logo {
+    align-self: center;
+    border: 1px solid #000;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 42px;
+}
+.footer-quick-links-container {
+    width: 679px;
+    margin: auto;
+   
+}
+.footer-quick-links-content {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
