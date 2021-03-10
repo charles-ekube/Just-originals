@@ -13,22 +13,28 @@ const Footer = () => {
                 </li>
                 <li className='footer-quick-links-container'>
                     <ul className='footer-quick-links-content'>
-                        <li>LINK</li>
-                        <li>,LINK</li>
-                        <li>DLINK</li>
+                        <li>Project Management</li>
+                        <li>Talent Management</li>
+                        <li>Get in Touch</li>
                     </ul>
                 </li>
                 <li className='footer-base-container'>
                     <ul className='footer-base-content'>
                         <li>ENGLISH</li>
                         <li>
-                            <ul>
+                            <ul className='footer-base-social-links'>
                                 <li>F</li>
                                 <li>I</li>
                                 <li>T</li>
                             </ul>
                         </li>
-                        <li>2021</li>
+                        <li>
+                            <ul className='footer-base-copyright'>
+                                <li>C</li>
+                                <li>JUST ORIGINAL</li>
+                                <li>2020</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>

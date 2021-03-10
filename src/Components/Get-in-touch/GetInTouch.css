@@ -1,0 +1,66 @@
+.get-in-touch-container {
+    display: flex;
+    
+}
+.get-in-touch-text {
+    width: 30%;
+    padding: 90px 80px 0 110px;
+    background: #EEEDEF;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.get-in-touch-text span {
+    width: 90px;
+    border: 1px solid #121212;
+    line-height: 32px;
+}
+.get-in-touch-text h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 20px;
+    color: #121212;
+}
+.get-in-touch-text p {
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+/* line-height: 19px; */
+color: #121212;
+width: 343px;
+}
+.get-in-touch-form {
+    background: #fff;
+    width: 60%;
+    padding: 90px 150px 90px 120px;
+    display: grid;
+    row-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.get-in-touch-form input {
+    width: 235px;
+    height: 38px;
+    border-radius: 4px;
+}
+.get-in-touch-form textarea {
+    width: 235px;
+    height: 100px;
+    border-radius: 4px;
+    border: 2px solid #000;
+}
+.get-in-touch-form button {
+    width: 243px;
+    height: 51px;
+    background:#7008f4;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: none;
+    margin-top: 48px;
+}
