@@ -1,27 +1,34 @@
 .rec.rec-arrow {
     position: absolute;
-    top: 130px;
-    right: 150px;
+    top: 120px;
+    right: 130px;
     background-color: inherit;
     border-radius: 0;
     justify-content: space-between;
+    border: none;
 }
-.rec.rec-arrowLeft {
-    background-color: #000;
+.rec.rec-arrow-left {
+    right: 160px;
 }
 .rec.rec-pagination {
     width: 95%;
-    border: 1px solid red;
+    background-color: #AAA8A8;
 }
-.rec.rec-pagination-item {
-    background-color: red;
-}
+
 button.rec-dot {
-    background-color: red;
+    width:20%;
+    margin: 0;
+    height: 1px;
     border-radius: 0;
+    border: none;
+    padding: 0;
+    
+}
+button.rec-dot:active {
+    background: #7008F4;
 }
 .carousel-main-container {
-    padding: 30px 130px;
+    padding: 80px 130px;
     position: relative;
 }
 .carousel-main-container-text h2{
@@ -31,9 +38,19 @@ button.rec-dot {
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
-    line-height: 56px;
+    line-height: 30px;
     color: #000000;
 }
 .carousel-mini-container {
     padding-left: 210px;
+}
+.carousel-main-container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.carousel-main-container-text span {
+        width: 90px;
+        border: 1px solid #121212;
+        line-height: 32px;
 }
