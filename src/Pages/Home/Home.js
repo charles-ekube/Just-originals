@@ -1,6 +1,6 @@
 import React from 'react';
-import { IntroCarousel, JoinUs, ProjectCarousel } from '../../Components';
-import { Navbar } from '../../Widgets/Navigation/Navbar';
+import { GetInTouch, IntroCarousel, JoinUs, ProjectCarousel } from '../../Components';
+import { Navbar, Footer } from '../../Widgets';
 import './Home.css';
 
 const Home = () => {
@@ -27,6 +27,12 @@ const Home = () => {
             </section>
             <section>
                 <ProjectCarousel/>
+            </section>
+            <section>
+                <GetInTouch/>
+            </section>
+            <section>
+                <Footer/>
             </section>
         </>
     )

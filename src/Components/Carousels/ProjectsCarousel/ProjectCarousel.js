@@ -1,40 +1,40 @@
 import React from 'react'
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+import Carousel from 'react-elastic-carousel';
 import { Cards } from '../../Cards/Cards';
 import './ProjectCarousel.css';
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const ProjectCarousel = () => {
-
-    const properties = {
-        duration: 5000,
-        transitionDuration: 500,
-        infinite: true,
-        prevArrow: <div className='prevArrow'><MdKeyboardArrowLeft/></div>,
-        nextArrow: <div className='nextArrow'><MdKeyboardArrowRight/></div>,
-        indicators: true,
-        items: 3,
-
-        // indicators: <div className="indicator">s</div>
-      };
+ 
+ 
+    const breakPoints = [
+      { width : 1, itemsToShow : 1},
+      { width : 550, itemsToShow : 2},
+      { width : 768, itemsToShow : 3},
+      { width : 1200, itemsToShow : 4}
+    ]
       
     return (
         <>
-    <section className="slide-container">
-        <Slide {...properties} easing="ease">
-          <div className="each-slide">
+        <section className='carousel-main-container'>
+          <div className='carousel-main-container-text'>
+            <span></span>
+            <h2>Previous Projects</h2>
+          </div>
+          <section className='carousel-mini-container'>
+          <Carousel 
+          // renderArrow={myArrow}
+          breakPoints={breakPoints}>
+
             <Cards/>
-          </div>
-          <div className="each-slide">
-          <Cards/>
-          </div>
-          <div className="each-slide">
-          <Cards/>
-          </div>
-        </Slide>
-      </section>
-            
+            <Cards/>
+            <Cards/>
+            <Cards/>
+            <Cards/>
+            <Cards/>
+            <Cards/>
+          </Carousel>
+          </section>
+          </section>          
         </>
     )
 }
