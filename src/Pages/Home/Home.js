@@ -1,10 +1,12 @@
 import React from 'react';
-import { IntroCarousel } from '../../Components';
+import { IntroCarousel, JoinUs, ProjectCarousel } from '../../Components';
+import { Navbar } from '../../Widgets/Navigation/Navbar';
 import './Home.css';
 
 const Home = () => {
     return (
         <>
+        <Navbar navColor="white"/>
             <section className='home-container'>
                 <section className='home-text'>
                     <article>
@@ -19,6 +21,12 @@ const Home = () => {
                         <IntroCarousel/>
                     </div>
                 </section>
+            </section>
+            <section className='why-join-us-container'>
+                    <JoinUs/>
+            </section>
+            <section>
+                <ProjectCarousel/>
             </section>
         </>
     )

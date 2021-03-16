@@ -2,20 +2,39 @@
 .home-container {
     display: flex;
     width: 100%;
-    height: 650px;
+    height: 720px;
 }
 .home-text {
     background: #7008F4;
     width: 70%;
+    display: flex;
+    align-items: center;
+     padding-left: 130px; 
+}
+.home-text h1 {
+    width: 431px;
+    height: 292px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 75px;
+    color: #FFFDFF; 
 }
 .home-carousel {
     width: 30%;
     background: #fff;
 }
 .home-carousel-content {
-    height: 550px;
+    height: 400px;
+    width: 400px;
     position: relative;
     left: -70px;
-    top: 130px;
+    top: 110px;
 
+}
+
+.why-join-us-container {
+    background:  #FBF8FB;
+    padding: 100px 130px;
 }

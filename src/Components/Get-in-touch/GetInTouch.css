@@ -33,7 +33,7 @@ color: #121212;
 width: 343px;
 }
 .get-in-touch-form {
-    background: #fff;
+    background: #FBF8FB;
     width: 60%;
     padding: 90px 150px 90px 120px;
     display: grid;
@@ -44,12 +44,13 @@ width: 343px;
     width: 235px;
     height: 38px;
     border-radius: 4px;
+    border: 1px solid #979797
 }
 .get-in-touch-form textarea {
     width: 235px;
     height: 100px;
     border-radius: 4px;
-    border: 2px solid #000;
+    border: 1px solid #979797;
 }
 .get-in-touch-form button {
     width: 243px;

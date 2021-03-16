@@ -1,0 +1,32 @@
+.slide-container {
+    position: relative;
+    padding: 100px;
+    border: 1px solid red;
+}
+.prevArrow {
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+.nextArrow {
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+Slide {
+    width: 300px;
+}
+.each-slide {
+    width: 260px !important;
+    border: 1px solid red;
+}

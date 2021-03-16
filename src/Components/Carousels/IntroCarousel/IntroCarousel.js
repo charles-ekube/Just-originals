@@ -1,26 +1,66 @@
 import React from 'react'
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import {ImageTest} from '../../../Assets';
+import {ImageTest, B, C} from '../../../Assets';
+import { Fade } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
+import './IntroCarousel.css';
 
 const IntroCarousel = () => {
+
+  const properties = {
+    prevArrow: <div style={{display:'none'}}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fff"><path d="M242 180.6v-138L0 256l242 213.4V331.2h270V180.6z"/></svg></div>,
+    nextArrow: <div style={{display:'none'}}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fff"><path d="M512 256L270 42.6v138.2H0v150.6h270v138z"/></svg></div>
+  };
     return (
         <>
-        <section>
+         <div className="slidee-container">
+      <Fade {...properties}>
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={ImageTest} alt='poster'  width='100%'/>
+            <span className='name-holder'>
+            <h4>Erica Monica</h4>
+              <p>Metal Bender</p>
+            </span>
+          </div>
+          {/* <h2>First Slide</h2> */}
+        </div>
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={B} alt='poster'/>
+            <span className='name-holder'>
+            <h4>Erica Monica</h4>
+              <p>Metal Bender</p>
+            </span>
+          </div>
+          {/* <h2>Second Slide</h2> */}
+        </div>
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={C} alt='poster'/>
+            <span className='name-holder'>
+              <h4>Erica Monica</h4>
+              <p>Metal Bender</p>
+            </span>
+          </div>
+          {/* <h2>Third Slide</h2> */}
+        </div>
+      </Fade>
+    </div>
+        {/* <section>
              <CarouselProvider
-        naturalSlideWidth={450}
-        naturalSlideHeight={550}
+        naturalSlideWidth={100}
+        naturalSlideHeight={400}
         totalSlides={3}
       >
              <Slider>
           <Slide index={0}>
-              <img src={ImageTest} alt='poster' width='100%'/>
+              <img src={ImageTest} alt='poster'/>
               </Slide>
           <Slide index={1}>I am the second Slide.</Slide>
           <Slide index={2}>I am the third Slide.</Slide>
         </Slider>
       </CarouselProvider>
-      </section>
+      </section> */}
         </>
     )
 }

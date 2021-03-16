@@ -1,18 +1,22 @@
 import React from 'react';
-import { GetInTouch, IntroCarousel } from './Components';
-import { Home } from './Pages';
-// import { Home } from './Pages/Home/Home';
-// import { IntroCarousel } from './Components/Carousels/IntroCarousel/IntroCarousel';
-import {Footer, Navbar} from './Widgets';
+import { Explore, Home, Projects } from './Pages';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 
 function App() {
   return (
     <>
-     {/* <GetInTouch/>
-     <Footer/> */}
-     {/* <IntroCarousel/> */}
-     <Navbar/>
-     <Home/>
+        <Router>
+
+        
+<Route exact path="/" render={props => (
+  <React.Fragment>
+    <Home/>
+  </React.Fragment>
+)} />
+<Route path="/Explore" component={Explore} />
+<Route path="/Projects" component={Projects} />
+</Router>
     </>
   );
 }
