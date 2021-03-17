@@ -25,12 +25,11 @@
 }
 .get-in-touch-text p {
     font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-/* line-height: 19px; */
-color: #121212;
-width: 343px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #121212;
+    width: 343px;
 }
 .get-in-touch-form {
     background: #FBF8FB;
@@ -65,3 +64,43 @@ width: 343px;
     border: none;
     margin-top: 48px;
 }
+
+
+/* mediaqueries */
+
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 400px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .get-in-touch-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .get-in-touch-text {
+        width: 100%;
+        padding: 30px 0 30px 0;
+    }
+    .get-in-touch-text h2, p{
+        padding-left: 20px;
+    }
+    .get-in-touch-text span {
+        margin-left: 20px;
+    }
+    .get-in-touch-form {
+        width: 100%;
+        padding: 50px 0 50px 0;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .get-in-touch-form input {
+        width: 90%;
+        margin: auto auto;
+    }
+    .get-in-touch-form textarea {
+        width: 90%;
+    }
+    .get-in-touch-form button {
+        width: 90%;
+        margin: 30px auto;
+    }
+  }

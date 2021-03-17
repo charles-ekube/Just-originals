@@ -54,3 +54,32 @@ button.rec-dot:active {
         border: 1px solid #121212;
         line-height: 32px;
 }
+
+/* mediaqueries */
+
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 400px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+   
+    .carousel-main-container {
+        padding: 50px 20px;
+        position: relative;
+    }
+    .carousel-main-container-text h2{
+        width: 100%;
+        height: 54px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 30px;
+        color: #000000;
+    }
+    .carousel-mini-container {
+        padding:0 ;
+    }
+    .rec.rec-arrow {
+     display: none;
+    }     
+  }

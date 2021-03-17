@@ -59,3 +59,60 @@ a:target {
     display: flex;
     justify-content: flex-end;
 }
+.mobile-nav-btn {
+    color: black;
+    display: none;
+}
+.mobile-nav-container {
+    background: #fff;
+    width: 70%;
+    position: fixed;
+    height: 100vh;
+    z-index: 6;
+}
+
+
+
+
+
+
+/* mediaqueries  */
+
+
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 400px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .navbar-container {
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+        width: 100%;
+        margin:0;
+        border:1px solid red;
+    }
+    
+.navbar-logo {
+    margin-left: 15px;
+    height: 60px;
+    width: 60px;
+}
+    .navbar-links {
+     display: none;
+    }
+    .mobile-nav-btn {
+        color: black;
+        display: block;
+        width: 10%;
+    }
+    .navbar-search {
+        width: 50%;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: flex-end;
+    }
+
+  }
