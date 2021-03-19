@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiMenu } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 import './Navbar.css';
-import { MdClose, MdSearch } from 'react-icons/md';
+import { MdSearch } from 'react-icons/md';
 
 const Navbar = ({navColor}) => {
 

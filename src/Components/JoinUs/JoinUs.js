@@ -4,7 +4,7 @@ import { IoBagSharp } from 'react-icons/io5'
 import { BsArrowRight } from 'react-icons/bs'
 import { Pool } from '../../Assets';
 import {Link} from 'react-router-dom';
-import { Modal } from '../Modals/Modal';
+
 
 const JoinUs = () => {
 
