@@ -1,13 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu } from "react-icons/fi";
+import { FaSearch } from "react-icons/fa";
 import './Navbar.css';
+import { MdClose, MdSearch } from 'react-icons/md';
 
 const Navbar = ({navColor}) => {
 
+
+    const [showSearchBar, setShowSearchBar] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
+    
+
+    const toggleSearch = () => {
+        setShowSearchBar(prev => !prev);
+    }
+    
+    
     let menu
-    // let menuMask
 
     if(showMenu) {
         menu = <aside className='mobile-nav-container'>
@@ -33,7 +43,7 @@ const Navbar = ({navColor}) => {
                             </Link>
                         </li>
                         <li>
-                            <Link style={{color:navColor}}>
+                            <Link to='/Blog' style={{color:navColor}}>
                                 Blog
                             </Link>
                         </li>
@@ -74,16 +84,17 @@ const Navbar = ({navColor}) => {
                             </Link>
                         </li>
                         <li className='navbar-links-item'>
-                            <Link style={{color:navColor}}>
+                            <Link to='/Blog' style={{color:navColor}}>
                                 Blog
                             </Link>
                         </li>
                     </ul>
                     <div className='navbar-search'>
-                        <span></span>
-                        <form>
-                            <input />
-                        </form>
+                        {showSearchBar ? <form className='navbar-search-input'>
+                            <input  type='text' placeholder='Search'/>
+                            <button><MdSearch/></button>
+                        </form> : null}
+                        <span className='search-toggle'><FaSearch onClick={toggleSearch}/></span>
                     </div>
                     <div className='mobile-nav-btn'>
                         <FiMenu onClick={() => setShowMenu(!showMenu)}/>

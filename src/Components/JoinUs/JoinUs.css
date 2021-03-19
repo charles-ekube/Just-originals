@@ -3,6 +3,11 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.join-us-container>span {
+    width: 90px;
+    border: 1px solid #121212;
+    line-height: 32px;
+}
 .join-us-container h2 {
     width: 792px;
     font-family: Roboto;
@@ -88,14 +93,17 @@ font-size:25px;
 
 @media only screen 
   and (min-device-width: 300px) 
-  and (max-device-width: 400px) 
+  and (max-device-width: 460px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     
+    .join-us-container>span {
+        margin-left: 20px;
+    }
     .join-us-container h2 {
         width: 100%;
         text-align: center;
-        font-size: 38px;
-        line-height: 56px;
+        font-size: 30px;
+        line-height: 40px;
       
     }
     .join-us-content {
@@ -120,7 +128,7 @@ font-size:25px;
         font-size: 22px;
     }
     .join-us-text h4 {
-        margin: 0 10px;
+        margin: 0 5px;
     }
     .join-us-text p {
         width: 100%;

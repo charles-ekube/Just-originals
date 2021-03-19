@@ -1,5 +1,5 @@
 import React from 'react';
-import { Explore, Home, Projects } from './Pages';
+import { Blog, Explore, Home, Projects } from './Pages';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
@@ -16,6 +16,7 @@ function App() {
 )} />
 <Route path="/Explore" component={Explore} />
 <Route path="/Projects" component={Projects} />
+<Route path="/Blog" component={Blog} />
 </Router>
     </>
   );

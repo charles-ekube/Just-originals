@@ -36,3 +36,37 @@
     padding: 50px 70px;
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.2));
 }
+
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 460px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+    .explore-container {
+        width: 100%;
+        padding: 100px 0 10px 0;
+    }
+    .explore-intro-text {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+    .explore-intro-text h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+    }
+    .explore-intro-text p {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    
+    }
+    .explore-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+        padding: 30px 0;
+    }
+       
+  }

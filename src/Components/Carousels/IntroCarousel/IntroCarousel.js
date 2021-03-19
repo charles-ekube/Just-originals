@@ -46,21 +46,6 @@ const IntroCarousel = () => {
         </div>
       </Fade>
     </div>
-        {/* <section>
-             <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={400}
-        totalSlides={3}
-      >
-             <Slider>
-          <Slide index={0}>
-              <img src={ImageTest} alt='poster'/>
-              </Slide>
-          <Slide index={1}>I am the second Slide.</Slide>
-          <Slide index={2}>I am the third Slide.</Slide>
-        </Slider>
-      </CarouselProvider>
-      </section> */}
         </>
     )
 }

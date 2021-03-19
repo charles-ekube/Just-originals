@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Builder, Tailor } from '../../Assets';
+import { Modal } from '../Modals/Modal';
 import './Cards.css';
 
 
@@ -7,6 +8,8 @@ import './Cards.css';
 
 export const ProjectCards = () => {
 
+
+      
     return (
         <>
             <section className='project-card-container'>
@@ -47,11 +50,18 @@ export const ExploreCards = () => {
 
 
 const Cards = () => {
+
+    const [showModal, setShowModal] = useState(false);
+    const toggleModal = () => {
+        setShowModal(prev => !prev);
+    }
+    
     return (
         <>
-            <section className='card-container' id='hoverable-card'>
+            <section className='card-container' >
                 <div className='card-image-container'>
-                    <img src={Tailor} alt='poster'/>
+                    <img src={Tailor} alt='poster'onClick={toggleModal} />
+                   
                 </div>
                 <div className='card-footer'>
                     <ul>
@@ -59,7 +69,9 @@ const Cards = () => {
                         <li>Numbers</li>
                     </ul>
                 </div>
+               
             </section>
+            <Modal showModal={showModal} setShowModal={setShowModal}/>
         </>
     )
 }

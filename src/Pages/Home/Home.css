@@ -29,8 +29,8 @@
     height: 400px;
     width: 400px;
     position: relative;
-    left: -70px;
-    top: 110px;
+    left: -85px;
+    top: 140px;
 
 }
 
@@ -46,39 +46,38 @@
 /* mediaqueries */
 @media only screen 
   and (min-device-width: 300px) 
-  and (max-device-width: 400px) 
+  and (max-device-width: 460px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .home-container {
         flex-direction: column;
-        align-items: center;
         height: 850px;
-        border: 1px solid red;
     }
     .home-text {
-        background: #7008F4;
+        padding: 50px 0;
         width: 100%;
-        justify-content: center;
-         padding: 100px 0; 
-    }    
-    .home-text h1 {
-        width: 100%;
-        font-size: 30px;
-        text-align: center;
-        line-height: 60px;
-        color: #FFFDFF; 
     }
+    
     .home-carousel {
         width: 100%;
     }
     .home-carousel-content {
         height: 400px;
-        width: 400px;
+        width: 100%;
         position: relative;
-        left: 20px;
-        top: -220px;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        top: -190px;
     
     }
     .why-join-us-container {
-        padding: 150px 5px 20px 5px;
-    } 
+        padding: 70px 5px 20px 5px;
+    }  
+    .home-text h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        line-height:45px;     
+    }
+    
   }

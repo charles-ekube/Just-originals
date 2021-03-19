@@ -4,15 +4,18 @@ import { IoBagSharp } from 'react-icons/io5'
 import { BsArrowRight } from 'react-icons/bs'
 import { Pool } from '../../Assets';
 import {Link} from 'react-router-dom';
+import { Modal } from '../Modals/Modal';
 
 const JoinUs = () => {
+
+    
     return (
         <>
             <section className='join-us-container'>
                 <span></span>
                 <h2>What would you get when you join us</h2>
                 <section className='join-us-content'>
-                    <article className='join-us-text'>
+                    <article className='join-us-text' >
                         <div className='join-us-text-header'> 
                             <span><IoBagSharp/></span>
                             <h4>Project Management</h4>
@@ -52,6 +55,7 @@ const JoinUs = () => {
                     </article>
                 </section>
             </section>
+           
         </>
     )
 }

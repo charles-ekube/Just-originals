@@ -70,7 +70,7 @@
 
 @media only screen 
   and (min-device-width: 300px) 
-  and (max-device-width: 400px) 
+  and (max-device-width: 460px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .get-in-touch-container {
         flex-direction: column;
@@ -83,7 +83,10 @@
     .get-in-touch-text h2, p{
         padding-left: 20px;
     }
-    .get-in-touch-text span {
+    .get-in-touch-text p {
+        width: 280px;
+    }
+    .get-in-touch-text>span {
         margin-left: 20px;
     }
     .get-in-touch-form {

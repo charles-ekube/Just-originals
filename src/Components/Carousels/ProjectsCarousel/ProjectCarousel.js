@@ -3,6 +3,7 @@ import Carousel from 'react-elastic-carousel';
 import { Cards } from '../../Cards/Cards';
 import './ProjectCarousel.css';
 
+
 const ProjectCarousel = () => {
  
  
@@ -12,7 +13,8 @@ const ProjectCarousel = () => {
       { width : 768, itemsToShow : 3},
       { width : 1200, itemsToShow : 4}
     ]
-      
+
+
     return (
         <>
         <section className='carousel-main-container'>
@@ -25,14 +27,15 @@ const ProjectCarousel = () => {
           // renderArrow={myArrow}
           breakPoints={breakPoints}>
 
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
           </Carousel>
+         
           </section>
           </section>          
         </>
