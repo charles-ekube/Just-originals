@@ -2,17 +2,17 @@ import React, {useState} from 'react';
 import { Builder, Tailor } from '../../Assets';
 import { Modal } from '../Modals/Modal';
 import './Cards.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 
 export const ProjectCards = () => {
-
-
-      
+    AOS.init();  
     return (
         <>
-            <section className='project-card-container'>
+            <section className='project-card-container' data-aos="fade-up"  data-aos-duration="1000"   data-aos-mirror="true">
                 <div className='project-card-image'>
                 <img src={Tailor} alt='poster' />
                 </div>
@@ -29,10 +29,10 @@ export const ProjectCards = () => {
 }
 
 export const ExploreCards = () => {
-
+    AOS.init();
     return (
         <>
-            <section className='explore-card-container'>
+            <section className='explore-card-container' data-aos="fade-up"  data-aos-duration="1000">
                 <div className='explore-card-image'>
                 <img src={Builder} alt='poster' />
                 </div>
@@ -50,7 +50,7 @@ export const ExploreCards = () => {
 
 
 const Cards = () => {
-
+    AOS.init();
     const [showModal, setShowModal] = useState(false);
     const toggleModal = () => {
         setShowModal(prev => !prev);
@@ -58,10 +58,9 @@ const Cards = () => {
     
     return (
         <>
-            <section className='card-container' >
+            <section className='card-container' data-aos="fade-up"  data-aos-duration="1000">
                 <div className='card-image-container'>
-                    <img src={Tailor} alt='poster'onClick={toggleModal} />
-                   
+                    <img src={Tailor} alt='poster'onClick={() =>toggleModal()} />                  
                 </div>
                 <div className='card-footer'>
                     <ul>
@@ -69,9 +68,8 @@ const Cards = () => {
                         <li>Numbers</li>
                     </ul>
                 </div>
-               
             </section>
-            <Modal showModal={showModal} setShowModal={setShowModal}/>
+            <Modal showModal={showModal} setShowModal={setShowModal}/> 
         </>
     )
 }

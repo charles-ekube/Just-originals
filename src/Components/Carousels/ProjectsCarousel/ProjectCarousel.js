@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-elastic-carousel';
 import { Cards } from '../../Cards/Cards';
+import { Modal } from '../../Modals/Modal';
 import './ProjectCarousel.css';
 
 
@@ -14,6 +15,11 @@ const ProjectCarousel = () => {
       { width : 1200, itemsToShow : 4}
     ]
 
+    const [showModal, setShowModal] = React.useState(false);
+    const toggleModal = () => {
+        setShowModal(true);
+    }
+    
 
     return (
         <>
@@ -27,7 +33,7 @@ const ProjectCarousel = () => {
           // renderArrow={myArrow}
           breakPoints={breakPoints}>
 
-            <Cards />
+            <Cards toggleModal={toggleModal}/>
             <Cards />
             <Cards />
             <Cards />
@@ -35,7 +41,7 @@ const ProjectCarousel = () => {
             <Cards />
             <Cards />
           </Carousel>
-         
+          <Modal showModal={showModal} setShowModal={setShowModal}/>
           </section>
           </section>          
         </>

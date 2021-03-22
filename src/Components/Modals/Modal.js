@@ -8,7 +8,10 @@ const Background = styled.div`
     height : 100%;
     background : rgba(0,0,0,0.8);
     position : fixed;
+    top:0;
+    left:0;
     display: flex;
+    z-index : 20;
     justify-content : center;
     align-items : center;
 `
@@ -19,7 +22,7 @@ const ModalWrapper = styled.div`
     background : #fff;
     color : #000;
     display : grid;
-    grid-template-column : 1fr 1fr;
+    grid-template-columns : repeat(2, 1fr);
     position : relative;
     z-index : 10;
     border-radius : 10px;
@@ -27,8 +30,8 @@ const ModalWrapper = styled.div`
 
 const ModalImg = styled.img`
     width : 100%;
-    height : 100%;
-    border-radius : 10px 0 0 10px;
+     height : 500px;
+    border-radius : 10px;
     background : #000;
 `
 
@@ -61,7 +64,7 @@ const Modal = ({showModal, setShowModal}) => {
     }
     return (
         <>
-         {showModal ?
+         {showModal ?(
             <Background ref={ModalRef} onClick={CloseModal}>
                 <ModalWrapper showModal={showModal}>
                     <ModalContent>
@@ -79,7 +82,7 @@ const Modal = ({showModal, setShowModal}) => {
                     <CloseModalButton aria-label='Close Modal' onClick={() => setShowModal(prev => !prev)}/>
                 </ModalWrapper>
             </Background>
-         : null}
+         ): null}
                 
         </>
     )
