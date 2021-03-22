@@ -11,9 +11,9 @@ const Home = () => {
                 <section className='home-text'>
                     <article>
                         <h1>
-                        Operations keeps the lights on, strategy provides a light at the end of the tunnel, 
-                        but project management is the train engine that moves the organization forward.” 
-                        ~ Joy Gumz
+                        Operations keeps the lights on, strategy provides a light at the end of the tunnel.
+                        {/* but project management is the train engine that moves the organization forward.”  */}
+                        {/* ~ Joy Gumz */}
                         </h1>
                     </article>
                 </section>
