@@ -12,13 +12,12 @@
      padding-left: 130px; 
 }
 .home-text h1 {
-    width: 431px;
-    height: 292px;
+    width: 631px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
-    line-height: 75px;
+    font-size: 40px;
+    line-height: 60px;
     color: #FFFDFF; 
 }
 .home-carousel {

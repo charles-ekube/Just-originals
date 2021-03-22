@@ -6,7 +6,7 @@ import './Navbar.css';
 import { MdSearch } from 'react-icons/md';
 import { Logos } from '../../Assets';
 
-const Navbar = ({navColor}) => {
+const Navbar = ({navColor, logoBg}) => {
 
 
     const [showSearchBar, setShowSearchBar] = React.useState(false);
@@ -65,8 +65,8 @@ const Navbar = ({navColor}) => {
         <>
             <header>
                 <nav className='navbar-container'>
-                    <div className='navbar-logo'>
-                        <Link to='/' style={{color:navColor}}>
+                    <div className='navbar-logo' style={{background:logoBg}}>
+                        <Link to='/'>
                             <img src={Logos} alt='logo'/>
                         </Link>
                     </div>

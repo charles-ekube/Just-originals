@@ -7,7 +7,7 @@ import {Builder} from '../../Assets';
 const Blog = () => {
     return (
         <>
-            <Navbar navColor='black'/>
+            <Navbar navColor='black' logoBg='rgba(0,0,0,0.4)'/>
             <main className='blog-main-container'>
                 <section className='recent-blog-container'>
                     <article className='recent-blog-post-content'>

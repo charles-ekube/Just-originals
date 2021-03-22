@@ -6,7 +6,7 @@ import { Footer, Navbar } from '../../Widgets';
 const Projects = () => {
     return (
         <>
-        <Navbar navColor='black'/>
+        <Navbar navColor='black' logoBg='rgba(0,0,0,0.4)'/>
           <main className='projects-container'>
             <section className='projects-intro'>
                 <span></span>

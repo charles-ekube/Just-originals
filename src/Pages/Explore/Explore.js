@@ -7,7 +7,7 @@ import './Explore.css';
 const Explore = () => {
     return (
         <>
-        <Navbar navColor="black"/>
+        <Navbar navColor="black" logoBg='rgba(0,0,0,0.4)'/>
           <main className='explore-container'>
             <section className='explore-intro'>
                 <span></span>
