@@ -22,10 +22,9 @@ const JoinUs = () => {
                         </div>
                         <div>
                             <p>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua.Lorem ipsum
+                            As the digital era continues to refashion the way we do things, 
+                            Just Original is set to deliver into innovative services such as partnerships, '
+                            content production, talent management and marketing.
                             </p>
                         </div>
                         <div className='join-us-text-footer' >
@@ -42,10 +41,11 @@ const JoinUs = () => {
                         </div>
                         <div>
                             <p>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua.Lorem ipsum
+                            Talent management is a business strategy and you must
+                             fully integrate it within all of the employee-related 
+                             processes of the organization. 
+                            Just Original identifies available talents and 
+                             set their career path for available opportunities
                             </p>
                         </div>
                         <div className='join-us-text-footer'>

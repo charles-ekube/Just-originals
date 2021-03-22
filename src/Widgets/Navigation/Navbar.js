@@ -4,6 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 import './Navbar.css';
 import { MdSearch } from 'react-icons/md';
+import { Logos } from '../../Assets';
 
 const Navbar = ({navColor}) => {
 
@@ -65,7 +66,9 @@ const Navbar = ({navColor}) => {
             <header>
                 <nav className='navbar-container'>
                     <div className='navbar-logo'>
-                        <Link to='/' style={{color:navColor}}>Logo</Link>
+                        <Link to='/' style={{color:navColor}}>
+                            <img src={Logos} alt='logo'/>
+                        </Link>
                     </div>
                     <ul className='navbar-links'>
                         <li className='navbar-links-item'>
