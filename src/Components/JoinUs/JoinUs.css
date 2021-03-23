@@ -115,11 +115,13 @@ font-size:25px;
     }
     .join-us-text {
         width: 80%;
-        height: 220px;
+        display: flex;
+        flex-direction: column;
+        height: 280px;
         background: #ABF0FF;
         border-radius: 3px;
         margin: 10px 0;
-        padding: 40px 20px 0 20px;
+        padding: 40px 20px 10px 20px;
         
     }
     .join-us-text-header {
@@ -136,6 +138,9 @@ font-size:25px;
         height: 70px;
         padding: 0;
         text-align: center;
+    }
+    .join-us-text>a {
+        align-self: flex-end;
     }
 
   }

@@ -3,14 +3,17 @@ import './Blog.css';
 import {Footer, Navbar} from '../../Widgets';
 import { Link } from 'react-router-dom';
 import {Builder} from '../../Assets';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Blog = () => {
+    AOS.init();
     return (
         <>
             <Navbar navColor='black' logoBg='rgba(0,0,0,0.4)'/>
             <main className='blog-main-container'>
                 <section className='recent-blog-container'>
-                    <article className='recent-blog-post-content'>
+                    <article className='recent-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
                         <div className='recent-blog-post-image'>
                             <img src={Builder} alt='poster'/>
                         </div>
@@ -28,7 +31,7 @@ const Blog = () => {
                             </Link>
                         </div>
                     </article>
-                    <article className='recent-blog-post-content'>
+                    <article className='recent-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
                         <div className='recent-blog-post-image'>
                             <img src={Builder} alt='poster'/>
                         </div>
@@ -46,7 +49,7 @@ const Blog = () => {
                             </Link>
                         </div>
                     </article>
-                    <article className='recent-blog-post-content'>
+                    <article className='recent-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
                         <div className='recent-blog-post-image'>
                             <img src={Builder} alt='poster'/>
                         </div>
@@ -66,7 +69,7 @@ const Blog = () => {
                     </article>
                 </section>
                 <section className='old-blog-post-main-container'>
-                <article className='old-blog-post-content'>
+                <article className='old-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
                         <div className='old-blog-post-image'>
                             <img src={Builder} alt='poster'/>
                         </div>
@@ -84,7 +87,7 @@ const Blog = () => {
                             </Link>
                         </div>
                     </article>
-                    <article className='old-blog-post-content'>
+                    <article className='old-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
                         <div className='old-blog-post-image'>
                             <img src={Builder} alt='poster'/>
                         </div>
@@ -102,7 +105,7 @@ const Blog = () => {
                             </Link>
                         </div>
                     </article>
-                    <article className='old-blog-post-content'>
+                    <article className='old-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
                         <div className='old-blog-post-image'>
                             <img src={Builder} alt='poster'/>
                         </div>
@@ -120,7 +123,7 @@ const Blog = () => {
                             </Link>
                         </div>
                     </article>
-                    <article className='old-blog-post-content'>
+                    <article className='old-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
                         <div className='old-blog-post-image'>
                             <img src={Builder} alt='poster'/>
                         </div>

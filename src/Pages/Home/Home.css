@@ -16,8 +16,8 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 50px;
+    line-height: 70px;
     color: #FFFDFF; 
 }
 .home-carousel {
@@ -63,9 +63,9 @@
         height: 400px;
         width: 100%;
         position: relative;
-        margin: 0 auto;
+        /* margin: 0 auto; */
         right: 0;
-        left: 0;
+        left: -2px;
         top: -190px;
     
     }
@@ -75,8 +75,9 @@
     .home-text h1 {
         width: 100%;
         text-align: center;
-        font-size: 30px;
-        line-height:45px;     
+        font-size:30px;
+        line-height:35px;
+        padding-bottom: 150px;     
     }
     
   }

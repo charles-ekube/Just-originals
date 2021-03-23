@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
+import { Logos } from '../../Assets';
 
 
 
@@ -11,7 +12,7 @@ const Footer = () => {
         <footer className='footer-container'>
             <ul className='footer-content'>
                 <li className='footer-logo'>
-                    Logo
+                    <img src={Logos} alt='logo'/>
                 </li>
                 <li className='footer-quick-links-container'>
                     <ul className='footer-quick-links-content'>

@@ -5,9 +5,11 @@ import { FaSearch } from "react-icons/fa";
 import './Navbar.css';
 import { MdSearch } from 'react-icons/md';
 import { Logos } from '../../Assets';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const Navbar = ({navColor, logoBg}) => {
-
+    AOS.init();
 
     const [showSearchBar, setShowSearchBar] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
@@ -93,7 +95,7 @@ const Navbar = ({navColor, logoBg}) => {
                         </li>
                     </ul>
                     <div className='navbar-search'>
-                        {showSearchBar ? <form className='navbar-search-input'>
+                        {showSearchBar ? <form className='navbar-search-input' data-aos="fade-left"  data-aos-duration="1000">
                             <input  type='text' placeholder='Search'/>
                             <button><MdSearch/></button>
                         </form> : null}
