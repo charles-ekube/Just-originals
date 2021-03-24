@@ -10,7 +10,7 @@ const Explore = () => {
     AOS.init();
     return (
         <>
-        <Navbar navColor="black" logoBg='rgba(0,0,0,0.4)'/>
+        <Navbar navColor="black" logoBg='#000'/>
           <main className='explore-container'>
             <section className='explore-intro'>
                 <span></span>

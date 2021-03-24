@@ -10,7 +10,7 @@ const Blog = () => {
     AOS.init();
     return (
         <>
-            <Navbar navColor='black' logoBg='rgba(0,0,0,0.4)'/>
+            <Navbar navColor='black' logoBg='#000'/>
             <main className='blog-main-container'>
                 <section className='recent-blog-container'>
                     <article className='recent-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">

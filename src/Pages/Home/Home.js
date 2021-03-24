@@ -19,7 +19,7 @@ const Home = () => {
         <>
         {spinner ? <Loader /> : (
             <main data-aos="fade-down"  data-aos-duration="2000">
-                 <Navbar navColor="white" logoBg="inherit"/>
+                 <Navbar navColor="white" logoBg="#fff"/>
                  <section className='home-container'>
                      <section className='home-text'>
                          <article>

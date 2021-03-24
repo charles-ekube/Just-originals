@@ -87,14 +87,14 @@ button.rec-dot:active {
     }
     .carousel-main-container-text h2{
         width: 100%;
-        height: 54px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 38px;
-        line-height: 30px;
-        color: #000000;
+        height: 44px;
+        font-size: 35px;
+        margin-left: 7px;
     }
+    .carousel-main-container-text span {
+        margin-left: 7px;
+        line-height: 28px;
+}
     .carousel-mini-container {
         padding:0 ;
     }

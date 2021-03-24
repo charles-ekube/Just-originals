@@ -9,7 +9,7 @@ const Projects = () => {
     AOS.init();
     return (
         <>
-        <Navbar navColor='black' logoBg='rgba(0,0,0,0.4)'/>
+        <Navbar navColor='black' logoBg='#000'/>
           <main className='projects-container'>
             <section className='projects-intro'>
                 <span></span>

@@ -5,7 +5,7 @@ import Builder from './Images/builder.jpg';
 import Developer from './Images/developer.jpg';
 import Tailor from './Images/tailor.jpg';
 import Pool from './Icons/pool_24px.svg';
-import Logo from './Icons/logo.svg';
+import  Logo from './Icons/logo.svg';
 import Logos from './Icons/logos.png';
 
 

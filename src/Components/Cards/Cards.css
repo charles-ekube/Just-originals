@@ -117,7 +117,7 @@
 
 @media only screen 
   and (min-device-width: 300px) 
-  and (max-device-width: 460px) 
+  and (max-device-width: 400px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .card-container {
         width: 330px;
@@ -132,24 +132,62 @@
         padding: 0 30px;
     }
     .project-card-container {
-        width: 290px;
+        width: 340px;
         height: 400px;
         margin: 0 auto;   
     }
     .project-card-image {
-        width: 320;
-        border: 1px solid red;
+        width: 340;
         height: 320px;
     }
     .explore-card-container {
-        width: 290px;
+        width: 340px;
         height: 400px; 
         margin: 0 auto;    
     }
     .explore-card-image {
-        width: 290px;
+        width: 340px;
         height: 320px;
     }
     
      
+  }
+
+  @media only screen 
+  and (min-device-width: 401px) 
+  and (max-device-width: 500px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .card-container {
+        width: 375px;
+        height: 400px;
+        margin-bottom: 20px;
+        border: 1px solid red;
+      
+    }
+    .card-image-container {
+        height: 350px;
+        width: 374px;
+    }
+    .card-footer {
+        padding: 0 30px;
+        margin-bottom: 10px;
+    }
+    .project-card-container {
+        width: 370px;
+        height: 400px;
+        margin: 0 auto;   
+    }
+    .project-card-image {
+        width: 370;
+        height: 350px;
+    }
+    .explore-card-container {
+        width: 370px;
+        height: 400px; 
+        margin: 0 auto;    
+    }
+    .explore-card-image {
+        width: 370px;
+        height: 350px;
+    } 
   }

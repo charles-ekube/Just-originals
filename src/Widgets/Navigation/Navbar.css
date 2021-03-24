@@ -13,6 +13,7 @@
     width: 80%;
     margin:0 auto ;
 }
+
 .navbar-logo {
     width: 260px;
     display: flex;
@@ -21,9 +22,18 @@
     justify-content: center;
     align-items: center;
 }
-.navbar-logo a {
+.navbar-logo>a {
     text-decoration: none;
+}   
+#svg {
+    height:100px; 
+    width:230px; 
+    font-size:17.18px;
+    font-family:'Roboto-BlackItalic, Roboto';
+    font-weight:800;
+    font-style:italic;
 }
+
 .navbar-links {
     display: flex;
     justify-content: space-between;
@@ -130,7 +140,7 @@ a:target {
 
 @media only screen 
   and (min-device-width: 300px) 
-  and (max-device-width: 460px) 
+  and (max-device-width: 400px) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
     .navbar-container {
@@ -145,13 +155,15 @@ a:target {
     }
     
 .navbar-logo {
-    /* margin-left: 15px; */
-    /* height: 100px; */
-    width: 100px;
-    padding-left: 10px;
+    height: 50px;
+    font-size: 20px;
 }
-.navbar-logo img {
-    width: 100%;
+#svg {
+    height:70px; 
+    width:180px;
+    position: relative;
+    left: -25px; 
+    font-size:15px;
 }
     .navbar-links {
      display: none;
@@ -162,21 +174,43 @@ a:target {
         /* width: 10%; */
     }
     .navbar-search {
-        width: 50%;
-        /* border: 1px solid red; */
-        display: flex;
-        justify-content: flex-end;
+        display: none;
     }
-    .navbar-search-input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    border-radius: 3px;
-    background: #fff;
-    justify-content: space-between;
-    align-items: center;
-    border:1px solid #938C8C;
-}
+   
 
+  }
+
+  @media only screen 
+  and (min-device-width: 401px) 
+  and (max-device-width: 500px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+    .navbar-container {
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+        width: 100%;
+        margin:0;
+       
+    }
+    
+#svg {
+    height:70px; 
+    width:180px;
+    position: relative;
+    left: -25px; 
+    font-size:15px;
+}
+    .navbar-links {
+     display: none;
+    }
+    .mobile-nav-btn {
+        color: black;
+        display: block;
+    }
+    .navbar-search {
+        display: none;
+    }
   }

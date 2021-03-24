@@ -17,7 +17,7 @@ const JoinUs = () => {
                 <span></span>
                 <h2>What would you get when you join us</h2>
                 <section className='join-us-content'>
-                    <article className='join-us-text' data-aos="fade-right"  data-aos-duration="1000">
+                    <article className='join-us-text' data-aos="fade-up"  data-aos-duration="1000">
                         <div className='join-us-text-header'> 
                             <span><IoBagSharp/></span>
                             <h4>Project Management</h4>
@@ -34,7 +34,7 @@ const JoinUs = () => {
                             <span><BsArrowRight/></span>
                         </div>
                     </article>
-                    <article className='join-us-text' data-aos="fade-left"  data-aos-duration="1000">
+                    <article className='join-us-text' data-aos="fade-up"  data-aos-duration="1000">
                         <div className='join-us-text-header'>
                              <span>
                                  <img src={Pool} alt='poster' width='23'/>
