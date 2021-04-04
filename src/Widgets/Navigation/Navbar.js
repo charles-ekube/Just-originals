@@ -4,7 +4,6 @@ import { FiMenu } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 import './Navbar.css';
 import { MdSearch } from 'react-icons/md';
-import { Logo } from '../../Assets';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
@@ -41,7 +40,7 @@ const Navbar = ({navColor, logoBg}) => {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/Explore' style={{color:navColor}}>
+                            <Link to='/Explore/:id' style={{color:navColor}}>
                                 Explore
                             </Link>
                         </li>
@@ -88,7 +87,7 @@ const Navbar = ({navColor, logoBg}) => {
                             </Link>
                         </li>
                         <li className='navbar-links-item'>
-                            <Link to='/Explore' style={{color:navColor}}>
+                            <Link to='/Explore/:id' style={{color:navColor}}>
                                 Explore
                             </Link>
                         </li>
@@ -99,7 +98,7 @@ const Navbar = ({navColor, logoBg}) => {
                         </li>
                     </ul>
                     <div className='navbar-search'>
-                        {showSearchBar ? <form className='navbar-search-input' data-aos="fade-left"  data-aos-duration="1000">
+                        {showSearchBar ? <form className='navbar-search-input' data-aos="fade-in"  data-aos-duration="1000">
                             <input  type='text' placeholder='Search'/>
                             <button><MdSearch/></button>
                         </form> : null}

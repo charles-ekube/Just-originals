@@ -123,3 +123,49 @@
         padding-bottom: 150px;     
     } 
   }
+
+  @media only screen 
+  and (min-device-width: 501px) 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .home-container {
+        flex-direction: column;
+        height: 850px;
+        align-items: center;
+    }
+    .home-text {
+        padding: 60px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-carousel {
+        width: 100%;
+    }
+    .home-carousel-content {
+        height: 600px;
+        
+        width: 100%;
+        position: relative;
+        right: 0;
+        left: 0;
+        top: -200px;
+        
+    
+    }
+    .why-join-us-container {
+        padding: 50px 0 20px 0;
+        margin-top: 500px;
+        
+        
+    }  
+    .home-text h1 {
+        width: 100%;
+        text-align: center;
+        font-size:50px;
+        line-height:60px;
+        padding-bottom: 150px;     
+    } 
+  }
+  

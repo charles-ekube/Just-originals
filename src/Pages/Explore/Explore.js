@@ -1,5 +1,6 @@
 import React from 'react';
-import { ExploreCards, GetInTouch } from '../../Components';
+// import {useHistory} from 'react-router-dom'
+import { ExploreCards, GetInTouch, Loader } from '../../Components';
 import { Footer, Navbar } from '../../Widgets';
 import './Explore.css';
 import AOS from 'aos';
@@ -8,8 +9,25 @@ import 'aos/dist/aos.css';
 
 const Explore = () => {
     AOS.init();
+    
+    const [ spinner, setSpinner ] = React.useState(true);
+  
+    React.useEffect(() => {
+        setTimeout(() => setSpinner(false), 5000)
+    },[setSpinner])
+
+
+    // const history = useHistory();
+    // const handleDisplayPage = () => {
+    //     history.push({
+    //         pathname : '/ExploreDisplay',
+    //     })
+    // }
+
     return (
         <>
+        {spinner ? <Loader/> : (
+        <section  data-aos="fade-down"  data-aos-duration="2000">
         <Navbar navColor="black" logoBg='#000'/>
           <main className='explore-container'>
             <section className='explore-intro'>
@@ -27,14 +45,7 @@ const Explore = () => {
                 </div>
             </section>
             <section className='explore-grid'>
-                    <ExploreCards/>
-                    <ExploreCards/>
-                    <ExploreCards/>
-                    <ExploreCards/>
-                    <ExploreCards/>
-                    <ExploreCards/>
-                    <ExploreCards/>
-                    <ExploreCards/>
+                    <ExploreCards />
             </section>  
           </main>  
           <section>
@@ -43,6 +54,8 @@ const Explore = () => {
             <section>
                 <Footer/>
             </section>
+            </section>
+            )}
         </>
     )
 }

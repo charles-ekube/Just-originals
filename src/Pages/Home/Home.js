@@ -5,19 +5,22 @@ import './Home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
+
+
+
 const Home = () => {
     AOS.init();
 
     const [ spinner, setSpinner ] = React.useState(true);
   
     React.useEffect(() => {
-      setTimeout(() => setSpinner(false), 5000)
-    }, []);
-
+        setTimeout(() => setSpinner(false), 5000)
+    },[setSpinner])     
+  
 
     return (
         <>
-        {spinner ? <Loader /> : (
+        {spinner ?  <Loader />  :   ( 
             <main data-aos="fade-down"  data-aos-duration="2000">
                  <Navbar navColor="white" logoBg="#fff"/>
                  <section className='home-container'>
@@ -49,8 +52,10 @@ const Home = () => {
                  </section>
 
                  </main>
-        )}
-        </>
+ )}
+
+            
+         </>
     )
     
 }

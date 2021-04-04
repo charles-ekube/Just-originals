@@ -5,11 +5,21 @@ import { Link } from 'react-router-dom';
 import {Builder} from '../../Assets';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Loader } from '../../Components';
 
 const Blog = () => {
     AOS.init();
+
+    const [ spinner, setSpinner ] = React.useState(true);
+  
+    React.useEffect(() => {
+        setTimeout(() => setSpinner(false), 5000)
+    },[setSpinner])
+
     return (
         <>
+           {spinner ? <Loader/> : (
+        <section  data-aos="fade-down"  data-aos-duration="2000">
             <Navbar navColor='black' logoBg='#000'/>
             <main className='blog-main-container'>
                 <section className='recent-blog-container'>
@@ -145,7 +155,9 @@ const Blog = () => {
             </main>       
             <section>
                 <Footer/>
-            </section>     
+            </section>
+            </section>
+            )}     
         </>
     )
 }

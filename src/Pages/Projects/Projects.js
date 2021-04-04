@@ -1,14 +1,23 @@
 import React from 'react';
 import './Projects.css';
-import { GetInTouch, ProjectCards } from '../../Components'
+import { GetInTouch, Loader, ProjectCards } from '../../Components'
 import { Footer, Navbar } from '../../Widgets';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Projects = () => {
     AOS.init();
+
+    
+    const [ spinner, setSpinner ] = React.useState(true);
+  
+    React.useEffect(() => {
+        setTimeout(() => setSpinner(false), 5000)
+    },[setSpinner]) 
     return (
         <>
+        {spinner ? <Loader/> : (
+            <section data-aos="fade-down"  data-aos-duration="2000">
         <Navbar navColor='black' logoBg='#000'/>
           <main className='projects-container'>
             <section className='projects-intro'>
@@ -27,13 +36,7 @@ const Projects = () => {
             </section>
             <section className='projects-grid'>
                 <ProjectCards/>
-                <ProjectCards/>
-                <ProjectCards/>
-                <ProjectCards/>
-                <ProjectCards/>
-                <ProjectCards/>
-                <ProjectCards/>
-                <ProjectCards/>
+                
             </section>
           </main>
           <section>
@@ -42,7 +45,9 @@ const Projects = () => {
           <section>
               <Footer/>
           </section>
-        </>
+          </section>
+)}
+</>
     )
 }
 

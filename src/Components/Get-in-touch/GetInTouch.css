@@ -124,3 +124,60 @@
        font-size: 18px;
    }   
   }
+
+  @media only screen 
+  and (min-device-width: 501px) 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .get-in-touch-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .get-in-touch-text {
+        width: 100%;
+        padding: 30px 0 30px 0;
+    }
+    .get-in-touch-text h2, p{
+        padding-left: 15px;
+        font-size: 60px;
+    }
+    .get-in-touch-text p {
+        width: 500px;
+        font-size: 30px;
+    }
+    .get-in-touch-text>span {
+        margin-left: 15px;
+    }
+    .get-in-touch-form {
+        width: 100%;
+        padding: 50px 0 50px 0;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .get-in-touch-form input {
+        width: 95%;
+        height: 60px;
+        margin: auto auto;
+    }
+    ::placeholder {
+        font-size: 20px;
+        color: #979797;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+    }
+    .get-in-touch-form textarea {
+        width: 95%;
+        height: 150px;
+    }
+    .get-in-touch-form button {
+        width: 96%;
+        margin: 30px auto ;
+        height: 60px;
+        font-size: 20px;
+        color: #fff;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+       }
+  }

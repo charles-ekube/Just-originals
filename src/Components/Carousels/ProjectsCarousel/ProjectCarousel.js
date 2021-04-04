@@ -5,6 +5,8 @@ import { Modal } from '../../Modals/Modal';
 import './ProjectCarousel.css';
 
 
+
+
 const ProjectCarousel = () => {
  
  
@@ -13,7 +15,9 @@ const ProjectCarousel = () => {
       { width : 550, itemsToShow : 2},
       { width : 768, itemsToShow : 3},
       { width : 1200, itemsToShow : 4}
-    ]
+    ];
+
+    
 
     const [showModal, setShowModal] = React.useState(false);
     const toggleModal = () => {
@@ -29,17 +33,10 @@ const ProjectCarousel = () => {
             <h2>Previous Projects</h2>
           </div>
           <section className='carousel-mini-container'>
-          <Carousel 
-          // renderArrow={myArrow}
-          breakPoints={breakPoints}>
+          <Carousel breakPoints={breakPoints}>
 
             <Cards toggleModal={toggleModal}/>
-            <Cards />
-            <Cards />
-            <Cards />
-            <Cards />
-            <Cards />
-            <Cards />
+          
           </Carousel>
           <Modal showModal={showModal} setShowModal={setShowModal}/>
           </section>
