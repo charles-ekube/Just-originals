@@ -1,16 +1,19 @@
 import React from 'react';
-import {  Loader } from '../../Components';
-// import { Footer } from '../../Widgets';
-import { Slide } from 'react-slideshow-image';
+import {  Loader, ProjectCarousel, ServicesCarousel } from '../../Components';
 import './Explore.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { B, Builder, C } from '../../Assets';
-import Carousel from 'react-elastic-carousel';
+import { B,  Explore,  Explorer, Logo } from '../../Assets';
+// import Carousel from 'react-elastic-carousel';
 import '../../Components/Carousels/ProjectsCarousel/ProjectCarousel.css';
+// import { useLocation } from "react-router-dom";
+import { ExploreCarousel, PreviousProjectCarousel } from '../../Components/Carousels/ExploreDisplayCarousel/ExploreCarousel'; 
+
+import { ProjectCarouselItem } from '../../Components/Carousels/ProjectsCarousel/ProjectCarouselItem';
+import { Footer } from '../../Widgets';
 
 
-const ExploreDisplay = () => {
+const ExploreDisplay = ({Talents}) => {
     AOS.init();
 
     const [ spinner, setSpinner ] = React.useState(true);
@@ -19,66 +22,44 @@ const ExploreDisplay = () => {
         setTimeout(() => setSpinner(false), 5000)
     },[setSpinner])
 
-    const properties = {
-        arrows : false,
-    }
-
+    // const { state } = useLocation();
+   
     
-  const breakPoints = [
-    { width : 1, itemsToShow : 1},
-    { width : 550, itemsToShow : 2},
-    { width : 768, itemsToShow : 3},
-    { width : 1200, itemsToShow : 4}
-  ]
+    // const [current, setCurrent] = React.useState(0);
+    // const length = Talents.length;
 
     return (
         <>
         {spinner ? <Loader/> : (
             <main>
-                <section className='explore-display-intro'> 
-                    {/* <img src={B} alt='poster'/> */}
+                <section className='explore-logo'>
+                    <img src={Logo} alt='logo'/>
+                </section>
+                <section className='explore-display-intro'>
                     <div className='explore-display-intro-text'>
-                        <h5>Hello</h5>
-                        <h2>Richard</h2>
-                        <h5>Ola</h5>
+                        <ul>
+                            <li>Hello, I'm</li>
+                            <li>Rich Ude</li>
+                            <li>Painter</li>
+                        </ul>
                     </div>
+                    <img src={Explore} alt='poster'/>
                 </section>
                 <section className='services-carousel'>
-                    <div>
+                    <div className='services-carousel-text'>
                         <span></span>
                         <h2>My Services</h2>
                     </div>
-                    <div className='services-slider'>
-                        <Slide {...properties}>
-                            <div className='each-slide'><img src={B} alt='poster'/></div>
-                            <div className='each-slide'><img src={C} alt='poster'/></div>
-                            <div className='each-slide'><img src={Builder} alt='poster'/></div>
-                            <div className='each-slide'><img src={B} alt='poster'/></div>
-                        </Slide>
+                    <div>
+                        <ServicesCarousel/>
                     </div>
                 </section>
-                <section className='carousel-main-container'>
-          <div className='carousel-main-container-text'>
-            <span></span>
-            <h2>Previous Projects</h2>
-          </div>
-          <section className='carousel-mini-container'>
-          <Carousel breakPoints={breakPoints}>
-
-                <h1>dnjvdvj</h1>
-                <h1>dnjvdvj</h1>
-                <h1>dnjvdvj</h1>
-                <h1>dnjvdvj</h1>
-                <h1>dnjvdvj</h1>
-                <h1>dnjvdvj</h1>
-                <h1>dnjvdvj</h1>
-            {/* <Cards/> */}
-          
-          </Carousel>
-          {/* <Modal showModal={showModal} setShowModal={setShowModal}/> */}
-          </section>
-          </section> 
-
+                <section>
+                    <PreviousProjectCarousel/>
+                </section>
+                <section>
+                    <Footer/>
+                </section>
             </main>
         )}
         </>

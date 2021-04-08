@@ -5,6 +5,7 @@ import './Cards.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useHistory} from 'react-router-dom';
+import { ExploreDisplay } from '../../Pages/Explore/ExploreDisplay';
 
 
 
@@ -74,7 +75,7 @@ export const ProjectDisplayCards = () => {
     )
 }
 
-export const ExploreCards = ({handleDisplayPage}) => {
+export const ExploreCards = () => {
     AOS.init();
 
     const [Talents, setTalents] = React.useState([]);
@@ -94,10 +95,24 @@ export const ExploreCards = ({handleDisplayPage}) => {
         }
         fetchTalents();
     }, []);
+
+    
+
+    const history = useHistory();
+    
+
     return (
         <>
         {Talents && Talents.map(talent => (
-            <section className='explore-card-container' data-aos="fade-up"  data-aos-duration="1000" key={talent.id} onClick={handleDisplayPage}>
+            <section className='explore-card-container' data-aos="fade-up"  data-aos-duration="1000" key={talent.id} onClick={() =>
+                history.push({
+                    pathname : '/ExploreDisplay',
+                    state : {
+                            title :  `${talent.name}`,
+                            avatar : `${talent.avatar}`
+                            }
+                })
+            }>
                 <div className='explore-card-image'>
                 <img src={talent.avatar} alt='poster' />
                 </div>
@@ -110,6 +125,7 @@ export const ExploreCards = ({handleDisplayPage}) => {
                 </div>
             </section>
             ))}
+            {/* <ExploreDisplay Talents={Talents}/> */}
         </>
     )
 }

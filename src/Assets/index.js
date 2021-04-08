@@ -7,6 +7,9 @@ import Tailor from './Images/tailor.jpg';
 import Pool from './Icons/pool_24px.svg';
 import  Logo from './Icons/logo.svg';
 import Logos from './Icons/logos.png';
+import Explore from './Images/exploreintro.png';
+import Explorer from './Images/final.png';
+
 
 
 export {
@@ -18,5 +21,7 @@ export {
     Builder,
     Tailor,
     Logo,
-    Logos
+    Logos,
+    Explore,
+    Explorer
 }

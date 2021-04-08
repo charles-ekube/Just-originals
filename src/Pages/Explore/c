@@ -1,0 +1,81 @@
+ <section className='explore-display-intro'> 
+                    {/* <img src={B} alt='poster'/> */}
+                    <div className='explore-display-intro-text'>
+                        <h5>Hello</h5>
+                        <h2>Richard</h2>
+                        <h5>Ola</h5>
+                    </div>
+                </section>
+                <section className='services-carousel'>
+                    <div>
+                        <span></span>
+                        <h2>My Services</h2>
+                    </div>
+                    <div className='services-slider'>
+                        <ExploreCarousel/>
+                    </div>
+                </section>
+                <section>
+                    <ProjectCarousel/>
+                </section>
+                <section style={{display:'grid', gridTemplateColumns : '30% 70%', position :'relative'}}>
+                    <div style={{background:'#fff'}}>
+                        <img src={B} alt='poster' style={{height:'80%', width:'80%',  position:'relative', top:'50px', right:'-150px'}}/>
+                    </div>
+                    <div style={{background:'#7008F4', padding:'100px 100px 50px 100px'}}>
+                        <p style={{width:'500px', fontSize:'25px', margin: '0 auto', lineHeight: '40px', color:'#fff'}}>
+                        Lorem ipsum dolor sit amet,
+                         consectetur adipiscing elit, 
+                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        </p>
+                        <div style={{width: '120px', margin: '30px 0 0 120px', display:'flex', justifyContent:'space-between', alignItems:'center', color:'#fff'}}>
+                            <img src={B} alt='poster' style={{width : '50px', height : '50px', borderRadius : '50%'}}/>
+                            <span>Richard</span>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <ProjectCarouselItem/>
+                </section>
+                <section style={{display:'grid', gridTemplateColumns : '30% 60%', position :'relative', gap:'135px'}}>
+                    <div style={{background:'#fff'}}>
+                        <div style={{paddingLeft:'100px', fontSize:'30px', display:'flex', flexDirection:'column'}}>
+                            <span style={{ width: '90px', border:' 1px solid #121212' ,lineHeight: '32px', marginTop:'30px'}}></span>
+                            <h2>The Team</h2>
+                        </div>
+                        <div 
+                        style={{height:'100px',
+                         width:'200px', 
+                          position:'relative', 
+                          display:'flex',
+                          flexDirection:'column',
+                          justifyContent:'center',
+                          alignItems:'center',
+                          top:'17%', right:'-380px', background:'#5BE2FF'}}>
+                            <p style={{color:'#7008F4'}}>Richard</p>
+                            <p>Managing Director</p>
+                        </div>
+                    </div>
+                    <div style={{ height:'500px'}}>
+                        <img src={Explorer} alt='poster' height='100%' width='100%'/>
+                    </div>
+                </section>
+                <section style={{background:'rgba(112, 8, 244, 0.48)', display:'flex', justifyContent:'space-between', alignItems:'center', padding:'100px'}}>
+                    <div style={{width:'50%'}}>
+                        <h2 style={{fontSize:'40px', textAlign:'center'}}>Like what you see?</h2>
+                        <p style={{textAlign:'center', marginTop:'-20px'}}>Get in touch to get your required service started</p>
+                    </div>
+                    <div style={{width:'50%', textAlign:'center'}}>
+                        <button style={{
+                            background: '#FFFDFF',
+                            borderRadius: '3px',
+                            width: '200px',
+                            height: '31px',
+                            border:'none',
+                            color:'#7008F4'
+
+                        }}>POST A REQUEST</button>
+                    </div>
+                </section>

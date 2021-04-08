@@ -17,13 +17,6 @@ const Explore = () => {
     },[setSpinner])
 
 
-    // const history = useHistory();
-    // const handleDisplayPage = () => {
-    //     history.push({
-    //         pathname : '/ExploreDisplay',
-    //     })
-    // }
-
     return (
         <>
         {spinner ? <Loader/> : (

@@ -5,4 +5,5 @@ export * from './Cards/Cards';
 export * from './Carousels/ProjectsCarousel/ProjectCarousel';
 export * from './Modals/Modal';
 export * from './Loader/Loader';
+export * from './Carousels/ExploreDisplayCarousel/ExploreCarousel';
 
