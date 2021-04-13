@@ -1,3 +1,22 @@
+  state = {
+    files: []
+  }
+
+  fileSelectedHandler = (e) => {
+    this.setState({ files: [...this.state.files, ...e.target.files] })
+  }
+
+  render() {
+    return (
+      <form>
+        <div><h2>Upload images</h2></div>
+        <h3>Images</h3>
+        <input type="file" multiple onChange={this.fileSelectedHandler} />
+      </form>
+    )
+
+
+
  <section className='explore-display-intro'> 
                     {/* <img src={B} alt='poster'/> */}
                     <div className='explore-display-intro-text'>

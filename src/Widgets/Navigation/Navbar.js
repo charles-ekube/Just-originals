@@ -40,7 +40,7 @@ const Navbar = ({navColor, logoBg}) => {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/Explore/:id' style={{color:navColor}}>
+                            <Link to='/Explore' style={{color:navColor}}>
                                 Explore
                             </Link>
                         </li>
@@ -87,7 +87,7 @@ const Navbar = ({navColor, logoBg}) => {
                             </Link>
                         </li>
                         <li className='navbar-links-item'>
-                            <Link to='/Explore/:id' style={{color:navColor}}>
+                            <Link to='/Explore' style={{color:navColor}}>
                                 Explore
                             </Link>
                         </li>

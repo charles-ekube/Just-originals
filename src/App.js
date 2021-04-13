@@ -1,11 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Home, Projects, Explore, ProjectDisplay, Blog, ExploreDisplay} from './Pages';
+import Routes from './route';
+import './App.css';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import { Home, Projects, Explore, ProjectDisplay, Blog, ExploreDisplay, Dashboard, HomeScreen, AdminProjects, Talents, NewTalent, EditTalent, AdminBlog, Client} from './Pages';
 
 function App(props) {
   return (
     <>
-    
+    <Routes/>
+{/*     
       <Router>
 
 
@@ -20,7 +23,7 @@ function App(props) {
         <Route path="/ProjectDisplay/:id" component={ProjectDisplay} />
         <Route path="/Blog" component={Blog} />
             
-      </Router>
+      </Router> */}
     </>
   );
 }

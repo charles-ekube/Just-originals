@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Loader, ProjectCarousel, ServicesCarousel } from '../../Components';
+import {  Loader, ProjectCarousel, ServicesCarousel, TestimoniesCarousel } from '../../Components';
 import './Explore.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,7 +7,7 @@ import { B,  Explore,  Explorer, Logo } from '../../Assets';
 // import Carousel from 'react-elastic-carousel';
 import '../../Components/Carousels/ProjectsCarousel/ProjectCarousel.css';
 // import { useLocation } from "react-router-dom";
-import { ExploreCarousel, PreviousProjectCarousel } from '../../Components/Carousels/ExploreDisplayCarousel/ExploreCarousel'; 
+import { ExploreCarousel, PreviousProjects } from '../../Components'; 
 
 import { ProjectCarouselItem } from '../../Components/Carousels/ProjectsCarousel/ProjectCarouselItem';
 import { Footer } from '../../Widgets';
@@ -24,14 +24,12 @@ const ExploreDisplay = ({Talents}) => {
 
     // const { state } = useLocation();
    
-    
-    // const [current, setCurrent] = React.useState(0);
-    // const length = Talents.length;
-
+   
     return (
         <>
         {spinner ? <Loader/> : (
             <main>
+                <section style={{ background: 'rgba(251, 248, 251, 1)'}}>
                 <section className='explore-logo'>
                     <img src={Logo} alt='logo'/>
                 </section>
@@ -45,6 +43,7 @@ const ExploreDisplay = ({Talents}) => {
                     </div>
                     <img src={Explore} alt='poster'/>
                 </section>
+                </section>
                 <section className='services-carousel'>
                     <div className='services-carousel-text'>
                         <span></span>
@@ -54,8 +53,15 @@ const ExploreDisplay = ({Talents}) => {
                         <ServicesCarousel/>
                     </div>
                 </section>
+                <section className='previous-projects-carousel-container'>
+                <div className='previous-projects-carousel-text'>
+                        <span></span>
+                        <h2>Previous Projects</h2>
+                    </div>
+                    <PreviousProjects/>
+                </section>
                 <section>
-                    <PreviousProjectCarousel/>
+                    <TestimoniesCarousel/>
                 </section>
                 <section>
                     <Footer/>

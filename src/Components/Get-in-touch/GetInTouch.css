@@ -1,10 +1,10 @@
 .get-in-touch-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 60%;
     
 }
 .get-in-touch-text {
-    width: 30%;
-    padding: 90px 80px 0 110px;
+    padding: 90px 80px 0 80px;
     background: #EEEDEF;
     display: flex;
     flex-direction: column;
@@ -22,6 +22,7 @@
     font-size: 48px;
     line-height: 20px;
     color: #121212;
+   
 }
 .get-in-touch-text p {
     font-family: Roboto;
@@ -33,7 +34,6 @@
 }
 .get-in-touch-form {
     background: #FBF8FB;
-    width: 60%;
     padding: 90px 150px 90px 120px;
     display: grid;
     row-gap: 15px;
@@ -81,7 +81,7 @@
   and (max-device-width: 460px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .get-in-touch-container {
-        flex-direction: column;
+       grid-template-columns: 100%;
         width: 100%;
     }
     .get-in-touch-text {

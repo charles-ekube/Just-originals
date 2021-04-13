@@ -12,52 +12,6 @@ import { Builder } from '../../../Assets';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-export const PreviousProjectCarousel =  () => {
-    return (
-      <>
-     <Swiper
-        autoplay={{delay:5000}}
-        slidesPerView={4}
-        spaceBetween={50}
-        Navigation
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-        breakpoints={{
-          // when window width is >= 640px
-          640: {
-            width: 640,
-            slidesPerView: 1,
-          },
-          // when window width is >= 768px
-          768: {
-            width: 768,
-            slidesPerView: 2,
-          },
-          1200: {
-            width : 1200,
-            slidesPerView : 3
-          }
-        }}
-    >
-      <SwiperSlide>
-        <img src={Builder} alt='poster' style={{width:'100%', height:'500px'}}/>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={Builder} alt='poster' style={{width:'100%', height:'500px'}}/>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={Builder} alt='poster' style={{width:'100%', height:'500px'}}/>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={Builder} alt='poster' style={{width:'100%', height:'500px'}}/>
-      </SwiperSlide>
-      
-    </Swiper> 
-    </>
-    )
-}
-
 const ServicesCarousel = () => {
  
   return (
@@ -67,18 +21,19 @@ const ServicesCarousel = () => {
         slidesPerView={1}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
+        className='services-carousel-container'
     >
-      <SwiperSlide style={{width:'100%'}}>
-        <img src={Builder} alt='poster' style={{width:'100%', height:'500px'}}/>
+      <SwiperSlide className='services-carousel-content'>
+        <img src={Builder} alt='poster' />
       </SwiperSlide>
-      <SwiperSlide style={{width:'100%'}}>
-        <img src={Builder} alt='poster' style={{width:'100%', height:'500px'}}/>
+      <SwiperSlide className='services-carousel-content'>
+        <img src={Builder} alt='poster' />
       </SwiperSlide>
-      <SwiperSlide style={{width:'100%'}}>
-        <img src={Builder} alt='poster' style={{width:'100%', height:'500px'}}/>
+      <SwiperSlide className='services-carousel-content'>
+        <img src={Builder} alt='poster' />
       </SwiperSlide>
-      <SwiperSlide style={{width:'100%'}}>
-        <img src={Builder} alt='poster' style={{width:'100%', height:'500px'}}/>
+      <SwiperSlide className='services-carousel-content'>
+        <img src={Builder} alt='poster' />
       </SwiperSlide>
       
     </Swiper> 

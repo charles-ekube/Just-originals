@@ -46,16 +46,13 @@
     margin-left: 130px;
 }
 .explore-display-intro {
-    height: 550px;
     width: 100%;
     display: grid;
     grid-template-columns: 20% 80%;
-    background: rgba(251, 248, 251, 1);
 
 }
 .explore-display-intro img {
     width: 100%;
-    height: 550px;
 }
 
 .explore-display-intro-text>ul {
@@ -132,6 +129,31 @@
     border-radius: 5px;
 }
 
+.previous-projects-carousel-container {
+    padding: 30px 0 ;
+}
+
+.previous-projects-carousel-text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.previous-projects-carousel-text span {
+    border: 1px solid #000;
+    width: 70px;
+}
+.previous-projects-carousel-text h2 {
+    width: 298px;
+    height: 52px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 46px;
+    color: #000000;
+}
+
 @media only screen 
   and (min-device-width: 300px) 
   and (max-device-width: 460px) 
@@ -163,5 +185,39 @@
         row-gap: 20px;
         padding: 30px 0;
     }
-       
+
+    .explore-logo {
+        margin-left: 20px;
+    }
+    .explore-display-intro {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .explore-display-intro-text>ul {
+        position: relative;
+        left: 20px;
+        top: 30px;
+    }
+    
+    .explore-display-intro-text>ul :first-child {
+        font-size: 18px;
+    }
+    .explore-display-intro-text>ul li {
+        font-size: 30px;
+    }
+    .explore-display-intro-text>ul :last-child {
+        font-size: 14px;  
+    } 
+    .services-carousel {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .services-carousel-text {
+        padding-top: 50px;
+        padding-left: 20px;
+    }
+    
+    .services-carousel-text h2 {
+        font-size: 30px;
+    }   
   }

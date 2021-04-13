@@ -1,0 +1,242 @@
+html body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --background: #7008F4;
+    --backgroud2: #F5F0F0;
+    --background3: rgba(112, 8, 244, 0.48);
+    --black: #000000;
+    --black2: #121212;
+    --white: #ffffff;
+    --red: #ff0000;
+    --ash: #eeeeee;
+    --cardbg: #ABF0FF;
+    --tilt-pup: rgba(112, 8, 244, 0.2);
+    --ash: #eee;
+    --ash2: #EEEDEF;
+    --deepBlue: #5BE2FF;
+  }
+  
+  .noParMar, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  a, a:hover {
+    color: var(--black);
+    text-decoration: none;
+  }
+  
+  .navlink, .navlink:hover {
+    color: var(--white);
+  }
+  
+  input, input:focus {
+    /* border: none; */
+    outline: none;
+  }
+  
+  .adminGrid {
+    display: grid;
+    grid-template-columns: 240px 1fr 1fr 1fr;
+    grid-template-areas: "header header header header" "sidebar main main main";
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    background-color: #F4F2F2;
+    overflow: hidden;
+  }
+  
+  .activeNavLink {
+    background-color: rgba(251, 251, 251, 0.18);
+  }
+  
+  .adminGrid>*:first-child {
+    grid-column: header;
+  }
+  
+  .adminGrid>*:nth-child(2) {
+    grid-column: sidebar;
+    background-color: #7008F4;
+  }
+  
+  .adminGrid>*:nth-child(3) {
+    grid-column: main;
+    overflow: scroll;
+  }
+  
+  .primaryBG {
+    background-color: #7008F4 !important
+  }
+  
+  .primaryText {
+    color: #7008F4 !important
+  }
+  
+  .iconBG {
+    background-color: #5BE2FF !important;
+  }
+  
+  .secondaryText {
+    color: #5BE2FF !important
+  }
+  
+  .iconBG img {
+    width: 16px !important;
+    height: 16px !important;
+    object-fit: cover;
+  }
+  
+  .requestCard {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: auto auto auto 1fr auto;
+  }
+  
+  .bigUserCard {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto auto 1fr auto;
+  }
+  
+  .projects_filter {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto 1fr auto;
+    background-color: #EEEDEF;
+    padding: 2em;
+    align-items: center;
+  }
+  
+  .greyBG {
+    background-color: #EEEDEF !important;
+  }
+  
+  .grey200 {
+    background-color: #E8E5E5 !important;
+  }
+  
+  .projects_filter>p {
+    margin: 0;
+  }
+  
+  .talentCard {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto 1fr auto auto auto auto auto auto;
+    padding: 1em;
+    align-items: center;
+  }
+  
+  .projectsTable:first-child {
+    background-color: #E8E5E5;
+    font-weight: bold;
+  }
+  
+  .table>p {
+    margin: 0 !important;
+  }
+  
+  .table>img.avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+  
+  .talent_add {
+    display: grid;
+    background-color: #EEEDEF;
+    grid-gap: 20px;
+    grid-template-columns: 1fr auto;
+    padding: 2em;
+    align-items: center;
+  }
+  
+  .blog_add {
+    display: grid;
+    background-color: #EEEDEF;
+    grid-gap: 20px;
+    grid-template-columns: auto auto 1fr auto;
+    padding: 2em;
+    align-items: center;
+  }
+  
+  .talentCard {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto 1fr 1fr auto auto;
+  }
+  
+  .talentCard>img.avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .talentCard>p, .blog_add>p {
+    margin: 0;
+  }
+  
+  .homeScreen_add {
+    display: grid;
+    grid-gap: 20px;
+    background-color: #EEEDEF;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
+    padding: 2em;
+    align-items: center;
+  }
+  
+  .homeScreen_add>*:first-child {
+    padding: 0.5em;
+    border: 1px dashed darkgrey;
+    color: darkgrey;
+    margin-bottom: 0;
+  }
+  
+  .homeScreen_add>input {
+    background-color: #D7D5D5;
+    border: none;
+    color: #d7d5d590
+  }
+  
+  .homeScreen_add>*:last-child {
+    font-weight: bold;
+  }
+  
+  .homeScreen_search {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px auto auto auto;
+    align-items: center;
+  }
+  
+  .homeScreen_search>* {
+    padding: 0.7em;
+    border: none;
+    background-color: #D7D5D5;
+  }
+  
+  .requestCard>h6, .requestCard>p, .bigUserCard>h6, .bigUserCard>p {
+    margin: 0;
+  }
+  
+  .requestCard>p {
+    font-size: 12px;
+  }
+  
+  @media(max-width: 768px) {
+    .mymb {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* button {
+    color: var(--white);
+    border: none;
+    outline: none;
+  } */
