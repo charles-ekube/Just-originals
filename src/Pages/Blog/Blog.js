@@ -36,7 +36,7 @@ const Blog = () => {
                                 How to mix several colors to achieve a 
                                 unique color for painting.
                             </p>
-                            <Link>
+                            <Link to='/blogpage'>
                                 Read Article
                             </Link>
                         </div>
@@ -54,7 +54,7 @@ const Blog = () => {
                                 How to mix several colors to achieve a 
                                 unique color for painting.
                             </p>
-                            <Link>
+                            <Link to='/blogpage'>
                                 Read Article
                             </Link>
                         </div>
@@ -72,7 +72,7 @@ const Blog = () => {
                                 How to mix several colors to achieve a 
                                 unique color for painting.
                             </p>
-                            <Link>
+                            <Link to='/blogpage'>
                                 Read Article
                             </Link>
                         </div>
@@ -92,7 +92,7 @@ const Blog = () => {
                                 How to mix several colors to achieve a 
                                 unique color for painting.
                             </p>
-                            <Link>
+                            <Link to='/blogpage'>
                                 Read Article
                             </Link>
                         </div>
@@ -110,7 +110,7 @@ const Blog = () => {
                                 How to mix several colors to achieve a 
                                 unique color for painting.
                             </p>
-                            <Link>
+                            <Link to='/blogpage'>
                                 Read Article
                             </Link>
                         </div>
@@ -128,7 +128,7 @@ const Blog = () => {
                                 How to mix several colors to achieve a 
                                 unique color for painting.
                             </p>
-                            <Link>
+                            <Link to='/blogpage'>
                                 Read Article
                             </Link>
                         </div>
@@ -146,7 +146,7 @@ const Blog = () => {
                                 How to mix several colors to achieve a 
                                 unique color for painting.
                             </p>
-                            <Link>
+                            <Link to='/blogpage'>
                                 Read Article
                             </Link>
                         </div>

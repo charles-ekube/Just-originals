@@ -1,15 +1,12 @@
 import React from 'react';
-import {  Loader, ProjectCarousel, ServicesCarousel, TestimoniesCarousel } from '../../Components';
+import {  Loader, PreviousClients, ServicesCarousel, TestimoniesCarousel, PreviousProjects, TeamsCarousel } from '../../Components';
 import './Explore.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { B,  Explore,  Explorer, Logo } from '../../Assets';
-// import Carousel from 'react-elastic-carousel';
+// import {Link} from 'react-router-dom';
+import { Explore, Logo } from '../../Assets';
 import '../../Components/Carousels/ProjectsCarousel/ProjectCarousel.css';
 // import { useLocation } from "react-router-dom";
-import { ExploreCarousel, PreviousProjects } from '../../Components'; 
-
-import { ProjectCarouselItem } from '../../Components/Carousels/ProjectsCarousel/ProjectCarouselItem';
 import { Footer } from '../../Widgets';
 
 
@@ -28,12 +25,14 @@ const ExploreDisplay = ({Talents}) => {
     return (
         <>
         {spinner ? <Loader/> : (
-            <main>
+            <main data-aos="fade-down"  data-aos-duration="2000">
                 <section style={{ background: 'rgba(251, 248, 251, 1)'}}>
-                <section className='explore-logo'>
-                    <img src={Logo} alt='logo'/>
+                <section className='explore-logo'  data-aos="fade-up"  data-aos-duration="2000">
+        
+                     <img src={Logo} alt='logo'/>
+        
                 </section>
-                <section className='explore-display-intro'>
+                <section className='explore-display-intro'  data-aos="fade-up"  data-aos-duration="2000">
                     <div className='explore-display-intro-text'>
                         <ul>
                             <li>Hello, I'm</li>
@@ -41,10 +40,10 @@ const ExploreDisplay = ({Talents}) => {
                             <li>Painter</li>
                         </ul>
                     </div>
-                    <img src={Explore} alt='poster'/>
+                    <img src={Explore} alt='poster'  data-aos="fade-up"  data-aos-duration="2000"/>
                 </section>
                 </section>
-                <section className='services-carousel'>
+                <section className='services-carousel'  data-aos="fade-up"  data-aos-duration="2000">
                     <div className='services-carousel-text'>
                         <span></span>
                         <h2>My Services</h2>
@@ -53,15 +52,25 @@ const ExploreDisplay = ({Talents}) => {
                         <ServicesCarousel/>
                     </div>
                 </section>
-                <section className='previous-projects-carousel-container'>
+                <section className='previous-projects-carousel-container'  data-aos="fade-up"  data-aos-duration="2000">
                 <div className='previous-projects-carousel-text'>
                         <span></span>
                         <h2>Previous Projects</h2>
                     </div>
                     <PreviousProjects/>
                 </section>
-                <section>
+                <section className='testimonies-carousel-container'  data-aos="fade-up"  data-aos-duration="2000">
                     <TestimoniesCarousel/>
+                </section>
+                <section style={{background:'#fff', marginBottom:'30px'}}  data-aos="fade-up"  data-aos-duration="2000">
+                <div className='previous-projects-carousel-text'>
+                        <span></span>
+                        <h2>Previous Clients</h2>
+                    </div>
+                    <PreviousClients/>
+                </section>
+                <section  data-aos="fade-up"  data-aos-duration="2000">
+                    <TeamsCarousel/>
                 </section>
                 <section>
                     <Footer/>

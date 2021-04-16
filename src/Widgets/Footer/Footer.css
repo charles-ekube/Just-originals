@@ -1,7 +1,7 @@
 .footer-container {
     background: #7008F4;
-    height: 200px;
-    padding: 50px 130px 26px 130px;
+    height: 230px;
+    padding: 50px 130px 10px 130px;
 }
 .footer-content {
     display: flex;
@@ -44,6 +44,7 @@
     line-height: 28px;
     text-decoration-line: underline;
     color: #FFFDFF;
+    margin-bottom: 20px;
 }
 .footer-base-content {
     display: flex;

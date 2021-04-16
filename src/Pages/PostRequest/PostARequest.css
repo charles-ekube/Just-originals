@@ -1,0 +1,118 @@
+.post-request-logo {
+    border: 1px solid red;
+    height: 50px;
+    width: 200px;
+    position: relative;
+}
+
+.post-request-content-container {
+    padding: 100px 130px;
+}
+.post-request-content-header {
+    display: flex;
+    flex-direction: column;
+}
+.post-request-content-header span {
+    width: 90px;
+    border: 1px solid #121212;
+    margin-bottom: 20px ;
+}
+.post-request-content-header h2 {
+    width: 685px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 76px;
+    margin-bottom: 20px;
+    color: #121212;
+}
+.post-request-form {
+    display: flex;
+    flex-direction: column;
+}
+.post-request-form-input label {
+    width: 100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+    
+    color: #121212;
+}
+.post-request-form-input textarea {
+    height: 300px;
+    width: 100%;
+    background: darkgray;
+    margin-bottom: 20px;
+}
+.post-request-form-input button {
+    background: darkmagenta;
+    color:#fff;
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+    width: 100px;
+}
+.post-request-form-input input {
+    height: 50px;
+    width: 50%;
+    background: tomato;
+    border: none;
+    margin-bottom: 50px;
+}
+.post-request-form-input input[type="file" i] {
+    background: red;
+}
+ 
+@media only screen 
+  and (min-device-width: 280px) 
+  and (max-device-width: 764px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .post-request-logo {
+        border: 1px solid red;
+        height: 50px;
+        width: 100px;
+        display: flex;
+       align-items: center;
+    }
+   
+    .post-request-content-container {
+        padding: 50px 0;
+        width: 10%;
+    }
+    .post-request-content-header {
+        display: flex;
+        flex-direction: column;
+    }
+    .post-request-content-header span {
+        width: 70px;
+    }
+    .post-request-content-header h2 {
+        width: 100%;
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .post-request-form-input textarea {
+        height: 300px;
+        width: 100%;
+        background: darkgray;
+        margin-bottom: 20px;
+    }
+    .post-request-form-input button {
+        background: darkmagenta;
+        color:#fff;
+        border: none;
+        border-radius: 3px;
+        height: 35px;
+        width: 100px;
+    }
+    .post-request-form-input input {
+        height: 50px;
+        width: 100%;
+        background: tomato;
+        border: none;
+        margin-bottom: 50px;
+    }   
+  }

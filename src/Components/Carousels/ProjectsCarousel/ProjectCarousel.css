@@ -61,7 +61,7 @@ button.rec-dot:active {
     color: #000000;
 }
 .carousel-mini-container {
-    padding-left: 80px;
+    padding: 50px 0;
 }
 .carousel-main-container-text {
     display: flex;
@@ -71,7 +71,7 @@ button.rec-dot:active {
 .carousel-main-container-text span {
         width: 90px;
         border: 1px solid #121212;
-        line-height: 32px;
+        margin-bottom: 30px;
 }
 
 /* mediaqueries */

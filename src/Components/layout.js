@@ -15,7 +15,7 @@ const Layout = ({ children, isAdmin }) => {
             :
 
             <div>
-                <div className={"d-flex"}>
+                <div>
                     <div>{children}</div>
                 </div>
             </div>

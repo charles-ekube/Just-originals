@@ -3,5 +3,7 @@ export * from './Projects/Projects';
 export * from './Projects/ProjectDisplay';
 export * from './Explore/Explore';
 export * from  './Blog/Blog';
+export * from  './Blog/BlogPage';
 export * from './Explore/ExploreDisplay';
+export * from './PostRequest/PostARequest';
 export * from "./admin";

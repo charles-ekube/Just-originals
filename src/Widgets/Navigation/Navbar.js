@@ -20,32 +20,30 @@ const Navbar = ({navColor, logoBg}) => {
     
     
     let menu
+    let menuMask
 
     if(showMenu) {
-        menu = <aside className='mobile-nav-container'>
+        menu = <aside className='mobile-nav-container' data-aos="fade-in-left"  data-aos-duration="2000">
             <header>
                 <nav>
-                    <div>
-                        <Link to='/' style={{color:navColor}}>Logo</Link>
-                    </div>
-                    <ul>
-                        <li>
-                            <Link to='/' style={{color:navColor}}>
+                    <ul className='mobile-menu-list'>
+                        <li className='mobile-menu-list-item'>
+                            <Link to='/' className='mobile-menu-list-item-content'>
                                 Home
                             </Link>
                         </li>
-                        <li>
-                            <Link to='/Projects' style={{color:navColor}}>
+                        <li className='mobile-menu-list-item'>
+                            <Link to='/Projects' className='mobile-menu-list-item-content'>
                                 Projects
                             </Link>
                         </li>
-                        <li>
-                            <Link to='/Explore' style={{color:navColor}}>
+                        <li className='mobile-menu-list-item'>
+                            <Link to='/Explore' className='mobile-menu-list-item-content'>
                                 Explore
                             </Link>
                         </li>
-                        <li>
-                            <Link to='/Blog' style={{color:navColor}}>
+                        <li className='mobile-menu-list-item'>
+                            <Link to='/Blog' className='mobile-menu-list-item-content'>
                                 Blog
                             </Link>
                         </li>
@@ -53,13 +51,15 @@ const Navbar = ({navColor, logoBg}) => {
                 </nav>
             </header>
         </aside>
+
+        
+    menuMask = <aside
+    className="mobile-menu-mask"
+    onClick={() => setShowMenu(false)}></aside>
+
     }
 
 
-
-    // menuMask = <aside
-    // className="mobile-menu-mask"
-    // onClick={() => setShowMenu(false)}></aside>
 
 
     return (
@@ -110,6 +110,7 @@ const Navbar = ({navColor, logoBg}) => {
                 </nav>
             </header>
             {menu}
+            {menuMask}
         </>
     )
 }

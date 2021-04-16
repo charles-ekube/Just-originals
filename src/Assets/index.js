@@ -9,6 +9,7 @@ import  Logo from './Icons/logo.svg';
 import Logos from './Icons/logos.png';
 import Explore from './Images/exploreintro.png';
 import Explorer from './Images/final.png';
+import Painting from './Images/painting.png';
 
 
 
@@ -23,5 +24,6 @@ export {
     Logo,
     Logos,
     Explore,
-    Explorer
+    Explorer,
+    Painting
 }
