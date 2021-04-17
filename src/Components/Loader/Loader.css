@@ -24,7 +24,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 130px;
+        padding-left: 160px;
     } 
     .loader-container img {
         width: 100%;
