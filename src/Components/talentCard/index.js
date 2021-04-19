@@ -9,9 +9,6 @@ export const TalentCard = ({ Talents, setTalents }) => {
     const history = useHistory();
     const [show, setShow] = useState(false)
 
-    
-
-    // () =>history.push(`/edit_talent/${id}`)
 
     return (
 
@@ -34,7 +31,7 @@ export const TalentCard = ({ Talents, setTalents }) => {
                         <div className="dropleft">
                             <img src={elipses} className={"rounded-circle p-2 dropdown-toggle"} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <p onClick={() =>
+                                <p onClick={(props) =>
                                      history.push({
                                         pathname: `/edit_talent/${talent.id}`,
                                         state: { title : `${talent.name}`,
@@ -43,30 +40,33 @@ export const TalentCard = ({ Talents, setTalents }) => {
                                                 talent_id : `${talent.id}`
                                         } })
                                 } className="dropdown-item" >Edit</p>
-                                <p onClick={() =>
+                                <p onClick={(props) =>
                                      history.push({
                                         pathname: `/add_projects/${talent.id}`,
+                                        state : {
+                                            talent_id : `${talent.id}`,
+                                        }
+
                                          })
                                 } className="dropdown-item" >Add Projects</p>
-                                <p onClick={() =>
+                                <p onClick={(props) =>
                                      history.push({
                                         pathname: `/add_testimonies/${talent.id}`,
+                                        state : {
+                                            talent_id : `${talent.id}`,
+                                        }
+
                                          })
                                 } className="dropdown-item" >Add Testimonies</p>
-                                <p onClick={() =>
+                                <p onClick={(props) =>
                                      history.push({
-                                        pathname: `/add_team/${talent.id}`,
+                                        pathname: `/add_teams/${talent.id}`,
+                                        state : {
+                                            talent_id : `${talent.id}`,
+                                        }
+
                                          })
                                 } className="dropdown-item" >Add Team</p>
-                                {/* <p onClick={() =>
-                                     history.push({
-                                        pathname: `/edit_talent/${talent.id}`,
-                                        state: { title : `${talent.name}`,
-                                                 avatar : `${talent.avatar}`,
-                                                 services : `${talent.services}`,
-                                                talent_id : `${talent.id}`
-                                        } })
-                                } className="dropdown-item" >Edit</p> */}
                                 <p className="dropdown-item" data-toggle="modal" data-target={`#deleteModal${id}`}>Remove</p>
                             </div>
                         </div>

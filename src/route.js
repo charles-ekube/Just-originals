@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Home, Projects, Explore, ProjectDisplay, Blog, ExploreDisplay, Dashboard, HomeScreen, AdminProjects, Talents, NewTalent, EditTalent, AdminBlog, Client, BlogPage, PostRequest} from './Pages';
+import { Home, Projects, Explore, ProjectDisplay, Blog, ExploreDisplay, Dashboard, HomeScreen, AdminProjects, Talents, NewTalent, EditTalent, AdminBlog, Client, BlogPage, PostRequest, AddProjects, AddTestimonies, AddTeams} from './Pages';
 import { Layout } from './Components';
 
 const LayoutWrapper = props => {
@@ -41,6 +41,9 @@ const Routes = (props) => {
                 <MyRoutes path='/talents' Component={Talents} exact {...props} isdmin />
                 <MyRoutes path='/new_talent' Component={NewTalent} exact {...props} isdmin />
                 <MyRoutes path='/edit_talent/:id' Component={EditTalent} exact {...props} isdmin />
+                <MyRoutes path='/add_projects/:id' Component={AddProjects} exact {...props} isdmin />
+                <MyRoutes path='/add_testimonies/:id' Component={AddTestimonies} exact {...props} isdmin />
+                <MyRoutes path='/add_teams/:id' Component={AddTeams} exact {...props} isdmin />
                 <MyRoutes path='/adminblog' Component={AdminBlog} exact {...props} isdmin />
                 <MyRoutes path='/clients' Component={Client} exact {...props} isdmin />
             </Switch>
