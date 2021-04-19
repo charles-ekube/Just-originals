@@ -43,6 +43,30 @@ export const TalentCard = ({ Talents, setTalents }) => {
                                                 talent_id : `${talent.id}`
                                         } })
                                 } className="dropdown-item" >Edit</p>
+                                <p onClick={() =>
+                                     history.push({
+                                        pathname: `/add_projects/${talent.id}`,
+                                         })
+                                } className="dropdown-item" >Add Projects</p>
+                                <p onClick={() =>
+                                     history.push({
+                                        pathname: `/add_testimonies/${talent.id}`,
+                                         })
+                                } className="dropdown-item" >Add Testimonies</p>
+                                <p onClick={() =>
+                                     history.push({
+                                        pathname: `/add_team/${talent.id}`,
+                                         })
+                                } className="dropdown-item" >Add Team</p>
+                                {/* <p onClick={() =>
+                                     history.push({
+                                        pathname: `/edit_talent/${talent.id}`,
+                                        state: { title : `${talent.name}`,
+                                                 avatar : `${talent.avatar}`,
+                                                 services : `${talent.services}`,
+                                                talent_id : `${talent.id}`
+                                        } })
+                                } className="dropdown-item" >Edit</p> */}
                                 <p className="dropdown-item" data-toggle="modal" data-target={`#deleteModal${id}`}>Remove</p>
                             </div>
                         </div>
