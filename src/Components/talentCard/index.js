@@ -9,7 +9,9 @@ export const TalentCard = ({ Talents, setTalents }) => {
     const history = useHistory();
     const [show, setShow] = useState(false)
 
+    
 
+    // () =>history.push(`/edit_talent/${id}`)
 
     return (
 
@@ -32,7 +34,15 @@ export const TalentCard = ({ Talents, setTalents }) => {
                         <div className="dropleft">
                             <img src={elipses} className={"rounded-circle p-2 dropdown-toggle"} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <p onClick={() => history.push(`/edit_talent/${id}`)} className="dropdown-item" >Edit</p>
+                                <p onClick={() =>
+                                     history.push({
+                                        pathname: `/edit_talent/${talent.id}`,
+                                        state: { title : `${talent.name}`,
+                                                 avatar : `${talent.avatar}`,
+                                                 services : `${talent.services}`,
+                                                talent_id : `${talent.id}`
+                                        } })
+                                } className="dropdown-item" >Edit</p>
                                 <p className="dropdown-item" data-toggle="modal" data-target={`#deleteModal${id}`}>Remove</p>
                             </div>
                         </div>

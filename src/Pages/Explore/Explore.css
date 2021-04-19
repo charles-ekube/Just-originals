@@ -218,6 +218,7 @@
     .services-carousel {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        padding: 0 10px;
     }
     .services-carousel-text {
         padding-top: 50px;
@@ -229,7 +230,7 @@
     }
     .previous-projects-carousel-text {
         padding-top: 100px;
-        padding-left: 20px;
+        padding-left: 10px;
     }
     .testimonies-carousel-container {
         padding: 0;

@@ -1,7 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
-import user from "../../../Assets/ex1.png";
-import elipses from "../../../Assets/elipses.svg";
 import { ProjectCard } from '../../../Components';
 
 const id = String(Math.random()).split(".").join("_");
@@ -11,20 +8,20 @@ export const AdminProjects = () => {
 
     const [title, setTitle] = useState("");
     const [url, setUrl] = useState("");
-    const [created_at, setCreated_at] = useState("");
-    const [updated_at, setUpdated_at] = useState("");
+    const [status, setStatus] = useState("");
+    const [category_id, setCategory_id] = useState("");
     const [client, setClient] = useState("");
     const [avatar, setAvatar] = useState("");
    
 
     const handleProjectUpdate = async (e) => {
         e.preventDefault();
-        console.log(title, url, created_at, updated_at, client, avatar);
+        console.log(title, url, category_id, status, client, avatar);
         const formData = new FormData();
         formData.append('title', title);
         formData.append('url', url);
-        formData.append('created_at', created_at);
-        formData.append('updated_at', updated_at);
+        formData.append('status', status);
+        formData.append('category_id', category_id);
         formData.append('client', client);
         formData.append('avatar', avatar);
 
@@ -53,24 +50,7 @@ export const AdminProjects = () => {
             }
             fetchProjects();
         }, []);
-    // (async () => {
-    //     const result = await axios.get(
-    //         "http://example.com/api/v1/categories/"
-    //     );
-    //     setData(result.data);
-    // })();
-
-
-
-    // const data = new URLSearchParams();
-    // for (const pair of new FormData(formElement)) {
-    //     data.append(pair[0], pair[1]);
-    // }
     
-    // fetch(`https://just-original.herokuapp.com/api/v1/projects`, {
-    //     method: 'post',
-    //     body: data,
-    // })
     
 
     return (
@@ -166,18 +146,18 @@ export const AdminProjects = () => {
                                     onChange={(e) => setUrl(e.target.value)}
                                     />
                                     <input 
-                                    type='date'
+                                    type='number'
                                     className={"mb-3 border greyBG rounded w-100"} 
-                                    name='created_at' 
-                                    placeholder={"Created"} 
-                                    onChange={(e) => setCreated_at(e.target.value)}
+                                    name='category_id' 
+                                    placeholder={"Category"} 
+                                    onChange={(e) => setCategory_id(e.target.value)}
                                     />
                                     <input 
-                                    type='date'
+                                    type='text'
                                     className={"mb-3 border greyBG rounded w-100"} 
-                                    name='updated_at' 
-                                    placeholder={"Update"} 
-                                    onChange={(e) => setUpdated_at(e.target.value)}
+                                    name='status' 
+                                    placeholder={"Status"} 
+                                    onChange={(e) => setStatus(e.target.value)}
                                     />
                                     
                                 </div>

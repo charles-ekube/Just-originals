@@ -27,9 +27,11 @@ const Home = () => {
                      <section className='home-text'>
                          <article>
                              <h1 data-aos="fade-up"  data-aos-duration="1000">
-                             Operations keeps the lights on, strategy provides a light at the end of the tunnel.
-                            
+                                Operations keeps the lights on
                              </h1>
+                             <p>
+                                 We help you manage your businesses and give you a platform to show your products and services 
+                             </p>
                          </article>
                      </section>
                      <section className='home-carousel'>

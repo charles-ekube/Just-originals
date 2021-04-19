@@ -36,11 +36,11 @@ const Routes = (props) => {
                 <MyRoutes path='/blogpage' Component={BlogPage} exact {...props} />
                 <MyRoutes path='/postrequest' Component={PostRequest} exact {...props} />
                 <MyRoutes path='/admin' Component={Dashboard} exact {...props} isdmin />
-                <MyRoutes path='/home' Component={HomeScreen} exact {...props} isdmin />
+                <MyRoutes path='/adminhome' Component={HomeScreen} exact {...props} isdmin />
                 <MyRoutes path='/adminProjects' Component={AdminProjects} exact {...props} isdmin />
                 <MyRoutes path='/talents' Component={Talents} exact {...props} isdmin />
                 <MyRoutes path='/new_talent' Component={NewTalent} exact {...props} isdmin />
-                <MyRoutes path='/edit_talent' Component={EditTalent} exact {...props} isdmin />
+                <MyRoutes path='/edit_talent/:id' Component={EditTalent} exact {...props} isdmin />
                 <MyRoutes path='/adminblog' Component={AdminBlog} exact {...props} isdmin />
                 <MyRoutes path='/clients' Component={Client} exact {...props} isdmin />
             </Switch>

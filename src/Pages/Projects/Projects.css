@@ -41,8 +41,8 @@
 /* mediaqueries */
 
 @media only screen 
-  and (min-device-width: 300px) 
-  and (max-device-width: 460px) 
+  and (min-device-width: 280px) 
+  and (max-device-width: 765px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     
     .projects-container {
@@ -57,7 +57,7 @@
     .projects-intro-text h1 {
         width: 100%;
         text-align: center;
-        font-size: 40px;
+        font-size: 30px;
     }
     .projects-intro-text p {
         width: 100%;

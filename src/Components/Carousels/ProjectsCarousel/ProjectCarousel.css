@@ -115,10 +115,10 @@ button.rec-dot:active {
         width: 100%;
         height: 44px;
         font-size: 35px;
-        margin-left: 7px;
+        margin-left: -2px;
     }
     .carousel-main-container-text span {
-        margin-left: 7px;
+        margin-left: -2px;
         line-height: 28px;
 }
     .carousel-mini-container {

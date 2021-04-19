@@ -1,9 +1,56 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { BlogCard } from '../../../Components';
 
 const id = String(Math.random()).split(".").join("_");
 
 export const AdminBlog = () => {
+
+    const [title, setTitle] = useState("");
+    const [avatar, setAvatar] = useState("");
+    const [url, setUrl] = useState("");
+    const [writer, setWriter] = useState("");
+    const [category_url, setCategory_url] = useState("");
+    const [description, setDescription] = useState("");
+    
+
+    const handleBlogUpdate = async (e) => {
+        e.preventDefault();
+        console.log(title, url, writer, category_url, avatar, description);
+        const formData = new FormData();
+        formData.append('title', title);
+        formData.append('url', url);
+        formData.append('writer', writer);
+        formData.append('category_url', category_url);
+        formData.append('avatar', avatar);
+        formData.append('description', description);
+
+        
+        let result = await fetch(`https://just-original.herokuapp.com/api/v1/blogs`,{
+            method : 'POST',
+            body : formData
+        }) ;
+        alert('updated');
+        console.log(result);
+    }
+
+
+    const [Blogs, setBlogs] = React.useState([]);
+
+        useEffect(() => {
+    
+            const fetchBlogs = async () => {
+     
+            
+                const response = await fetch(`https://just-original.herokuapp.com/api/v1/projects`);
+                const data = await response.json()
+                const item = data.data ;
+                const lists = Object.values(item);
+                setBlogs(lists);
+            }
+            fetchBlogs();
+        }, []);
+    
+
     return (
         <div className="px-4 container">
             <h4 className="mt-5"><b>Blog</b></h4>
@@ -37,15 +84,14 @@ export const AdminBlog = () => {
                     </thead>
 
                     <tbody>
-                        <BlogCard />
-                        <BlogCard />
-                        <BlogCard />
+                        <BlogCard  Blogs={Blogs} setBlogs={setBlogs}/>
                     </tbody>
                 </table>
             </div>
 
             {/* create modal */}
             <div className="modal fade" id={`createModal${id}`} tabindex="-1" role="dialog" aria-hidden="true">
+                <form onSubmit={handleBlogUpdate}>
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -57,21 +103,56 @@ export const AdminBlog = () => {
                         <div className="modal-body p-5 text-center">
                             <div className="row">
                                 <div className="col-4">
-                                    <div style={{ height: 120 }} className={"w-100 bg-secondary"}></div>
-                                    <small>upload image</small>
+                                <input 
+                                style={{background:'#eee', height:'120px', width:'120px'}}
+                                    type="file" 
+                                    name="avatar" 
+                                    placeholder="Upload Image"
+                                    onChange={(e) => setAvatar(e.target.files[0])}
+                                />
                                 </div>
                                 <div className="col-8">
-                                    <input className={"mb-3 border greyBG rounded w-100"} placeholder={"Name"} />
-                                    <input className={"mb-3 border greyBG rounded w-100"} placeholder={"Occupation"} />
-                                    <textarea className={"mb-3 border greyBG rounded w-100"} placeholder={"Tagline"} />
+                                    <input
+                                     className={"mb-3 border greyBG rounded w-100"} 
+                                     placeholder={"Title"} 
+                                     name='title'
+                                     onChange={(e) => setTitle(e.target.value)}
+                                     />
+                                    <input 
+                                    className={"mb-3 border greyBG rounded w-100"} 
+                                    name='url' 
+                                    placeholder={"Tagline"} 
+                                    onChange={(e) => setUrl(e.target.value)}
+                                    />
+                                    <input 
+                                    className={"mb-3 border greyBG rounded w-100"} 
+                                    name='category_url' 
+                                    placeholder={"Category"} 
+                                    onChange={(e) => setCategory_url(e.target.value)}
+                                    />
+                                    
+                                    <input 
+                                    className={"mb-3 border greyBG rounded w-100"} 
+                                    name='writer' 
+                                    placeholder={"Author"} 
+                                    onChange={(e) => setWriter(e.target.value)}
+                                    />
+                                    
+                                    <textarea 
+                                    className={"mb-3 border greyBG rounded w-100"} 
+                                    placeholder={"Description"}
+                                    name='content'
+                                    onChange={(e) => setDescription(e.target.value)}
+                                    />
                                 </div>
                             </div>
                         </div>
                         <div className="modal-footer justify-content-center">
-                            <button type="button" className="btn btn-md px-5 btn-primary primaryBG">CREATE</button>
+                            <button type="submit" className="btn btn-md px-5 btn-primary primaryBG">CREATE</button>
                         </div>
                     </div>
                 </div>
+            </form>
             </div>
 
         </div>

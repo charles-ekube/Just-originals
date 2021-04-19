@@ -1,18 +1,67 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import user from "../../../Assets/ex1.png";
 
 export const NewTalent = () => {
+
+    const [name, setName] = useState("");
+    const [avatar, setAvatar] = useState("");
+    const [services, setServices] = useState("");
+    const [category_id, setCategory_id] = useState("");
+   
+    
+
+    const handleTalentUpdate = async (e) => {
+        e.preventDefault();
+        console.log(name, services, category_id, avatar);
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('services', services);
+        formData.append('category_id', category_id);
+        formData.append('avatar', avatar);
+
+        
+        let result = await fetch(`https://just-original.herokuapp.com/api/v1/talents`,{
+            method : 'POST',
+            body : formData
+        }) ;
+        alert('updated');
+        console.log(result);
+    }
+
+
+    // const [Blogs, setBlogs] = React.useState([]);
+
+    //     useEffect(() => {
+    
+    //         const fetchBlogs = async () => {
+     
+            
+    //             const response = await fetch(`https://just-original.herokuapp.com/api/v1/projects`);
+    //             const data = await response.json()
+    //             const item = data.data ;
+    //             const lists = Object.values(item);
+    //             setBlogs(lists);
+    //         }
+    //         fetchBlogs();
+    //     }, []);
+    
+
+
     return (
         <div className="px-4 container pb-5">
             <h4 className="mt-5"><b>New Talent</b></h4>
 
+            <form onSubmit={handleTalentUpdate}>
             <div className={"my-5 row"}>
                 <div className={"col-4 text-center"}>
-                    <div className={"w-100 bg-info"} style={{ height: 200 }}>
-
-                    </div>
-                    <Link className={"text-center small"}>Upload Image</Link>
+                    <input
+                        style={{ background: '#eee', height: '120px', width: '120px' }}
+                        type="file"
+                        name="avatar"
+                        placeholder="Upload Image"
+                        onChange={(e) => setAvatar(e.target.files[0])}
+                    />
                 </div>
 
                 <div className={"col-8"}>
@@ -20,15 +69,33 @@ export const NewTalent = () => {
 
                         <div className={"d-flex my-3"}>
                             <label className={"small w-25"}>Name:</label>
-                            <input className={"w-50 border p-2 bg-white rounded small"} placeholder={"Enter name"} />
+                            <input
+                                className={"w-50 border p-2 bg-white rounded small"} 
+                                placeholder={"Enter name"} 
+                                name='title'
+                                onChange={(e) => setName(e.target.value)}
+                            />
                         </div>
                         <div className={"d-flex my-3"}>
                             <label className={"small w-25"}>Category:</label>
-                            <input className={"w-50 border p-2 bg-white rounded small"} placeholder={"Enter Category name"} />
+                            <input
+                                className={"w-50 border p-2 bg-white rounded small"} 
+                                placeholder={"Category"} 
+                                name='category_id'
+                                onChange={(e) => setCategory_id(e.target.value)}
+                            /> 
                         </div>
                         <div className={"d-flex my-3"}>
                             <label className={"small w-25"}>Services:</label>
-                            <textarea style={{ height: 120 }} className={"border w-50 bg-white p-2 rounded small"} placeholder={"Enter Category name"} />
+                            <input
+                                className={"w-50 border p-2 bg-white rounded small"} 
+                                placeholder={"Service"} 
+                                name='services'
+                                onChange={(e) => setServices(e.target.value)}
+                            />
+                        </div>
+                        <div className="modal-footer justify-content-center">
+                            <button type="submit" className="btn btn-md px-5 btn-primary primaryBG">CREATE</button>
                         </div>
 
                         <div className={"d-flex my-3"}>
@@ -86,7 +153,7 @@ export const NewTalent = () => {
                     </div>
                 </div>
             </div>
-
+        </form>
         </div>
     )
 }

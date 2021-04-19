@@ -45,7 +45,7 @@ export const ProjectCards = () => {
                 
                 <div className='project-card-footer'>
                     <ul className='project-card-footer-links'>
-                        <li>{project.name}</li>
+                        <li>{project.title}</li>
                         <li>3</li>
                     </ul>
                 </div>
@@ -131,23 +131,26 @@ export const ExploreCards = () => {
 }
 
 
-const Cards = () => {
+const Cards = (props) => {
     AOS.init();
     const [showModal, setShowModal] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
     const toggleModal = () => {
         setShowModal(prev => !prev);
+        
     }
     const [CarouselCards, setCarouselCards] = React.useState([]);
 
         useEffect(() => {
     
-            const fetchCarouselCards = async () => {
+            const fetchCarouselCards = async (carouselcard) => {
      
                 const response = await fetch(`https://just-original.herokuapp.com/api/v1/projects`);
                 const data = await response.json()
                 const item = data.data ;
                 const lists = Object.values(item);
                 setCarouselCards(lists);
+                setSelectedProject(carouselcard)
             }
             fetchCarouselCards();
         }, []);
@@ -164,7 +167,8 @@ const Cards = () => {
         {CarouselCards && CarouselCards.map(carouselcard => (
             <section className='card-container' data-aos="fade-up"  data-aos-duration="1000">
                 <div className='card-image-container'>
-                    <img src={carouselcard.avatar} alt='poster'onClick={() =>toggleModal()} />                  
+                    <img src={carouselcard.avatar} alt='poster' />
+                    {/* onClick={() =>toggleModal()}                   */}
                 </div>
                 <div className='card-footer'>
                     <ul>
@@ -174,7 +178,7 @@ const Cards = () => {
                 </div>
             </section>
             ))}
-            <Modal showModal={showModal} setShowModal={setShowModal} handleNext={handleNext}/> 
+            <Modal showModal={showModal} setShowModal={setShowModal} handleNext={handleNext}  CarouselCards={selectedProject}/> 
         </>
     )
 }

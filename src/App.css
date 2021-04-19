@@ -63,7 +63,7 @@ html body {
   
   .adminGrid>*:nth-child(2) {
     grid-column: sidebar;
-    background-color: #7008F4;
+    background-color: #fff;
   }
   
   .adminGrid>*:nth-child(3) {

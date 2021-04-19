@@ -5,27 +5,30 @@ import elipses from "../../Assets/elipses.svg";
 
 const id = String(Math.random()).split(".").join("_");
 
-export const BlogCard = () => {
+export const BlogCard = ({Blogs, setBlogs}) => {
     return (
         <>
+        {Blogs && Blogs.map(blog => (   
+        
+        <main>
             <tr className={"align-items-center bg-white"}>
                 <td className={"align-middle"}><input type="checkbox" /></td>
 
-                <td className={"align-middle"}><img src={user} alt="" className={"rounded border avatar"} /></td>
+                <td className={"align-middle"}><img src={blog.avatar} alt="" className={"rounded border avatar"}  width='50px' height='50px'/></td>
 
                 <td className={"align-middle text-left text-wrap"}>
-                    <p>Dolore aliqua dolore et enim incididunt deserunt magna culpa.</p>
+                    <p>{blog.title}</p>
                 </td>
 
                 <td className={"align-middle text-nowrap"}>
-                    <p>Fashion Designing</p>
+                    <p>{blog.category_url}</p>
                 </td>
 
                 <td className={"align-middle text-nowrap"}>
-                    <p>Dec 23rd 2020</p>
+                    <p>{blog.created_at}</p>
                 </td>
 
-                <td className={"align-middle text-nowrap"}>Nonson Amadi</td>
+                <td className={"align-middle text-nowrap"}>{blog.writer}</td>
 
                 <td className={"align-middle text-nowrap text-right"}>
                     <Link to="#"><small>See more</small></Link>
@@ -33,7 +36,7 @@ export const BlogCard = () => {
 
                 <td className={"align-middle"}>
                     <div className="dropleft">
-                        <img src={elipses} className={"rounded-circle p-2 dropdown-toggle"} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                        <img src={elipses} className={"rounded-circle p-2 dropdown-toggle"} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  alt='poster'/>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <p className="dropdown-item" data-toggle="modal" data-target={`#editModal${id}`} >Edit</p>
                             <p className="dropdown-item" data-toggle="modal" data-target={`#deleteModal${id}`}>Remove</p>
@@ -42,7 +45,7 @@ export const BlogCard = () => {
                 </td>
             </tr>
 
-            {/* delete modal */}
+            
             <div className="modal fade" id={`deleteModal${id}`} tabindex="-1" role="dialog" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
@@ -57,7 +60,7 @@ export const BlogCard = () => {
                 </div>
             </div>
 
-            {/* edit modal */}
+          
             <div className="modal fade" id={`editModal${id}`} tabindex="-1" role="dialog" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
@@ -86,6 +89,8 @@ export const BlogCard = () => {
                     </div>
                 </div>
             </div>
+            </main>
+        ))}
         </>
     )
 }

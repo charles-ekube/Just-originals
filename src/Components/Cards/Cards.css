@@ -26,6 +26,13 @@
     display: flex;
     justify-content: space-between;
 }
+.card-footer ul :first-child {
+    font-size: 20px;
+    color: #7008F4;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+}
 
 .explore-card-container {
     display: flex;
@@ -117,7 +124,7 @@
 /* mediaqueries */
 
 @media only screen 
-  and (min-device-width: 300px) 
+  and (min-device-width: 280px) 
   and (max-device-width: 400px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .card-container {
@@ -133,50 +140,54 @@
         padding: 0 30px;
     }
     .project-card-container {
-        width: 340px;
+        width: 320px;
         height: 400px;
-        margin: 0 auto;   
+        margin: 0 auto 30px auto;   
+        padding: 0 10px;
     }
     .project-card-image {
-        width: 340;
-        height: 320px;
-    }
-    .explore-card-container {
-        width: 340px;
-        height: 400px; 
-        margin: 0 auto;    
-    }
-    .explore-card-image {
-        width: 340px;
+        width: 320;
         height: 320px;
     }
     
+    .explore-card-container {
+        width: 300px;
+        height: 400px; 
+        margin: 0 auto 30px auto;    
+        padding: 0 10px;
+    }
+    .explore-card-image {
+        width: 300px;
+        height: 320px;
+    }
+    .explore-card-footer-links>:first-child {
+        width: 240px;
+    }   
      
   }
 
   @media only screen 
   and (min-device-width: 401px) 
-  and (max-device-width: 500px) 
+  and (max-device-width: 868px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .card-container {
-        width: 375px;
+        width: 390px;
         height: 400px;
         margin-bottom: 20px;
-        border: 1px solid red;
       
     }
     .card-image-container {
         height: 350px;
-        width: 374px;
+        width: 390px;
     }
     .card-footer {
-        padding: 0 30px;
+        padding: 0 10px;
         margin-bottom: 10px;
     }
     .project-card-container {
         width: 370px;
         height: 400px;
-        margin: 0 auto;   
+        margin: 0 auto 30px auto;   
     }
     .project-card-image {
         width: 370;
@@ -185,10 +196,13 @@
     .explore-card-container {
         width: 370px;
         height: 400px; 
-        margin: 0 auto;    
+        margin: 0 auto 30px auto;    
     }
     .explore-card-image {
         width: 370px;
         height: 350px;
     } 
+    .explore-card-footer-links>:first-child {
+        width: 240px;
+    }
   }

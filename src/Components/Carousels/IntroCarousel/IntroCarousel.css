@@ -54,7 +54,7 @@
 
 
   @media only screen 
-  and (min-device-width: 300px) 
+  and (min-device-width: 280px) 
   and (max-device-width: 400px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .each-fade {
@@ -70,16 +70,22 @@
   and (-webkit-min-device-pixel-ratio: 1) {
     .image-container {
       position: relative;
-
+      left: -2px;
       box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   } 
   .each-fade { 
     width: 100%;
     margin: 0;
     height: 500px;
-  
+
     
   }
+  .each-fade > div {
+    width: 95%;
+    margin: 0 auto;
+    
+  }
+  
   }
 
 

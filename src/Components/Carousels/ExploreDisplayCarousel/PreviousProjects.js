@@ -72,6 +72,31 @@ const PreviousProjects =  () => {
           <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
           </div>
       </SwiperSlide>
+      <SwiperSlide>
+          <div className='content-holder'>
+          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
+          </div>
+      </SwiperSlide>
+      <SwiperSlide>
+          <div className='content-holder'>
+          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
+          </div>
+      </SwiperSlide>
+      <SwiperSlide>
+          <div className='content-holder'>
+          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
+          </div>
+      </SwiperSlide>
+      <SwiperSlide>
+          <div className='content-holder'>
+          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
+          </div>
+      </SwiperSlide>
+      <SwiperSlide>
+          <div className='content-holder'>
+          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
+          </div>
+      </SwiperSlide>
     </Swiper> 
     </>
     )

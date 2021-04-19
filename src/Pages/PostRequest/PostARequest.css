@@ -1,8 +1,9 @@
 .post-request-logo {
-    border: 1px solid red;
     height: 50px;
     width: 200px;
     position: relative;
+    top: 30px;
+    left: 130px;
 }
 
 .post-request-content-container {
@@ -42,13 +43,15 @@
     color: #121212;
 }
 .post-request-form-input textarea {
-    height: 300px;
-    width: 100%;
-    background: darkgray;
+    background: #FBF8FB;
+    width: 990px;
+    height: 404px;
+    border-radius: 3px;
+    border: none;
     margin-bottom: 20px;
 }
 .post-request-form-input button {
-    background: darkmagenta;
+    background: rgba(112, 8, 244, 1);
     color:#fff;
     border: none;
     border-radius: 3px;
@@ -56,26 +59,43 @@
     width: 100px;
 }
 .post-request-form-input input {
+    width: 503px;
     height: 50px;
-    width: 50%;
-    background: tomato;
+    background: #FBF8FB;
+    border-radius: 3px;
     border: none;
     margin-bottom: 50px;
 }
-.post-request-form-input input[type="file" i] {
-    background: red;
+
+#attach-files::-webkit-file-upload-button {
+    visibility: hidden;
 }
+#attach-files::before {
+    content: 'Attach Files';
+    /* display: inline-block; */
+    background: rgba(112, 8, 244, 1);
+    border: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    height: 35px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
  
 @media only screen 
   and (min-device-width: 280px) 
   and (max-device-width: 764px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .post-request-logo {
-        border: 1px solid red;
         height: 50px;
         width: 100px;
-        display: flex;
-       align-items: center;
+        position: relative;
+        top: 10px;
+        left: 30px;
     }
    
     .post-request-content-container {

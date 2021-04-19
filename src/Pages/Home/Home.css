@@ -12,13 +12,22 @@
      padding-left: 130px; 
 }
 .home-text h1 {
-    width: 631px;
+    width: 650px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 47px;
     line-height: 70px;
     color: #FFFDFF; 
+}
+.home-text p {
+    width: 631px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    color: #FFFDFF;
 }
 .home-carousel {
     background: #fff;
@@ -51,7 +60,7 @@
         height: 850px;
     }
     .home-text {
-        padding: 50px 0;
+        padding: 90px 0;
         width: 100%;
     }
     
@@ -74,12 +83,20 @@
     .home-text h1 {
         width: 100%;
         text-align: center;
-        font-size:25px;
+        font-size:30px;
         padding: 0 0.2px;
         line-height:45px;
-        padding-bottom: 150px;     
+             
     }
     
+.home-text p {
+    width: 100%;
+    font-size:18px;
+    text-align: center;
+    line-height: 30px;
+    padding-bottom: 150px;
+    padding-left: 0;
+}
   }
 
   @media only screen 
@@ -92,7 +109,7 @@
         /* align-items: center; */
     }
     .home-text {
-        padding: 60px 0;
+        padding: 120px 0;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -117,15 +134,24 @@
     .home-text h1 {
         width: 405px;
         text-align: center;
-        font-size:30px;
-        line-height:45px;
-        padding-bottom: 150px;     
+        font-size:35px;
+        line-height:45px;     
     } 
+    
+.home-text p {
+    width: 97%;
+    margin: 0 auto;
+    font-size:18px;
+    text-align: center;
+    line-height: 30px;
+    padding-bottom: 100px;
+    padding-left: 0;
+}
   }
 
   @media only screen 
   and (min-device-width: 501px) 
-  and (max-device-width: 768px) 
+  and (max-device-width: 868px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .home-container {
         grid-template-columns:100%;
@@ -133,7 +159,7 @@
         align-items: center;
     }
     .home-text {
-        padding: 60px 0;
+        padding: 150px 0;
         width: 100%;
         display: flex;
         justify-content: center;

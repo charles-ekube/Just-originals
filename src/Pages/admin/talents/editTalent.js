@@ -1,16 +1,22 @@
 import React from 'react'
+import { useLocation } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import user from "../../../Assets/ex1.png";
 
-export const EditTalent = () => {
+export const EditTalent = (props) => {
+
+
+    const { state } = useLocation();
+
+
     return (
         <div className="px-4 container pb-5">
             <h4 className="mt-5"><b>Edit Talent</b></h4>
 
             <div className={"my-5 row"}>
                 <div className={"col-4 text-center"}>
-                    <div className={"w-100 bg-info"} style={{ height: 200 }}>
-
+                    <div className={"w-100 bg-info"} style={{ height:'300px', width:'200px' }}>
+                        <img src={state?.avatar} alt='poster' width='100%' height='100%'/>    
                     </div>
                     <Link className={"text-center small"}>Upload Image</Link>
                 </div>
@@ -20,17 +26,29 @@ export const EditTalent = () => {
 
                         <div className={"d-flex my-3"}>
                             <label className={"small w-25"}>Name:</label>
-                            <input className={"w-50 border p-2 bg-white rounded small"} placeholder={"Enter name"} />
+                            <input
+                             className={"w-50 border p-2 bg-white rounded small"} 
+                            placeholder={"Enter name"}
+                            value={state?.title} 
+                            />
                         </div>
                         <div className={"d-flex my-3"}>
                             <label className={"small w-25"}>Category:</label>
-                            <input className={"w-50 border p-2 bg-white rounded small"} placeholder={"Enter Category name"} />
+                            <input 
+                            className={"w-50 border p-2 bg-white rounded small"} 
+                            placeholder={"Enter Category name"} 
+                            value={state?.talent_id}
+                            />
                         </div>
                         <div className={"d-flex my-3"}>
                             <label className={"small w-25"}>Services:</label>
-                            <textarea style={{ height: 120 }} className={"border w-50 bg-white p-2 rounded small"} placeholder={"Enter Category name"} />
+                            <input 
+                            className={"w-50 border p-2 bg-white rounded small"} 
+                            placeholder={"Services"} 
+                            value={state?.services}
+                            />
                         </div>
-
+                        
                         <div className={"d-flex my-3"}>
                             <label className={"small w-25"}>Team:</label>
 

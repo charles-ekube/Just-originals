@@ -24,7 +24,7 @@ const PostRequest = () => {
                         <textarea data-max-words='2000'  data-announce='true'></textarea>
                     </div>
                     <div className='post-request-form-input'>
-                        <input type="file" multiple  />
+                        <input type="file" multiple  id='attach-files'/>
                     </div>
                     <div className='post-request-form-input'>
                         <label>

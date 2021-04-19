@@ -23,7 +23,7 @@ const Navbar = ({navColor, logoBg}) => {
     let menuMask
 
     if(showMenu) {
-        menu = <aside className='mobile-nav-container' data-aos="fade-in-left"  data-aos-duration="2000">
+        menu = <aside className='mobile-nav-container animate__animated animate__slideInLeft'>
             <header>
                 <nav>
                     <ul className='mobile-menu-list'>

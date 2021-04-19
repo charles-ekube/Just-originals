@@ -14,7 +14,7 @@
 
 @media only screen 
   and (min-device-width: 280px) 
-  and (max-device-width: 764px) 
+  and (max-device-width: 868px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .loader-container {
         background: #fff;
@@ -24,7 +24,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 160px;
+        padding-left: 140px;
     } 
     .loader-container img {
         width: 100%;

@@ -14,6 +14,8 @@ const Background = styled.div`
     z-index : 20;
     justify-content : center;
     align-items : center;
+
+    
 `
 const ModalWrapper = styled.div`
     width : 800px;
@@ -26,6 +28,16 @@ const ModalWrapper = styled.div`
     position : relative;
     z-index : 10;
     border-radius : 10px;
+   
+    @media only screen 
+  and (min-device-width: 280px) 
+  and (max-device-width: 868px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    grid-template-columns : repeat(1, 1fr);
+    width :400px;
+    top:-70px;
+    height:400px;
+  }
 `
 
 const ModalImg = styled.img`
@@ -33,6 +45,14 @@ const ModalImg = styled.img`
      height : 500px;
     border-radius : 10px;
     background : #000;
+    @media only screen 
+  and (min-device-width: 280px) 
+  and (max-device-width: 868px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    grid-template-columns : repeat(1, 1fr);
+    width :400px;
+    height:400px;
+  }
 `
 
 const ModalContent = styled.div`
@@ -54,7 +74,7 @@ const CloseModalButton = styled(MdClose)`
     z-index : 10;
 ` 
 
-const Modal = ({showModal, setShowModal}) => {
+const Modal = ({showModal, setShowModal,  CarouselCards}) => {
 
     const ModalRef = useRef();
     const CloseModal = e => {
@@ -62,13 +82,15 @@ const Modal = ({showModal, setShowModal}) => {
             setShowModal(false);
         }
     }
+  
     return (
         <>
          {showModal ?(
             <Background ref={ModalRef} onClick={CloseModal}>
                 <ModalWrapper showModal={showModal}>
                     <ModalContent>
-                        <h1>DJ</h1>
+                        {/* <h1>{carouselcard.url}</h1> */}
+                        {/* <h1>{carouselcard.title}</h1> */}
                         <p>
                             loremcjnscjscnsjncsjcnscjnscjnscnsjcsjncs
                             scnjcscjnscjnscjnscjsncnsc

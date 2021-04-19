@@ -40,11 +40,11 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
-    text-decoration-line: underline;
+    font-size: 17px;
+    line-height: 23px;
+    text-decoration-line: none;
     color: #FFFDFF;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 }
 .footer-base-content {
     display: flex;
@@ -76,6 +76,7 @@
     left: 50px;
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 10px;
 }
 .footer-base-copyright {
     display: flex;

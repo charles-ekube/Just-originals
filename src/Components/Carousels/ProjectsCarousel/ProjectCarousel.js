@@ -11,7 +11,7 @@ const ProjectCarousel = () => {
  
  
     const breakPoints = [
-      { width : 1, itemsToShow : 1},
+      { width : 375, itemsToShow : 1},
       { width : 550, itemsToShow : 2},
       { width : 768, itemsToShow : 3},
       { width : 1200, itemsToShow : 4}
@@ -35,8 +35,8 @@ const ProjectCarousel = () => {
           <section className='carousel-mini-container'>
           <Carousel breakPoints={breakPoints}>
 
-            <Cards toggleModal={toggleModal}/>
-          
+            <Cards/>
+            {/* s toggleModal={toggleModal} */}
           </Carousel>
           <Modal showModal={showModal} setShowModal={setShowModal}/>
           </section>
