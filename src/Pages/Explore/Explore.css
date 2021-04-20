@@ -52,14 +52,16 @@
 
 }
 .explore-display-intro img {
-    width: 100%;
+    width: 80%;
+    height: 650px;
+    justify-self:right;
 }
 
 .explore-display-intro-text>ul {
     position: relative;
     list-style: none;
     padding: 0;
-    left: 350px;
+    left: 130px;
     top: 100px;
 }
 .explore-display-intro-text>ul :first-child {
@@ -73,12 +75,12 @@
     color: #5BE2FF;
 }
 .explore-display-intro-text>ul li {
-    width: 270px;
+    width: 350px;
     height: 72px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 45px;
     color: #7008F4;
 }
@@ -199,6 +201,7 @@
     .explore-display-intro {
         grid-template-columns: repeat(1, 1fr);
     }
+   
     
     .explore-display-intro-text>ul {
         position: relative;

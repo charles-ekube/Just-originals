@@ -11,7 +11,7 @@ import { B, Builder, Explorer } from '../../../Assets';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-const TeamsCarousel = () => {
+const TeamsCarousel = ({TalentTeam}) => {
     return (
         <>
             <Swiper
@@ -21,96 +21,26 @@ const TeamsCarousel = () => {
         onSlideChange={() => console.log('slide change')}
         className='teams-carousel-main-container'
     >
-      <SwiperSlide className='teams-carousel-container'>
-        <section className='teams-carousel-content'>
-          <div className='teams-carousel-header'>
-            <span></span>
-            <h2>Team</h2>
-            <div className='teams-carousel-nametag'>
-                <ul>
-                    <li>James Brown</li>
-                    <li>Painter</li>
-                </ul>
+
+      {TalentTeam && TalentTeam.map((team) => (
+          <SwiperSlide className='teams-carousel-container' key={team.id}>
+          <section className='teams-carousel-content'>
+            <div className='teams-carousel-header'>
+              <span></span>
+              <h2>Team</h2>
+              <div className='teams-carousel-nametag'>
+                  <ul>
+                      <li>{team.team_member}</li>
+                      <li>Painter</li>
+                  </ul>
+              </div>
             </div>
-          </div>
-          <div className='teams-carousel-img'>
-            <img src={Explorer} alt='poster'/>
-          </div>
-        </section>
-        
-      </SwiperSlide>
-      <SwiperSlide className='teams-carousel-container'>
-        <section className='teams-carousel-content'>
-          <div className='teams-carousel-header'>
-            <span></span>
-            <h2>Team</h2>
-            <div className='teams-carousel-nametag'>
-                <ul>
-                    <li>James Brown</li>
-                    <li>Painter</li>
-                </ul>
+            <div className='teams-carousel-img'>
+              <img src={Explorer} alt='poster'/>
             </div>
-          </div>
-          <div className='teams-carousel-img'>
-            <img src={Explorer} alt='poster'/>
-          </div>
-        </section>
-        
-      </SwiperSlide>
-      <SwiperSlide className='teams-carousel-container'>
-        <section className='teams-carousel-content'>
-          <div className='teams-carousel-header'>
-            <span></span>
-            <h2>Team</h2>
-            <div className='teams-carousel-nametag'>
-                <ul>
-                    <li>James Brown</li>
-                    <li>Painter</li>
-                </ul>
-            </div>
-          </div>
-          <div className='teams-carousel-img'>
-            <img src={Explorer} alt='poster'/>
-          </div>
-        </section>
-        
-      </SwiperSlide>
-      <SwiperSlide className='teams-carousel-container'>
-        <section className='teams-carousel-content'>
-          <div className='teams-carousel-header'>
-            <span></span>
-            <h2>Team</h2>
-            <div className='teams-carousel-nametag'>
-                <ul>
-                    <li>James Brown</li>
-                    <li>Painter</li>
-                </ul>
-            </div>
-          </div>
-          <div className='teams-carousel-img'>
-            <img src={Explorer} alt='poster'/>
-          </div>
-        </section>
-        
-      </SwiperSlide>
-      <SwiperSlide className='teams-carousel-container'>
-        <section className='teams-carousel-content'>
-          <div className='teams-carousel-header'>
-            <span></span>
-            <h2>Team</h2>
-            <div className='teams-carousel-nametag'>
-                <ul>
-                    <li>James Brown</li>
-                    <li>Painter</li>
-                </ul>
-            </div>
-          </div>
-          <div className='teams-carousel-img'>
-            <img src={Explorer} alt='poster'/>
-          </div>
-        </section>
-        
-      </SwiperSlide>     
+          </section>
+        </SwiperSlide>
+      ))}     
     </Swiper> 
         </>
     )

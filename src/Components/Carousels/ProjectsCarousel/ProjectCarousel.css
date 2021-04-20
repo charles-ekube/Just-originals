@@ -1,37 +1,7 @@
 .rec.rec-arrow {
-    position: absolute;
-    top: 120px;
-    right: 132px;
-    background-color: inherit;
-    border-radius: 0;
-    justify-content: space-between;
-    border: none;
+    display: none;
 }
-.rec.rec-arrow-left {
-    right: 160px;
-    border: none;
-}
-.rec.rec-pagination {
-    width: 94%;
-    background-color: #AAA8A8;
-}
-.cTIvzZ {
-    box-sizing: border-box;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    font-size: 1.6em;
-    color: #333;
-    border: none;
-    padding: 0;
-    width: 0 !important;
-    height: 0 !important;
-    line-height: 50px;
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-    cursor: pointer;
-    outline: none;
-}
+
 
 button.rec-dot {
     width:272px;

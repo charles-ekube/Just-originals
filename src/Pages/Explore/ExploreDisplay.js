@@ -3,15 +3,18 @@ import {  Loader, PreviousClients, ServicesCarousel, TestimoniesCarousel, Previo
 import './Explore.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// import {Link} from 'react-router-dom';
 import { Explore, Logo } from '../../Assets';
 import '../../Components/Carousels/ProjectsCarousel/ProjectCarousel.css';
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Footer } from '../../Widgets';
 
 
-const ExploreDisplay = ({Talents}) => {
+const ExploreDisplay = (props) => {
     AOS.init();
+
+
+    const { state } = useLocation();
+    let query = state?.talent_id;
 
     const [ spinner, setSpinner ] = React.useState(true);
   
@@ -19,7 +22,53 @@ const ExploreDisplay = ({Talents}) => {
         setTimeout(() => setSpinner(false), 5000)
     },[setSpinner])
 
-    // const { state } = useLocation();
+
+   
+    const [Teams, setTeams] = React.useState([]);
+
+    React.useEffect(() => {
+
+        const fetchTeams = async () => {
+        
+            const response = await fetch(`https://just-original.herokuapp.com/api/v1/talents/${query}/teams`);
+            const data = await response.json()
+            const item = data.data ;
+            const lists = Object.values(item);
+            setTeams(lists);
+        }
+        fetchTeams();
+    }, []);
+   
+    const [TalentProjects, setTalentProjects] = React.useState([]);
+
+    React.useEffect(() => {
+
+        const fetchTalentProjects = async () => {
+        
+            const response = await fetch(`https://just-original.herokuapp.com/api/v1/talents/${query}/projects`);
+            const data = await response.json()
+            const item = data.data ;
+            const lists = Object.values(item);
+            setTalentProjects(lists);
+            console.log(lists);
+        }
+        fetchTalentProjects();
+    }, []);
+   
+    const [TalentTestimonies, setTalentTestimonies] = React.useState([]);
+
+    React.useEffect(() => {
+
+        const fetchTalentTestimonies = async () => {
+        
+            const response = await fetch(`https://just-original.herokuapp.com/api/v1/talents/${query}/testimonies`);
+            const data = await response.json()
+            const item = data.data ;
+            const lists = Object.values(item);
+            setTalentTestimonies(lists);
+        }
+        fetchTalentTestimonies();
+    }, []);
    
    
     return (
@@ -36,11 +85,11 @@ const ExploreDisplay = ({Talents}) => {
                     <div className='explore-display-intro-text'>
                         <ul>
                             <li>Hello, I'm</li>
-                            <li>Rich Ude</li>
+                            <li>{state?.title}</li>
                             <li>Painter</li>
                         </ul>
                     </div>
-                    <img src={Explore} alt='poster'  data-aos="fade-up"  data-aos-duration="2000"/>
+                    <img src={state?.avatar} alt='poster'  data-aos="fade-up"  data-aos-duration="2000"/>
                 </section>
                 </section>
                 <section className='services-carousel'  data-aos="fade-up"  data-aos-duration="2000">
@@ -57,20 +106,20 @@ const ExploreDisplay = ({Talents}) => {
                         <span></span>
                         <h2>Previous Projects</h2>
                     </div>
-                    <PreviousProjects/>
+                    <PreviousProjects TalentProjects={TalentProjects}/>
                 </section>
                 <section className='testimonies-carousel-container'  data-aos="fade-up"  data-aos-duration="2000">
-                    <TestimoniesCarousel/>
+                    <TestimoniesCarousel TalentTestimonies={TalentTestimonies}/>
                 </section>
                 <section style={{background:'#fff', marginBottom:'30px'}}  data-aos="fade-up"  data-aos-duration="2000">
                 <div className='previous-projects-carousel-text'>
                         <span></span>
                         <h2>Previous Clients</h2>
                     </div>
-                    <PreviousClients/>
+                    <PreviousClients TalentProjects={TalentProjects}/>
                 </section>
                 <section  data-aos="fade-up"  data-aos-duration="2000">
-                    <TeamsCarousel/>
+                    <TeamsCarousel TalentTeam={Teams}/>
                 </section>
                 <section>
                     <Footer/>

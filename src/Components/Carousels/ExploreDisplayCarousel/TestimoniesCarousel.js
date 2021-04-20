@@ -11,7 +11,7 @@ import { B, Builder } from '../../../Assets';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-const TestimoniesCarousel = () => {
+const TestimoniesCarousel = ({TalentTestimonies}) => {
     return (
         <>
             <Swiper
@@ -21,137 +21,34 @@ const TestimoniesCarousel = () => {
         onSlideChange={() => console.log('slide change')}
         className='testimonies-carousel-main-container'
     >
-      <SwiperSlide className='testimonies-carousel-container'>
-        <section className='testimonies-carousel-content'>
-            <div className='testimonies-carousel-img'>
-                <img src={Builder} alt='poster' />
-            </div>
-            <div className='testimonies-carousel-text'>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-                <div className='testimonies-carousel-text-footer'>
-                    <img src={B} alt='poster'/>
-                    <span>Your dad</span>
+        {TalentTestimonies && TalentTestimonies.map((talenttestimony) => (
+
+            <SwiperSlide className='testimonies-carousel-container' key={talenttestimony.id}>
+            <section className='testimonies-carousel-content'>
+                <div className='testimonies-carousel-img'>
+                    <img src={talenttestimony.project.avatar} alt='poster' />
                 </div>
-                <div className='testimonies-svg'>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
+                <div className='testimonies-carousel-text'>
+                    <p>
+                        {talenttestimony.content} 
+                    </p>
+                    <div className='testimonies-carousel-text-footer'>
+                        <img src={B} alt='poster'/>
+                        <span>{talenttestimony.project.client}</span>
+                    </div>
+                    <div className='testimonies-svg'>
+                        <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
+                        </svg>
+                        <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
+                        </svg>
+                    </div>
                 </div>
-            </div>
-        </section>
-        
-      </SwiperSlide>
-      <SwiperSlide className='testimonies-carousel-container'>
-        <section className='testimonies-carousel-content'>
-            <div className='testimonies-carousel-img'>
-                <img src={Builder} alt='poster' />
-            </div>
-            <div className='testimonies-carousel-text'>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-                <div className='testimonies-carousel-text-footer'>
-                    <img src={B} alt='poster'/>
-                    <span>Your dad</span>
-                </div>
-                <div className='testimonies-svg'>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
-                </div>
-            </div>
-        </section>
-        
-      </SwiperSlide>
-      <SwiperSlide className='testimonies-carousel-container'>
-        <section className='testimonies-carousel-content'>
-            <div className='testimonies-carousel-img'>
-                <img src={Builder} alt='poster' />
-            </div>
-            <div className='testimonies-carousel-text'>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-                <div className='testimonies-carousel-text-footer'>
-                    <img src={B} alt='poster'/>
-                    <span>Your dad</span>
-                </div>
-                <div className='testimonies-svg'>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
-                </div>
-            </div>
-        </section>
-        
-      </SwiperSlide>
-      <SwiperSlide className='testimonies-carousel-container'>
-        <section className='testimonies-carousel-content'>
-            <div className='testimonies-carousel-img'>
-                <img src={Builder} alt='poster' />
-            </div>
-            <div className='testimonies-carousel-text'>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-                <div className='testimonies-carousel-text-footer'>
-                    <img src={B} alt='poster'/>
-                    <span>Your dad</span>
-                </div>
-                <div className='testimonies-svg'>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
-                </div>
-            </div>
-        </section>
-        
-      </SwiperSlide>
-      <SwiperSlide className='testimonies-carousel-container'>
-        <section className='testimonies-carousel-content'>
-            <div className='testimonies-carousel-img'>
-                <img src={Builder} alt='poster' />
-            </div>
-            <div className='testimonies-carousel-text'>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-                <div className='testimonies-carousel-text-footer'>
-                    <img src={B} alt='poster'/>
-                    <span>Your dad</span>
-                </div>
-                <div className='testimonies-svg'>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
-                    <svg width="108" height="179" viewBox="0 0 108 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M108 107.143H54.4286L90.1432 178.571H36.5718L0.857262 107.143V0H108V107.143Z" fill="#7C14FF"/>
-                    </svg>
-                </div>
-            </div>
-        </section>
-        
-      </SwiperSlide>
-      
+            </section>
+
+            </SwiperSlide>
+        ))}
     </Swiper> 
         </>
     )

@@ -12,7 +12,8 @@ import { Builder } from '../../../Assets';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-const PreviousProjects =  () => {
+const PreviousProjects =  ({TalentProjects}) => {
+    
     return (
       <>
      <Swiper 
@@ -42,61 +43,13 @@ const PreviousProjects =  () => {
         }}
        
     >
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide>
-          <div className='content-holder'>
-          <img src={Builder} alt='poster' style={{width:'100%', height:'100%'}}/>
-          </div>
-      </SwiperSlide>
+    {TalentProjects && TalentProjects.map((talentproject) => (
+        <SwiperSlide key={talentproject.id}>
+            <div className='content-holder'>
+                <img src={talentproject.projects.avatar} alt='poster' style={{width:'100%', height:'100%'}}/>
+            </div>
+    </SwiperSlide>
+    ))}
     </Swiper> 
     </>
     )

@@ -12,6 +12,11 @@
 .content-holder {
     width:280px; 
     height:300px;
+    background: #FFFDFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .services-carousel-container {
     width: 100%;
