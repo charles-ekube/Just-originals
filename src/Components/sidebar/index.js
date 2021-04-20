@@ -11,6 +11,7 @@ export const Sidebar = () => {
                 <li className="p-0"><NavLink activeClassName={"activeNavLink"} className={"pl-2 py-2 w-100 d-flex mb-1"} to="/talents">Talents</NavLink></li>
                 <li className="p-0"><NavLink activeClassName={"activeNavLink"} className={"pl-2 py-2 w-100 d-flex mb-1"} to="/clients">Clients</NavLink></li>
                 <li className="p-0"><NavLink activeClassName={"activeNavLink"} className={"pl-2 py-2 w-100 d-flex mb-1"} to="/adminblog">Blog</NavLink></li>
+                <li className="p-0"><NavLink activeClassName={"activeNavLink"} className={"pl-2 py-2 w-100 d-flex mb-1"} to="/messages">Messages</NavLink></li>
             </ul>
         </div>
     )

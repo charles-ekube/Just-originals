@@ -18,4 +18,5 @@ export * from './projectCard';
 export * from './talentCard';
 export * from './clientCard';
 export * from './blogCard';
+export * from './messagesCard';
 

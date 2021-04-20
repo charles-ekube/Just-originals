@@ -9,3 +9,4 @@ export * from "./talents/addTeams";
 export * from "./talents/addTestimonies";
 export * from "./client";
 export * from "./blog";
+export * from "./messages";
