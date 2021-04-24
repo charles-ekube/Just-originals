@@ -4,6 +4,7 @@ import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import './IntroCarousel.css';
 
+
 const IntroCarousel = () => {
 
   const properties = {
@@ -12,9 +13,10 @@ const IntroCarousel = () => {
   };
 
   const [Talents, setTalents] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-
+    
       const fetchTalents = async () => {
 
 
@@ -25,6 +27,8 @@ const IntroCarousel = () => {
 
           console.log(list);
           setTalents(list);
+          setIsLoading(false);      
+        
       }
       fetchTalents();
   }, []);
@@ -32,7 +36,9 @@ const IntroCarousel = () => {
 
     return (
         <>
+        {isLoading ? <div className='loader'></div> : 
          <div className="slidee-container">
+           
       <Fade {...properties}>
       {Talents && Talents.map(talent => (
 
@@ -48,7 +54,9 @@ const IntroCarousel = () => {
       
       ))}
       </Fade>
+  
     </div>
+        }
         </>
     )
 }

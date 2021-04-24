@@ -23,8 +23,12 @@ const ProjectCarousel = () => {
     const toggleModal = () => {
         setShowModal(true);
     }
+    const [isLoading, setIsLoading] = React.useState(true);
     
-
+    React.useEffect(() => {
+      setIsLoading(false);
+    },[])
+ 
     return (
         <>
         <section className='carousel-main-container'>
@@ -32,14 +36,16 @@ const ProjectCarousel = () => {
             <span></span>
             <h2>Previous Projects</h2>
           </div>
-          <section className='carousel-mini-container'>
-          <Carousel breakPoints={breakPoints}>
-
-            <Cards/>
-            {/* s toggleModal={toggleModal} */}
-          </Carousel>
-          <Modal showModal={showModal} setShowModal={setShowModal}/>
-          </section>
+         {isLoading ? <div className="loader" style={{top:'58%'}}></div> : (
+            <section className='carousel-mini-container'>
+            <Carousel breakPoints={breakPoints}>
+  
+              <Cards/>
+              {/* s toggleModal={toggleModal} */}
+            </Carousel>
+            <Modal showModal={showModal} setShowModal={setShowModal}/>
+            </section>
+         )}
           </section>          
         </>
     )

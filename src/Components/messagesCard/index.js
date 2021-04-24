@@ -32,42 +32,6 @@ export const MessageCard = ({ Messages, setMessages }) => {
                         <div className="dropleft">
                             <img src={elipses} className={"rounded-circle p-2 dropdown-toggle"} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                {/* <p onClick={(props) =>
-                                     history.push({
-                                        pathname: `/edit_talent/${talent.id}`,
-                                        state: { title : `${talent.name}`,
-                                                 avatar : `${talent.avatar}`,
-                                                 services : `${talent.services}`,
-                                                talent_id : `${talent.id}`
-                                        } })
-                                } className="dropdown-item" >Edit</p>
-                                <p onClick={(props) =>
-                                     history.push({
-                                        pathname: `/add_projects/${talent.id}`,
-                                        state : {
-                                            talent_id : `${talent.id}`,
-                                        }
-
-                                         })
-                                } className="dropdown-item" >Add Projects</p>
-                                <p onClick={(props) =>
-                                     history.push({
-                                        pathname: `/add_testimonies/${talent.id}`,
-                                        state : {
-                                            talent_id : `${talent.id}`,
-                                        }
-
-                                         })
-                                } className="dropdown-item" >Add Testimonies</p>
-                                <p onClick={(props) =>
-                                     history.push({
-                                        pathname: `/add_teams/${talent.id}`,
-                                        state : {
-                                            talent_id : `${talent.id}`,
-                                        }
-
-                                         })
-                                } className="dropdown-item" >Add Team</p> */}
                                 <p className="dropdown-item" data-toggle="modal" data-target={`#deleteModal${id}`}>Remove</p>
                             </div>
                         </div>
