@@ -48,13 +48,13 @@
 .explore-display-intro {
     width: 100%;
     display: grid;
-    grid-template-columns: 20% 80%;
+    gap: 135px;
+    grid-template-columns: 20%  70%;
 
 }
 .explore-display-intro img {
-    width: 80%;
-    height: 650px;
-    justify-self:right;
+    width: 100%;
+    height: 600px;
 }
 
 .explore-display-intro-text>ul {
@@ -63,6 +63,8 @@
     padding: 0;
     left: 130px;
     top: 100px;
+    display: flex;
+    flex-direction: column;
 }
 .explore-display-intro-text>ul :first-child {
     width: 102px;
@@ -75,21 +77,18 @@
     color: #5BE2FF;
 }
 .explore-display-intro-text>ul li {
-    width: 350px;
-    height: 72px;
+    width: 320px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
-    line-height: 45px;
+    line-height: 30px;
     color: #7008F4;
 }
 .explore-display-intro-text>ul :last-child {
     font-size: 16px;
     height: 20px;
-    position: relative;
-    top: -15px;
-    line-height: 0;
+    line-height: 20px;
     font-weight: normal;
    
 }
@@ -121,9 +120,9 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     position: relative;
     height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 .image {
     width: 100%;
@@ -160,12 +159,12 @@
 
 .testimonies-carousel-container {
     height: 600px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 @media only screen 
   and (min-device-width: 280px) 
-  and (max-device-width: 764px) 
+  and (max-device-width: 868px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     
     .explore-container {
@@ -196,44 +195,61 @@
     }
 
     .explore-logo {
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .explore-display-intro {
         grid-template-columns: repeat(1, 1fr);
+        gap:50px;
+        padding: 0 10px;
     }
    
     
     .explore-display-intro-text>ul {
         position: relative;
-        left: 20px;
-        top: 30px;
+        left: 0;
+        top: 20px;
     }
     
     .explore-display-intro-text>ul :first-child {
         font-size: 18px;
     }
     .explore-display-intro-text>ul li {
-        font-size: 30px;
+        font-size: 25px;
+        width: 300px;
+        height: 60px;
+        line-height: 30px;
     }
     .explore-display-intro-text>ul :last-child {
         font-size: 14px;  
+    }
+    .explore-display-intro img {
+        width: 100% !important;
+        height: 500px;
+        justify-self:left;
     } 
     .services-carousel {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         padding: 0 10px;
+      
     }
     .services-carousel-text {
         padding-top: 50px;
-        padding-left: 20px;
+        padding-left: 0;
     }
     
-    .services-carousel-text h2 {
-        font-size: 30px;
+    .previous-projects-carousel-container {
+        padding: 30px 10px ;
     }
     .previous-projects-carousel-text {
-        padding-top: 100px;
-        padding-left: 10px;
+        padding-top: 20px;
+        padding-left: 0;
+    }
+    .previous-projects-carousel-text h2 {
+        width: 100%;
+        height: 32px;
+        font-size: 25px;
+        line-height: 16px;
     }
     .testimonies-carousel-container {
         padding: 0;

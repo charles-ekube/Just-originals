@@ -89,7 +89,9 @@ const ExploreDisplay = (props) => {
                             <li>Painter</li>
                         </ul>
                     </div>
-                    <img src={state?.avatar} alt='poster'  data-aos="fade-up"  data-aos-duration="2000"/>
+                    <div>
+                        <img src={state?.avatar} alt='poster'  data-aos="fade-up"  data-aos-duration="2000"/>
+                        </div>
                 </section>
                 </section>
                 <section className='services-carousel'  data-aos="fade-up"  data-aos-duration="2000">
@@ -111,7 +113,7 @@ const ExploreDisplay = (props) => {
                 <section className='testimonies-carousel-container'  data-aos="fade-up"  data-aos-duration="2000">
                     <TestimoniesCarousel TalentTestimonies={TalentTestimonies}/>
                 </section>
-                <section style={{background:'#fff', marginBottom:'30px'}}  data-aos="fade-up"  data-aos-duration="2000">
+                <section style={{background:'#fff', padding:'30px 10px'}}  data-aos="fade-up"  data-aos-duration="2000">
                 <div className='previous-projects-carousel-text'>
                         <span></span>
                         <h2>Previous Clients</h2>

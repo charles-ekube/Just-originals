@@ -9,10 +9,10 @@ const Projects = () => {
     AOS.init();
 
 
-    const [spinner, setSpinner] = React.useState(false);
+    const [spinner, setSpinner] = React.useState(true);
 
     React.useEffect(() => {
-        setSpinner(true);
+        setSpinner(false);
     }, [setSpinner])
     return (
         <>
@@ -34,7 +34,7 @@ const Projects = () => {
                     </p>
                         </div>
                     </section>
-                    {spinner ? <div className='loader' style={{ top: '50%', left: '45%' }}></div> : (
+                    {spinner ? <div className='loader' style={{ top: '50%', left: '45%', marginBottom:'50px' }}></div> : (
                         <section className='projects-grid'>
                             <ProjectCards />
 

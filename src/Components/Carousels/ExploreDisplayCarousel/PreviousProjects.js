@@ -32,7 +32,7 @@ const PreviousProjects =  ({TalentProjects}) => {
             spaceBetween: 0
           },
           // when window width is >= 768px
-          768: {
+          868: {
             slidesPerView: 2,
             spaceBetween: 20
           },

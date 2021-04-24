@@ -19,8 +19,8 @@ const ServicesCarousel = () => {
      <Swiper
         autoplay={{delay:5000}}
         slidesPerView={1}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log('slide change')}
         className='services-carousel-container'
     >
       <SwiperSlide className='services-carousel-content'>

@@ -10,7 +10,7 @@
     position: absolute;
 }
 .content-holder {
-    width:280px; 
+    width:100%; 
     height:300px;
     background: #FFFDFF;
     display: flex;
@@ -49,7 +49,7 @@
     width: 408px;
     height: 480px;
     position: relative ;
-    left: 135px;
+    left: 100px;
     top: 60px;
     z-index: 5;
 }
@@ -146,14 +146,16 @@
           width: 100% !important;
         
       }
+      .swiper-container {
+          margin: 0;
+          width: 100%;
+      }
     .content-holder {
         height:300px;
-        width: 100% !important;
-        /* object-fit: cover; */
-        border: 1px solid red;
     }
     .content-holder img {
         width: 100% !important;
+        height: 100%;
     }
     .services-carousel-container {
         width: 100%;
@@ -180,6 +182,7 @@
         left:0;
         top: 0;
         width: 100%;
+        height: 100%;
        
     }
     .testimonies-carousel-text {

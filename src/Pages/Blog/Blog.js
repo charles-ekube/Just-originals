@@ -18,7 +18,7 @@ const Blog = () => {
 
     return (
         <>
-           {spinner ? <Loader/> : (
+           
         <section  data-aos="fade-down"  data-aos-duration="2000">
             <Navbar navColor='black' logoBg='#000'/>
             <main className='blog-main-container'>
@@ -157,7 +157,7 @@ const Blog = () => {
                 <Footer/>
             </section>
             </section>
-            )}     
+                
         </>
     )
 }

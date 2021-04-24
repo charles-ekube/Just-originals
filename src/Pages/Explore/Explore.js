@@ -13,13 +13,13 @@ const Explore = () => {
     const [ spinner, setSpinner ] = React.useState(true);
   
     React.useEffect(() => {
-        setTimeout(() => setSpinner(false), 5000)
+        setSpinner(false);
     },[setSpinner])
 
 
     return (
         <>
-        {spinner ? <Loader/> : (
+        
         <section  data-aos="fade-down"  data-aos-duration="2000">
         <Navbar navColor="black" logoBg='#000'/>
           <main className='explore-container'>
@@ -37,10 +37,12 @@ const Explore = () => {
                     </p>
                 </div>
             </section>
+            {spinner ? <div className='loader' style={{ top: '50%', left: '45%', marginBottom:'50px' }}></div> : (
             <section className='explore-grid'>
                     <ExploreCards />
             </section>  
-          </main>  
+            )}
+        </main>  
           <section>
                 <GetInTouch/>
             </section>
@@ -48,7 +50,7 @@ const Explore = () => {
                 <Footer/>
             </section>
             </section>
-            )}
+        
         </>
     )
 }
