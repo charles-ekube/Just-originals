@@ -16,12 +16,7 @@ const ExploreDisplay = (props) => {
     const { state } = useLocation();
     let query = state?.talent_id;
 
-    const [ spinner, setSpinner ] = React.useState(true);
-  
-    React.useEffect(() => {
-        setTimeout(() => setSpinner(false), 5000)
-    },[setSpinner])
-
+    
 
    
     const [Teams, setTeams] = React.useState([]);
@@ -73,7 +68,7 @@ const ExploreDisplay = (props) => {
    
     return (
         <>
-        {spinner ? <Loader/> : (
+        
             <section>
                 <Navbar navColor="black" logoBg='#000'/>
             
@@ -126,7 +121,7 @@ const ExploreDisplay = (props) => {
                 </section>
             </main>
             </section>
-        )}
+        
         </>
     )
 
