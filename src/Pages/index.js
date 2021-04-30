@@ -7,3 +7,4 @@ export * from  './Blog/BlogPage';
 export * from './Explore/ExploreDisplay';
 export * from './PostRequest/PostARequest';
 export * from "./admin";
+export * from "./Auth";

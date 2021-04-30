@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Home, Projects, Explore, ProjectDisplay, Blog, ExploreDisplay, Dashboard, HomeScreen, AdminProjects, Talents, NewTalent, EditTalent, AdminBlog, Client, BlogPage, PostRequest, AddProjects, AddTestimonies, AddTeams, Messages} from './Pages';
 import { Layout } from './Components';
+import SignUp from './Pages/Auth/SignUp';
 
 const LayoutWrapper = props => {
     return (
