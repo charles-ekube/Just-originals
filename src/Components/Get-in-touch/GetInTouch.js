@@ -83,9 +83,14 @@ const GetInTouch = () => {
                     onChange={({ target }) => setPhone(target.value)}
                     />
                 </div>
+                {isLoading ? 
                 <button>
-                    SEND A MESSAGE
+                  Sending...
+                </button>  :
+                <button>
+                  Send
                 </button>
+              }
             </form>
           </section>  
         </>

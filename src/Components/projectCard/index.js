@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import elipses from "../../Assets/elipses.svg";
 
 
 const id = String(Math.random()).split(".").join("_");
 
 export const ProjectCard = ({Projects, setProjects}) => {
+    const [status , setStatus] = useState('');
 
     return (
 
@@ -15,7 +16,7 @@ export const ProjectCard = ({Projects, setProjects}) => {
                 <tr className={"align-items-center bg-white"} key={project.category_id}>
                 <td className={"align-middle"}><input type="checkbox" /></td>
                 
-                <td className={"align-middle"}><img src={project.avatar} alt="" className={"rounded border avatar"} /></td>
+                <td className={"align-middle"}><img src={project.avatar} alt="" className={"rounded border avatar"} style={{width:'100px', height:'100px'}} /></td>
                 
                  <td className={"align-middle text-left"}>
                 <div>
@@ -54,20 +55,30 @@ export const ProjectCard = ({Projects, setProjects}) => {
                          <img src={elipses} className={"rounded-circle p-2 dropdown-toggle"} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <p className="dropdown-item" data-toggle="modal" data-target={`#editModal${id}`} >Edit</p>
-                           <p className="dropdown-item" data-toggle="modal" data-target={`#deleteModal${id}`}>Remove</p>
+                           <p className="dropdown-item" data-toggle="modal" data-target={`#deleteModal${project.id}`}>Remove</p>
                          </div>
                      </div>
                  </td>
          
-             <div className="modal fade" id={`deleteModal${id}`} tabindex="-1" role="dialog" aria-hidden="true">
+             <div className="modal fade" id={`deleteModal${project.id}`} tabindex="-1" role="dialog" aria-hidden="true">
              <div className="modal-dialog modal-dialog-centered" role="document">
                  <div className="modal-content">
                      <div className="modal-body p-5 text-center">
-                         <p>Are you sure you want to remove Uju Okeke from the list?</p>
+                         <p>Are you sure you want to remove {project.title} from the list?</p>
                      </div>
                      <div className="modal-footer justify-content-center">
                          <button type="button" className="btn btn-md px-5 btn-secondary" data-dismiss="modal">No</button>
-                         <button type="button" className="btn btn-md px-5 btn-primary primaryBG">Yes</button>
+                         <button type="button" className="btn btn-md px-5 btn-primary primaryBG"
+                              onClick= {
+                                async () => {
+                                   await fetch(`https://just-original.herokuapp.com/api/v1/projects/${project.id}`, { method: 'DELETE' });
+                                   setStatus('Delete successful');
+                                   setTimeout(function(){
+                                       window.location.reload('/adminblog');
+                                    }, 5000);
+                               }   
+                           }
+                         >Yes</button>
                      </div>
                  </div>
              </div>
@@ -115,6 +126,9 @@ export const ProjectCard = ({Projects, setProjects}) => {
                 
                 
             ))} 
+            <div>
+                {status}
+            </div>
         </> 
     )
 }

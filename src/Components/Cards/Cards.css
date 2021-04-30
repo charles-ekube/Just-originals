@@ -142,24 +142,24 @@
         padding: 0 30px;
     }
     .project-card-container {
-        width: 320px;
+        width: 370px;
         height: 400px;
         margin: 0 auto 30px auto;   
         padding: 0 10px;
     }
     .project-card-image {
-        width: 320;
+        width: 370;
         height: 320px;
     }
     
     .explore-card-container {
-        width: 300px;
+        width: 360px;
         height: 400px; 
         margin: 0 auto 30px auto;    
         padding: 0 ;
     }
     .explore-card-image {
-        width: 300px;
+        width: 360px;
         height: 320px;
     }
     .explore-card-footer-links>:first-child {

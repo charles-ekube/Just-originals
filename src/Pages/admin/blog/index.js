@@ -71,16 +71,18 @@ export const AdminBlog = () => {
             <div className={"my-5 table-responsive"}>
                 <table className={"table text-center table-hover"}>
                     <thead >
-                        <tr className={"grey200"}>
-                            <th><input type="checkbox" /></th>
-                            <th>Image</th>
-                            <th className={"text-left text-wrap"}>Title</th>
-                            <th>Category</th>
-                            <th>Date</th>
-                            <th>Writer</th>
-                            <th className={"text-left"}></th>
-                            <th>Action</th>
-                        </tr>
+                        
+                        <tr className={"grey200"} style={{display:'grid', gridTemplateColumns:'repeat(7, 1fr)'}}>
+                                <th><input type="checkbox" /></th>
+                                <th>Image</th>
+                                <th className={"text-left"}>Title</th>
+                                <th>Category</th>
+                                <th>Date</th>
+                                <th>Writer</th>     
+                                <th>Action</th>
+                            </tr>
+                           
+                        
                     </thead>
 
                     <tbody>

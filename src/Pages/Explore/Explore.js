@@ -9,13 +9,6 @@ import 'aos/dist/aos.css';
 
 const Explore = () => {
     AOS.init();
-    
-    const [ spinner, setSpinner ] = React.useState(true);
-  
-    React.useEffect(() => {
-        setSpinner(false);
-    },[setSpinner])
-
 
     return (
         <>
@@ -37,11 +30,11 @@ const Explore = () => {
                     </p>
                 </div>
             </section>
-            {spinner ? <div className='loader' style={{ top: '50%', left: '45%', marginBottom:'50px' }}></div> : (
+            
             <section className='explore-grid'>
                     <ExploreCards />
             </section>  
-            )}
+            
         </main>  
           <section>
                 <GetInTouch/>

@@ -3,11 +3,12 @@ import { Link, useHistory } from 'react-router-dom';
 import user from "../../Assets/ex1.png";
 import elipses from "../../Assets/elipses.svg";
 
-const id = String(Math.random()).split(".").join("_");
+// const id = String(Math.random()).split(".").join("_");
 
 export const TalentCard = ({ Talents, setTalents }) => {
     const history = useHistory();
     const [show, setShow] = useState(false)
+    const [status , setStatus] = useState('');
 
 
     return (
@@ -67,7 +68,7 @@ export const TalentCard = ({ Talents, setTalents }) => {
 
                                          })
                                 } className="dropdown-item" >Add Team</p>
-                                <p className="dropdown-item" data-toggle="modal" data-target={`#deleteModal${id}`}>Remove</p>
+                                <p className="dropdown-item" data-toggle="modal" data-target={`#deleteModal${talent.id}`}>Remove</p>
                             </div>
                         </div>
                     </div>
@@ -206,7 +207,7 @@ export const TalentCard = ({ Talents, setTalents }) => {
                     }
 
                     {/* delete modal */}
-                    <div className="modal fade" id={`deleteModal${id}`} tabindex="-1" role="dialog" aria-hidden="true">
+                    <div className="modal fade" id={`deleteModal${talent.id}`} tabindex="-1" role="dialog" aria-hidden="true">
                         <div className="modal-dialog modal-dialog-centered" role="document">
                             <div className="modal-content">
                                 <div className="modal-body p-5 text-center">
@@ -214,7 +215,17 @@ export const TalentCard = ({ Talents, setTalents }) => {
                                 </div>
                                 <div className="modal-footer justify-content-center">
                                     <button type="button" className="btn btn-md px-5 btn-secondary" data-dismiss="modal">No</button>
-                                    <button type="button" className="btn btn-md px-5 btn-primary primaryBG">Yes</button>
+                                    <button type="button" className="btn btn-md px-5 btn-primary primaryBG"
+                                         onClick= {
+                                            async () => {
+                                               await fetch(`https://just-original.herokuapp.com/api/v1/talents/${talent.id}`, { method: 'DELETE' });
+                                               setStatus('Delete successful');
+                                               setTimeout(function(){
+                                                   window.location.reload('/talents');
+                                                }, 5000);
+                                           }   
+                                       }
+                                    >Yes</button>
                                 </div>
                             </div>
                         </div>
@@ -222,7 +233,9 @@ export const TalentCard = ({ Talents, setTalents }) => {
 
                 </div>
             ))}
-
+            <div>
+                {status}
+            </div>
         </>
     )
 }

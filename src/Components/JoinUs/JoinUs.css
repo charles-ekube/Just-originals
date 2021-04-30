@@ -137,7 +137,7 @@ font-size:25px;
     .join-us-text-header {
         justify-content: center;
         width: 100%;
-        text-align: center;
+        /* text-align: center; */
         font-size: 22px;
     }
     .join-us-text h4 {
@@ -147,7 +147,7 @@ font-size:25px;
         width: 100%;
         height: 70px;
         padding: 0;
-        text-align: center;
+        /* text-align: center; */
     }
     .join-us-text-footer {
         margin-top: 80px;
@@ -194,7 +194,7 @@ font-size:25px;
     .join-us-text-header {
         justify-content: center;
         width: 70%;
-        text-align: center;
+        /* text-align: center; */
         font-size: 42px;
     }
     .join-us-text h4 {
@@ -206,7 +206,7 @@ font-size:25px;
         height: 70px;
         padding: 0;
         line-height: 30px;
-        text-align: center;
+        /* text-align: center; */
         font-size: 25px;
     }
     .join-us-text-footer {
@@ -235,7 +235,7 @@ font-size:25px;
     .join-us-text-header {
         justify-content: center;
         width: 100%;
-        text-align: center;
+        /* text-align: center; */
         font-size: 32px;
     }
     .join-us-text h4 {
@@ -247,7 +247,7 @@ font-size:25px;
         height: 70px;
         padding: 0;
         line-height: 30px;
-        text-align: center;
+        /* text-align: center; */
         font-size: 19px;
     }
     .join-us-text-footer {

@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCard} from '../../../Components';
 
 export const Messages = () => {
 
-    const [Messages, setMessages] = React.useState([]);
+    const [Messages, setMessages] = useState([]);
+    
+
 
     useEffect(() => {
 
@@ -21,21 +23,34 @@ export const Messages = () => {
         }
         fetchMessages();
     }, []);
+
+
+    
     return (
+        <>
         <div className="px-4 container">
-            <h4 className="mt-5"><b>Messages</b></h4>
+                <h4 className="mt-5"><b>Messages</b></h4>
+                <div className={"my-5 table-responsive"}>
+                    <table className={"table text-center table-hover"}>
+                        <thead >
+                            <tr className={"grey200"}  style={{display:'grid', gridTemplateColumns:'repeat(7, 1fr)'}}>
+                                <th><input type="checkbox" /></th>
+                                <th></th>
+                                <th className={"text-left"}></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
 
-            {/* <div className="mt-5 talent_add rounded align-items-center">
-
-                <input className={"p-2 rounded border greyBG"} placeholder={"Search by Name, Business Type"} />
-                <Link to={"/new_talent"} className={"primaryText border h-100 px-5 text-white rounded font-weight-bold"}>NEW TALENT</Link>
-
-            </div> */}
-
-            <div className={"my-5"}>
-                <MessageCard Messages={Messages} setMessages={setMessages} />
+                        <tbody>
+                        <MessageCard Messages={Messages} setMessages={setMessages}  />                    
+                        </tbody>
+                    </table>
+                    
+                </div>
             </div>
-
-        </div>
+       
+        </>
     )
 }

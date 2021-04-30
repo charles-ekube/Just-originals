@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { Explore, Logo } from '../../Assets';
 import '../../Components/Carousels/ProjectsCarousel/ProjectCarousel.css';
 import { useLocation } from "react-router-dom";
-import { Footer } from '../../Widgets';
+import { Footer, Navbar } from '../../Widgets';
 
 
 const ExploreDisplay = (props) => {
@@ -74,13 +74,11 @@ const ExploreDisplay = (props) => {
     return (
         <>
         {spinner ? <Loader/> : (
+            <section>
+                <Navbar navColor="black" logoBg='#000'/>
+            
             <main data-aos="fade-down"  data-aos-duration="2000">
                 <section style={{ background: 'rgba(251, 248, 251, 1)'}}>
-                <section className='explore-logo'  data-aos="fade-up"  data-aos-duration="2000">
-        
-                     <img src={Logo} alt='logo'/>
-        
-                </section>
                 <section className='explore-display-intro'  data-aos="fade-up"  data-aos-duration="2000">
                     <div className='explore-display-intro-text'>
                         <ul>
@@ -127,6 +125,7 @@ const ExploreDisplay = (props) => {
                     <Footer/>
                 </section>
             </main>
+            </section>
         )}
         </>
     )
