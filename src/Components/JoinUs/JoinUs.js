@@ -17,24 +17,57 @@ const JoinUs = () => {
                 <span></span>
                 <h2>What would you get when you join us</h2>
                 <section className='join-us-content'>
-                    <article className='join-us-text' data-aos="fade-up"  data-aos-duration="1000">
-                        <div className='join-us-text-header'> 
-                            <span><IoBagSharp/></span>
-                            <h4>Project Management</h4>
+                   
+                    <article className='join-us-text-container'  data-aos="fade-up"  data-aos-duration="1000">
+                        <div className='join-us-text-icon'>
+                            <IoBagSharp/>
                         </div>
-                        <div>
-                            <p>
-                            As the digital era continues to refashion the way we do things, 
-                            Just Original is set to deliver into innovative services such as partnerships, '
-                            content production, talent management and marketing.
-                            </p>
-                        </div>
-                        <div className='join-us-text-footer' >
-                            <Link to='/Projects'>Let's Manage You</Link>
-                            <span><BsArrowRight/></span>
+                        <div className='join-us-text-content'>
+                            <div>
+                                <h4>
+                                    Project Management
+                                </h4>
+                            </div>
+                            <div>
+                                <p>
+                                    As the digital era continues to refashion the way we do things, 
+                                    Just Original is set to deliver into innovative services such as partnerships,
+                                    content production, talent management and marketing.
+                                    
+                                </p>
+                            </div>
+                            <div className='join-us-text-footer' >
+                                <Link to='/Projects'>Let's Manage You</Link>
+                                <span><BsArrowRight/></span>
+                            </div>
                         </div>
                     </article>
-                    <article className='join-us-text' data-aos="fade-up"  data-aos-duration="1000">
+                    <article className='join-us-text-container'  data-aos="fade-up"  data-aos-duration="1000">
+                        <div className='join-us-text-icon'>
+                            <img src={Pool} alt='poster' width='23'/>
+                        </div>
+                        <div className='join-us-text-content'>
+                            <div>
+                                <h4>
+                                    Talent Management
+                                </h4>
+                            </div>
+                            <div>
+                                <p>
+                                    Talent management is a business strategy and you must
+                                    fully integrate it within all of the employee-related 
+                                    processes of the organization. 
+                                    Just Original identifies available talents and 
+                                    set their career path for available opportunities
+                                </p>
+                            </div>
+                            <div className='join-us-text-footer'>
+                                <Link to='/Explore'>Explore</Link>
+                                <span><BsArrowRight/></span>
+                            </div>
+                        </div>
+                    </article>
+                    {/* <article className='join-us-text' data-aos="fade-up"  data-aos-duration="1000">
                         <div className='join-us-text-header'>
                              <span>
                                  <img src={Pool} alt='poster' width='23'/>
@@ -54,7 +87,7 @@ const JoinUs = () => {
                             <Link to='/Explore'>Explore</Link>
                             <span><BsArrowRight/></span>
                         </div>
-                    </article>
+                    </article> */}
                 </section>
             </section>
            

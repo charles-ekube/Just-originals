@@ -27,59 +27,62 @@
    gap: 20px; 
 }
 
-.join-us-text {
+.join-us-text-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
+    grid-template-columns: 10% 80%;
+    gap: 10px;
     background: #ABF0FF;
     border-radius: 3px;
     padding: 30px 50px 10px 50px;
     
 }
-.join-us-text-header {
+.join-us-text-icon {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px; 
+    color: #7008F4;
+}
+.join-us-text-content {
     display: grid;
-    grid-template-columns: 10% 90%;
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    margin: auto;
+}
+.join-us-text-content h4 {
     width: 100%;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     color: #7008F4;
-    margin: auto;
+    padding-top: 5px;
 }
-.join-us-text h4 {
-    margin: 0;
-    line-height: 28px;
-}
-.join-us-text p {
+.join-us-text-content p {
     width: 100%;
-    height: 70px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: normal;
     font-size: 17px;
-    line-height: 21px;
+    line-height: 25px;
     color: #121212;
-    margin: auto;
+    height: 100px;
 }
 
 .join-us-text-footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 80%;
-    margin:40px auto ;
+    width: 95%;
     color: #7008F4;
     font-size: 14px;
 }
 .join-us-text-footer a {
-    
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-line-height: 21px;
-text-decoration-line: underline;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 21px;
 }
 .join-us-text-footer span {
     font-family: Roboto;
@@ -103,12 +106,9 @@ font-size:25px;
   and (max-device-width: 765px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     
-    /* .join-us-container {
-        border: 1px solid red;
-    } */
     .join-us-container>span {
         margin-left: 15px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
     .join-us-container h2 {
         width: 95%;
@@ -122,36 +122,68 @@ font-size:25px;
         width: 100%;
         margin: 0;
     }
-    .join-us-text {
-        width: 100%;
-        height: 330px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        
+    .join-us-text-container {
+        display: grid;
+        grid-template-columns: 10% 80%;
+        gap: 10px;
         background: #ABF0FF;
         border-radius: 3px;
-        margin: 10px 0;
-        padding: 40px 10px 10px 10px;
+        padding: 20px 10px 20px 20px;
         
     }
-    .join-us-text-header {
-        justify-content: center;
+    .join-us-text-icon {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px; 
+        color: #7008F4;
+    }
+    .join-us-text-content {
+        gap: 20px;
+    }
+    .join-us-text-content h4 {
         width: 100%;
-        /* text-align: center; */
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
         font-size: 22px;
+        color: #7008F4;
+        padding-top: 5px;
     }
-    .join-us-text h4 {
-        margin: 0 5px;
+    .join-us-text-content p {
+        width: 100% ;
+        font-size: 17px;
+        line-height: 20px;
+        height: 150px;
+        padding-left: 0;
     }
-    .join-us-text p {
-        width: 100%;
-        height: 70px;
-        padding: 0;
-        /* text-align: center; */
-    }
+    
     .join-us-text-footer {
-        margin-top: 80px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 95%;
+        color: #7008F4;
+        font-size: 14px;
     }
+    .join-us-text-footer a {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 21px;
+    }
+    .join-us-text-footer span {
+        font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    width: 40px;
+    display: flex;
+    justify-content: flex-end;
+    font-size:25px;
+    }
+    
 
   }
 

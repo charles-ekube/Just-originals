@@ -60,7 +60,7 @@
         height: 850px;
     }
     .home-text {
-        padding: 90px 0;
+        padding: 90px 10px;
         width: 100%;
     }
     
@@ -84,7 +84,7 @@
         width: 100%;
         text-align: center;
         font-size:30px;
-        padding: 0 0.2px;
+        /* padding: 0 0.2px; */
         line-height:45px;
              
     }
@@ -109,7 +109,7 @@
         /* align-items: center; */
     }
     .home-text {
-        padding: 120px 0;
+        padding: 120px 10px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -159,7 +159,7 @@
         align-items: center;
     }
     .home-text {
-        padding: 150px 0;
+        padding: 150px 10px;
         width: 100%;
         display: flex;
         justify-content: center;
