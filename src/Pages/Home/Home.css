@@ -83,7 +83,7 @@
     .home-text h1 {
         width: 100%;
         text-align: center;
-        font-size:30px;
+        font-size:36px;
         /* padding: 0 0.2px; */
         line-height:45px;
              
@@ -91,7 +91,7 @@
     
 .home-text p {
     width: 100%;
-    font-size:18px;
+    font-size:20px;
     text-align: center;
     line-height: 30px;
     padding-bottom: 150px;

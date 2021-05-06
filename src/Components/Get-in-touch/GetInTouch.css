@@ -78,7 +78,7 @@
 /* mediaqueries */
 
 @media only screen 
-  and (min-device-width: 300px) 
+  and (min-device-width: 280px) 
   and (max-device-width: 460px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .get-in-touch-container {
@@ -94,6 +94,7 @@
     }
     .get-in-touch-text p {
         width: 280px;
+        font-size: 20px;
     }
     .get-in-touch-text>span {
         margin-left: 20px;

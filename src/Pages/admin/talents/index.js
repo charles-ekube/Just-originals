@@ -22,10 +22,10 @@ export const Talents = () => {
         fetchTalents();
     }, []);
     return (
-        <div className="px-4 container">
+        <div className="pages-container">
             <h4 className="mt-5"><b>Talents</b></h4>
 
-            <div className="mt-5 talent_add rounded align-items-center">
+            <div className="mt-5 talent_add rounded align-items-center d-flex flex-wrap">
 
                 <input className={"p-2 rounded border greyBG"} placeholder={"Search by Name, Business Type"} />
                 <Link to={"/new_talent"} className={"primaryText border h-100 px-5 text-white rounded font-weight-bold"}>NEW TALENT</Link>
