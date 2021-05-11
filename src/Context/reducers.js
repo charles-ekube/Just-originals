@@ -16,6 +16,24 @@ export const initialState = {
 
 export const AuthReducer = (initialState, action) => {
 	switch (action.type) {
+
+		case 'REQUEST_SIGNUP' :
+			return {
+				...initialState,
+				loading: true,
+			};
+		case 'SIGNUP_SUCCESS' :
+			return {
+				...initialState,
+				user : action.payload.user,
+				loading : false,
+			};	
+		case 'SIGNUP_ERROR' : 
+			return {
+				...initialState,
+				loading : false,
+				errorMessage : action.error,
+			};	
 		case 'REQUEST_LOGIN':
 			return {
 				...initialState,

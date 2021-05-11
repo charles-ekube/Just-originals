@@ -1,6 +1,35 @@
 
 const ROOT_URL = 'https://just-original.herokuapp.com/api/v1/users';
 
+
+export async function registerUser(dispatch, signupPayload) {
+
+	const requestOptions = {
+		method : 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(signupPayload),
+	};
+
+	try {
+		dispatch({type: 'REQUEST_SIGNUP'});
+		const response = await fetch(`${ROOT_URL}`, requestOptions);
+		const data =  await response.json();
+		
+		if(data) {
+			dispatch({type: 'SIGNUP_SUCCESS', payload: data});
+			localStorage.setItem('currentUser', JSON.stringify(data));
+			return  data;
+		}
+		dispatch({ type: 'SIGNUP_ERROR', error: data.errors[0] });
+		console.log(data.errors[0]);
+		return;
+
+	} catch (error) {
+		dispatch({ type: 'SIGNUP_ERROR', error: error });
+		console.log(error);
+	}
+}
+
 export async function loginUser(dispatch, loginPayload) {
 	
 	const requestOptions = {
@@ -11,8 +40,8 @@ export async function loginUser(dispatch, loginPayload) {
 
 	try {
 		dispatch({ type: 'REQUEST_LOGIN' });
-		let response = await fetch(`${ROOT_URL}/login`, requestOptions);
-		let data = await response.json();
+		const response = await fetch(`${ROOT_URL}/login`, requestOptions);
+		const data = await response.json();
 		// console.log(data);
 
 		if (data.token) {

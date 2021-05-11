@@ -1,9 +1,32 @@
-import React from 'react';
-import './signup.css';
+import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom'
+import '../SignUp/signup.css';
+import { registerUser, useAuthState, useAuthDispatch } from '../../../Context' 
 
 
 
 const SignUp = () => {
+
+    const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+
+	const dispatch = useAuthDispatch();
+	const { loading, errorMessage } = useAuthState();
+    const history = useHistory();
+
+	const handleSignUp = async (e) => {
+		e.preventDefault();
+
+		try {
+			let response = await registerUser(dispatch, { email, password });
+            // console.log(response)
+			if (!response) return;
+                history.push('/adminlogin');
+            
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
     return (
         <>
@@ -12,13 +35,14 @@ const SignUp = () => {
                 <h2>Sign Up</h2>
             </section>
             <section className='signup-form-container'>
-                <form>
+                <form onSubmit={handleSignUp}>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
                         <input 
                          type="email" 
                          placeholder="Enter Email"
-                         value=''
+                         value={email}  
+                         onChange={(e) => setEmail(e.target.value)}
                          name="email"
                          id="email"
                          class="form-control" 
@@ -30,7 +54,8 @@ const SignUp = () => {
                         <input 
                         type="password" 
                         placeholder="Enter Password"
-                        value=''
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         name="password"
                         id="password"                        
                         class="form-control"
@@ -43,6 +68,7 @@ const SignUp = () => {
                       variant="primary"
                       className="signup-btn"
                       class='btn btn-primary'
+                      disabled={loading}
                     >
                       Sign Up
                     </button>
