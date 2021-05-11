@@ -6,3 +6,13 @@
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+ @media only screen 
+  and (min-device-width: 280px) 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+.main-form-container {
+    width: 95%;
+    padding:30px 10px;
+    margin:0 auto;
+}
