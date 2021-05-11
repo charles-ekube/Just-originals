@@ -13,6 +13,8 @@
   and (-webkit-min-device-pixel-ratio: 1) {
 .main-form-container {
     width: 95%;
+    height: 90vh;
     padding:30px 10px;
-    margin:0 auto;
+    margin:30px auto;
 }
+  }
