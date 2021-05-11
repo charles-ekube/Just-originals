@@ -21,8 +21,8 @@ const PreviousClients =  ({TalentProjects}) => {
         spaceBetween={20}
         Navigation
         scrollbar={{ draggable: true }}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
         className='previous-projects-carousel-main'
         breakpoints={{
           // when window width is >= 640px

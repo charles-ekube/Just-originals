@@ -2,15 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import 'animate.css/animate.css'
-import JustOriginalsContextProvider from './Contexts/Context';
+import 'animate.css/animate.css';
 import reportWebVitals from './reportWebVitals';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <JustOriginalsContextProvider>
-      <App />
-    </JustOriginalsContextProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

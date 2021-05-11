@@ -1,13 +1,28 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import project from "../../../Assets/project_2.svg";
 import talent from "../../../Assets/talent_2.svg"
 import request from "../../../Assets/request.svg"
 import withdrawal from "../../../Assets/withdrawal.svg"
-import { UserCard, RequestCard } from '../../../Components';
+import { UserCard, RequestCard, Sidebar } from '../../../Components';
+import { MdMenu } from 'react-icons/md';
 
 export const Dashboard = () => {
+    
+    const [showNav, setShowNav] = React.useState(false);
+         const handleShowNav = () => {
+             setShowNav(prev => !prev);
+        }
+
     return (
-        <div className="px-4 container">
+    <>
+    <Sidebar showNav={showNav} setShowNav={setShowNav}/>
+    <button
+        onClick={handleShowNav}
+        className='open-menu'
+    >
+        <MdMenu/>
+    </button>
+         <div className="px-4 container">
             <h2 className="mt-5">Dashboard</h2>
 
             <div className="row mt-5">
@@ -105,5 +120,8 @@ export const Dashboard = () => {
             </div>
 
         </div >
+        
+     </>
+      
     )
 }

@@ -239,33 +239,7 @@ html body {
     font-size: 12px;
   }
   
-  .close-menu {
-    background: inherit;
-    padding: 5px;
-    border: none;
-    position: absolute;
-    right:10px;
-    font-size: 20px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-style: normal;
-  }
-  .open-menu {
-    background: inherit;
-    padding: 0 5px;
-    border: none;
-    position: absolute;
-    top: 0;
-    font-size: 25px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-style: normal;
-  }
-  .pages-container {
-    padding: 50px;
-    overflow: hidden;
-    /* height: 100vh; */
-  }
+  
   
   @media(max-width: 768px) {
     .mymb {
@@ -273,42 +247,4 @@ html body {
     }
   }
   
-  @media only screen 
-  and (min-device-width: 280px) 
-  and (max-device-width: 765px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .sidenav {     
-      width: 100vw;
-      height: 100vh;
-      /* background: red; */
-      top: 0;
-      z-index: 10;
-    }
-    .pages-container {
-      padding: 10px;
-    }
-    .children-container {
-      width: 100vw;
-    }
-    .talentCard {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(1, 1fr);
-      padding: 0;
-      scroll-behavior: auto;
-    }
-    /* .adminGrid {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-areas:  "main";
-      grid-template-rows:100% 1fr;
-      height: 100vh;
-      background-color: #F4F2F2;
-      overflow: hidden;
-    } */
-  }
-  /* button {
-    color: var(--white);
-    border: none;
-    outline: none;
-  } */
+ 

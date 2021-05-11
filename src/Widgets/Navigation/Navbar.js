@@ -14,7 +14,7 @@ const Navbar = ({navColor, logoBg}) => {
     const [showMenu, setShowMenu] = React.useState(false);
     
 
-    const toggleSearch = () => {
+    const toggleSearch = (props) => {
         setShowSearchBar(prev => !prev);
     }
     
@@ -33,17 +33,17 @@ const Navbar = ({navColor, logoBg}) => {
                             </Link>
                         </li>
                         <li className='mobile-menu-list-item'>
-                            <Link to='/Projects' className='mobile-menu-list-item-content'>
+                            <Link to='/projects' className='mobile-menu-list-item-content'>
                                 Projects
                             </Link>
                         </li>
                         <li className='mobile-menu-list-item'>
-                            <Link to='/Explore' className='mobile-menu-list-item-content'>
+                            <Link to='/explore' className='mobile-menu-list-item-content'>
                                 Explore
                             </Link>
                         </li>
                         <li className='mobile-menu-list-item'>
-                            <Link to='/Blog' className='mobile-menu-list-item-content'>
+                            <Link to='/blog' className='mobile-menu-list-item-content'>
                                 Blog
                             </Link>
                         </li>
