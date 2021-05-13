@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCard, Sidebar} from '../../../Components';
+import { MdMenu } from 'react-icons/md';
 
 export const Messages = () => {
 
@@ -44,7 +45,9 @@ export const Messages = () => {
         <button
        onClick={handleShowNav}
        className='open-menu'
-   ></button>
+   >
+       <MdMenu/>
+   </button>
         <div className="px-4 container">
                 <h4 className="mt-5"><b>Messages</b></h4>
                 <div className={"my-5 table-responsive"}>

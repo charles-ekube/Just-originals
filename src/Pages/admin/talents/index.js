@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TalentCard, Sidebar } from '../../../Components';
+import { MdMenu } from 'react-icons/md';
 
 export const Talents = () => {
 
@@ -44,7 +45,9 @@ export const Talents = () => {
         <button
        onClick={handleShowNav}
        className='open-menu'
-   ></button>
+   >
+       <MdMenu/>
+   </button>
     
         <div className="pages-container">
             <h4 className="mt-5"><b>Talents</b></h4>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { ClientCard, Sidebar } from '../../../Components';
+import { MdMenu } from 'react-icons/md';
 
 const id = String(Math.random()).split(".").join("_");
 
@@ -17,7 +18,9 @@ export const Client = () => {
          <button
         onClick={handleShowNav}
         className='open-menu'
-    ></button>
+    >
+        <MdMenu/>
+    </button>
             <div className="px-4 container">
                 <h4 className="mt-5"><b>Clients</b></h4>
 

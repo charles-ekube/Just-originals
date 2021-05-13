@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sidebar } from '../../../Components';
 import { UserCardBig } from '../../../Components/userCardBig';
+import { MdMenu } from 'react-icons/md';
 
 export const HomeScreen = () => {
 
@@ -16,7 +17,9 @@ export const HomeScreen = () => {
         <button
        onClick={handleShowNav}
        className='open-menu'
-   ></button>
+   >
+       <MdMenu/>
+   </button>
         <div className="px-4 container">
             <h4 className="mt-5"><b>Homescreen</b></h4>
 

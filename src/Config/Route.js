@@ -66,12 +66,12 @@ import { Home,
             isPrivate : false
         },
         {
-            path : '/admin',
+            path : '/adminus',
             component : SignUp,
             isPrivate : false
         },
         {
-            path : '/adminlogin',
+            path : '/admin',
             component : Login,
             isPrivate : false
         },

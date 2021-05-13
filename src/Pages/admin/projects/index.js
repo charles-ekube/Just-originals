@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { MdMenu } from 'react-icons/md';
 import { ProjectCard, Sidebar } from '../../../Components';
 
 const id = String(Math.random()).split(".").join("_");
@@ -71,7 +72,9 @@ export const AdminProjects = () => {
         <button
        onClick={handleShowNav}
        className='open-menu'
-   ></button>
+   >
+       <MdMenu/>
+   </button>
             <div className="px-4 container">
                 <h4 className="mt-5"><b>Projects</b></h4>
 

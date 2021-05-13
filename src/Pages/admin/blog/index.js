@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { BlogCard, Sidebar } from '../../../Components';
+import { MdMenu } from 'react-icons/md';
 
 const id = String(Math.random()).split(".").join("_");
 
@@ -44,8 +45,16 @@ export const AdminBlog = () => {
                 const response = await fetch(`https://just-original.herokuapp.com/api/v1/projects`);
                 const data = await response.json()
                 const item = data.data ;
-                const lists = Object.values(item);
-                setBlogs(lists);
+                if(item) {
+                    const lists = Object.values(item);
+                    setBlogs(lists);
+                    
+                  }
+                  else {
+                      return <div>No projects found</div>
+                  }
+                // const lists = Object.values(item);
+              
             }
             fetchBlogs();
         }, []);
@@ -65,7 +74,9 @@ export const AdminBlog = () => {
          <button
         onClick={handleShowNav}
         className='open-menu'
-    ></button>
+    >
+        <MdMenu/>
+    </button>
         <div className="px-4 container">
             <h4 className="mt-5"><b>Blog</b></h4>
 
