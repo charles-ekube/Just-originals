@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { BlogCard } from '../../../Components';
+import { BlogCard, Sidebar } from '../../../Components';
 
 const id = String(Math.random()).split(".").join("_");
 
@@ -49,9 +49,23 @@ export const AdminBlog = () => {
             }
             fetchBlogs();
         }, []);
+
+        const [showNav, setShowNav] = React.useState(false);
+        const handleShowNav = () => {
+            setShowNav(prev => !prev);
+       }
     
 
     return (
+
+
+        <>
+        
+         <Sidebar showNav={showNav} setShowNav={setShowNav}/>
+         <button
+        onClick={handleShowNav}
+        className='open-menu'
+    ></button>
         <div className="px-4 container">
             <h4 className="mt-5"><b>Blog</b></h4>
 
@@ -158,5 +172,6 @@ export const AdminBlog = () => {
             </div>
 
         </div>
+        </>
     )
 }

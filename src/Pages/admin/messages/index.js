@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCard} from '../../../Components';
+import { MessageCard, Sidebar} from '../../../Components';
 
 export const Messages = () => {
 
@@ -16,18 +16,35 @@ export const Messages = () => {
             const response = await fetch(`https://just-original.herokuapp.com/api/v1/messages`);
             const data = await response.json()
             const item = data.data;
-            const list = Object.values(item);
+            if(item) {
+                const lists = Object.values(item);
+                setMessages(lists);
+                
+              }
+              else {
+                  return <div>No projects found</div>
+              }
+            // const list = Object.values(item);
 
-            console.log(list);
-            setMessages(list);
+
+            // console.log(list);
+            
         }
         fetchMessages();
     }, []);
 
-
+    const [showNav, setShowNav] = React.useState(false);
+    const handleShowNav = () => {
+        setShowNav(prev => !prev);
+   }
     
     return (
         <>
+         <Sidebar showNav={showNav} setShowNav={setShowNav}/>
+        <button
+       onClick={handleShowNav}
+       className='open-menu'
+   ></button>
         <div className="px-4 container">
                 <h4 className="mt-5"><b>Messages</b></h4>
                 <div className={"my-5 table-responsive"}>

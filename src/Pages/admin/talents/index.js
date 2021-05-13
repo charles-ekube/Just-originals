@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { TalentCard } from '../../../Components';
+import { TalentCard, Sidebar } from '../../../Components';
 
 export const Talents = () => {
 
@@ -14,14 +14,38 @@ export const Talents = () => {
             const response = await fetch(`https://just-original.herokuapp.com/api/v1/talents`);
             const data = await response.json()
             const item = data.data;
-            const list = Object.values(item);
+            if(item) {
+                const lists = Object.values(item);
+                setTalents(lists);
+                
+              }
+              else {
+                  return <div>No projects found</div>
+              }
+            // const list = Object.values(item);
 
-            console.log(list);
-            setTalents(list);
+            // console.log(list);
+            
         }
         fetchTalents();
     }, []);
+
+
+    const [showNav, setShowNav] = React.useState(false);
+    const handleShowNav = () => {
+        setShowNav(prev => !prev);
+   }
+
+
     return (
+
+        <>
+        <Sidebar showNav={showNav} setShowNav={setShowNav}/>
+        <button
+       onClick={handleShowNav}
+       className='open-menu'
+   ></button>
+    
         <div className="pages-container">
             <h4 className="mt-5"><b>Talents</b></h4>
 
@@ -37,5 +61,6 @@ export const Talents = () => {
             </div>
 
         </div>
+        </>
     )
 }

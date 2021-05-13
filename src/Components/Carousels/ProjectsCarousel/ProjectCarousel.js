@@ -68,9 +68,18 @@ const ProjectCarousel = () => {
                 const response = await fetch(`https://just-original.herokuapp.com/api/v1/projects`);
                 const data = await response.json()
                 const item = data.data ;
-                const lists = Object.values(item);
-                setCarouselCards(lists);
-                setSelectedProject(carouselcard)
+                if(item) {
+                    const lists = Object.values(item);
+                    setCarouselCards(lists);
+                    setSelectedProject(carouselcard);
+                    
+                  }
+                  else {
+                      return <div>No projects found</div>
+                  }
+                // const lists = Object.values(item);
+                // setCarouselCards(lists);
+                // setSelectedProject(carouselcard)
             }
             fetchCarouselCards();
         }, []);

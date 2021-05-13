@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { ProjectCard } from '../../../Components';
+import { ProjectCard, Sidebar } from '../../../Components';
 
 const id = String(Math.random()).split(".").join("_");
 
@@ -45,16 +45,33 @@ export const AdminProjects = () => {
                 const response = await fetch(`https://just-original.herokuapp.com/api/v1/projects`);
                 const data = await response.json()
                 const item = data.data ;
-                const lists = Object.values(item);
-                setProjects(lists);
+                // const lists = Object.values(item);
+                if(item) {
+                    const lists = Object.values(item);
+                    setProjects(lists);
+                    
+                  }
+                  else {
+                      return <div>No projects found</div>
+                  }
+               
             }
             fetchProjects();
         }, []);
-    
-    
 
+
+        const [showNav, setShowNav] = React.useState(false);
+        const handleShowNav = () => {
+            setShowNav(prev => !prev);
+       }
     return (
         <>
+
+<Sidebar showNav={showNav} setShowNav={setShowNav}/>
+        <button
+       onClick={handleShowNav}
+       className='open-menu'
+   ></button>
             <div className="px-4 container">
                 <h4 className="mt-5"><b>Projects</b></h4>
 

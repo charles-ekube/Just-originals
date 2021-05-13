@@ -1,11 +1,23 @@
 import React from 'react'
-import { ClientCard } from '../../../Components';
+import { ClientCard, Sidebar } from '../../../Components';
 
 const id = String(Math.random()).split(".").join("_");
 
+
 export const Client = () => {
+
+    const [showNav, setShowNav] = React.useState(false);
+    const handleShowNav = () => {
+        setShowNav(prev => !prev);
+   }
+
     return (
         <>
+         <Sidebar showNav={showNav} setShowNav={setShowNav}/>
+         <button
+        onClick={handleShowNav}
+        className='open-menu'
+    ></button>
             <div className="px-4 container">
                 <h4 className="mt-5"><b>Clients</b></h4>
 

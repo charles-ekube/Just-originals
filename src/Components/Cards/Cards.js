@@ -22,8 +22,15 @@ export const ProjectCards = () => {
                 const response = await fetch(`https://just-original.herokuapp.com/api/v1/projects`);
                 const data = await response.json()
                 const item = data.data ;
-                const lists = Object.values(item);
-                setProjectCards(lists);
+                if(item) {
+                  const lists = Object.values(item);
+                  setProjectCards(lists);
+                }
+                else {
+                    return <div>No projects found</div>
+                }
+                
+                
             }
             fetchProjectCards();
         }, []);
@@ -38,7 +45,7 @@ export const ProjectCards = () => {
     return (
         <>
         {ProjectCards && ProjectCards.map(project  => (
-            <section className='project-card-container' data-aos="fade-up"  data-aos-duration="1000"   data-aos-mirror="true" onClick={handleChange} key={project.id}>
+            <section className='project-card-container' data-aos="fade-up"  data-aos-duration="1000"  data-aos-mirror="true" onClick={handleChange} key={project.id}>
                 <div className='project-card-image'>
                 <img src={project.avatar} alt='poster' />
                 </div>
@@ -50,7 +57,9 @@ export const ProjectCards = () => {
                     </ul>
                 </div>
             </section>
-              ))} 
+              )) 
+               
+              } 
         </>
     )
 }
@@ -88,10 +97,17 @@ export const ExploreCards = () => {
             const response = await fetch(`https://just-original.herokuapp.com/api/v1/talents`);
             const data = await response.json()
             const item = data.data;
-            const list = Object.values(item);
+            if(item) {
+                const list = Object.values(item);
+                setTalents(list);    
+              }
+              else {
+                  return <div>No projects found</div>
+              }
+            // const list = Object.values(item);
 
-            console.log(list);
-            setTalents(list);
+            // console.log(list);
+            
         }
         fetchTalents();
     }, []);
@@ -150,9 +166,17 @@ const Cards = (props) => {
                 const response = await fetch(`https://just-original.herokuapp.com/api/v1/projects`);
                 const data = await response.json()
                 const item = data.data ;
-                const lists = Object.values(item);
-                setCarouselCards(lists);
-                setSelectedProject(carouselcard)
+                 if(item) {
+                  const lists = Object.values(item);
+                  setCarouselCards(lists);
+                  setSelectedProject(carouselcard);
+                  
+                }
+                else {
+                    return <div>No projects found</div>
+                }
+                // const lists = Object.values(item);
+                
             }
             fetchCarouselCards();
         }, []);
