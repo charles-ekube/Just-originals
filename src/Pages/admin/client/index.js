@@ -1,27 +1,19 @@
 import React from 'react'
-import { ClientCard, Sidebar } from '../../../Components';
-import { MdMenu } from 'react-icons/md';
+import { AdminNav, ClientCard, Sidebar, SidebarToggle } from '../../../Components';
+
 
 const id = String(Math.random()).split(".").join("_");
 
 
 export const Client = () => {
 
-    const [showNav, setShowNav] = React.useState(false);
-    const handleShowNav = () => {
-        setShowNav(prev => !prev);
-   }
+   
 
     return (
         <>
-         <Sidebar showNav={showNav} setShowNav={setShowNav}/>
-         <button
-        onClick={handleShowNav}
-        className='open-menu'
-    >
-        <MdMenu/>
-    </button>
-            <div className="px-4 container">
+         <Sidebar/>
+         <AdminNav/>
+            <div className="px-4 page-container">
                 <h4 className="mt-5"><b>Clients</b></h4>
 
                 <div className="mt-5 talent_add rounded align-items-center">

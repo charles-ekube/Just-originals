@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import user from "../../Assets/ex1.png";
 import elipses from "../../Assets/elipses.svg";
+import Swal from "sweetalert2";
 
 // const id = String(Math.random()).split(".").join("_");
 
 export const MessageCard = ({ Messages, setMessages }) => {
+    const Swal = require("sweetalert2");
     const history = useHistory();
     const [show, setShow] = useState(false)
-    const [status , setStatus] = useState('');
+    
 
 
 
@@ -74,11 +76,29 @@ export const MessageCard = ({ Messages, setMessages }) => {
                                     <button type="button" className="btn btn-md px-5 btn-primary primaryBG"
                                         onClick= {
                                              async () => {
-                                                await fetch(`https://just-original.herokuapp.com/api/v1/messages/${message.id}`, { method: 'DELETE' });
-                                                setStatus('Delete successful');
-                                                setTimeout(function(){
-                                                    window.location.reload('/messages');
-                                                 }, 5000);
+                                                let getToken = JSON.parse(
+                                                    localStorage.getItem("currentUser")
+                                                  );
+                                                  let token = getToken.token;
+                                                  const deleteFunction = await fetch(`https://just-original.herokuapp.com/api/v1/messages/${message.id}`, {
+                                                       method: 'DELETE',
+                                                       headers: {
+                                                        Accept: "application/json",
+                                                        Authorization: "Bearer " + token,
+                                                        "Content-Type": "application/json",
+                                                      },
+                                                    
+                                                    });
+                                                    if (deleteFunction.status === 200) {
+                                                        Swal.fire({
+                                                          title: "Successful!",
+                                                          text: "Message Deleted",
+                                                          icon: "success",
+                                                          confirmButtonText: "Continue",
+                                                        }).then(function () {
+                                                          window.location.reload();
+                                                        });
+                                                      }
                                             }   
                                         }
                                     >Yes</button>
@@ -89,9 +109,7 @@ export const MessageCard = ({ Messages, setMessages }) => {
 
                 </div>
             ))}
-            <div>
-                {status}
-            </div>
+           
         </>
     )
 }

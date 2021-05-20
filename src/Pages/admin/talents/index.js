@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { TalentCard, Sidebar } from '../../../Components';
+import { TalentCard, Sidebar, SidebarToggle, AdminNav } from '../../../Components';
 import { MdMenu } from 'react-icons/md';
 
 export const Talents = () => {
 
     const [Talents, setTalents] = React.useState([]);
+    const [EmptyState, setEmptyState] = React.useState("");
+    
 
     useEffect(() => {
 
@@ -20,8 +22,8 @@ export const Talents = () => {
                 setTalents(lists);
                 
               }
-              else {
-                  return <div>No projects found</div>
+              if (!item) {
+                setEmptyState("No Talents Found.");
               }
             // const list = Object.values(item);
 
@@ -32,22 +34,14 @@ export const Talents = () => {
     }, []);
 
 
-    const [showNav, setShowNav] = React.useState(false);
-    const handleShowNav = () => {
-        setShowNav(prev => !prev);
-   }
+   
 
 
     return (
 
         <>
-        <Sidebar showNav={showNav} setShowNav={setShowNav}/>
-        <button
-       onClick={handleShowNav}
-       className='open-menu'
-   >
-       <MdMenu/>
-   </button>
+        <Sidebar/>
+        <AdminNav/>
     
         <div className="pages-container">
             <h4 className="mt-5"><b>Talents</b></h4>
@@ -61,6 +55,7 @@ export const Talents = () => {
 
             <div className={"my-5"}>
                 <TalentCard Talents={Talents} setTalents={setTalents} />
+                <div className="pt-5">{EmptyState}</div>
             </div>
 
         </div>

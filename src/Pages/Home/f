@@ -1,0 +1,45 @@
+ <Swiper
+        autoplay={{delay:5000}}
+        slidesPerView={4}
+        spaceBetween={20}
+        scrollbar={{draggable:true}}
+        pagination={{clickable:true}}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+        breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            // when window width is >= 768px
+            880: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            1200: {
+              slidesPerView : 4,
+              spaceBetween: 10
+            }
+          }}
+    >
+      {CarouselCards && CarouselCards.map(carouselcard => (
+       <SwiperSlide key={carouselcard.id} className='slide'>
+          <section className='card-container' data-aos="fade-up"  data-aos-duration="1000">
+              <div className='card-image-container'>
+                  <img src={carouselcard.avatar} alt='poster' />
+                  {/* onClick={() =>toggleModal()}                   */}
+              </div>
+              <div className='card-footer'>
+                  <ul>
+                      <li>{carouselcard.title}</li>
+                      <li>3</li>
+                  </ul>
+              </div>
+          </section>
+        </SwiperSlide>
+          ))}
+
+
+
+    </Swiper>

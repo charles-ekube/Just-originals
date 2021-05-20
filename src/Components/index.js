@@ -19,4 +19,8 @@ export * from './talentCard';
 export * from './clientCard';
 export * from './blogCard';
 export * from './messagesCard';
+export * from './toggle/homepagetoggle';
+export * from './toggle/logouttoggle';
+export * from './toggle/sidebartoggle';
+export * from './AdminNav/index';
 

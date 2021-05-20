@@ -4,8 +4,10 @@ import thrash from "../../Assets/thrash.svg";
 
 export const RequestCard = () => {
     return (
-        <div className="bg-white border p-4 align-items-center requestCard mb-2">
+        <div className="bg-white border p-4 align-items-center requestCard mb-2 req-card">
+            <div>
             <img src={user} alt={""} className={""} width={48} height={48} style={{ objectFit: "cover" }} />
+            </div>
 
             <div>
                 <h6>Uju Okeke</h6>
@@ -17,7 +19,7 @@ export const RequestCard = () => {
                 <p>+2348 090 2345 234</p>
             </div>
 
-            <div>
+            <div className='req-card-p'>
                 <p>
                     Hello, My name is Uju Okeke, the CEO of Ju’s Fashion. My company  deals
                     on Fashion designing of both female and male clothing. Please i’ll be needing

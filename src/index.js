@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import 'animate.css/animate.css';
 import reportWebVitals from './reportWebVitals';
+import ToggleContextProvider from './Context/toggle';
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <ToggleContextProvider>
     <App />
+    </ToggleContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

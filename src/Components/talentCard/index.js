@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import user from "../../Assets/ex1.png";
 import elipses from "../../Assets/elipses.svg";
+import Swal from "sweetalert2";
 
 // const id = String(Math.random()).split(".").join("_");
 
 export const TalentCard = ({ Talents, setTalents }) => {
+
+    const Swal = require("sweetalert2");
     const history = useHistory();
     const [show, setShow] = useState(false)
-    const [status , setStatus] = useState('');
+ 
 
 
     return (
@@ -216,15 +219,33 @@ export const TalentCard = ({ Talents, setTalents }) => {
                                 <div className="modal-footer justify-content-center">
                                     <button type="button" className="btn btn-md px-5 btn-secondary" data-dismiss="modal">No</button>
                                     <button type="button" className="btn btn-md px-5 btn-primary primaryBG"
-                                         onClick= {
-                                            async () => {
-                                               await fetch(`https://just-original.herokuapp.com/api/v1/talents/${talent.id}`, { method: 'DELETE' });
-                                               setStatus('Delete successful');
-                                               setTimeout(function(){
-                                                   window.location.reload('/talents');
-                                                }, 5000);
-                                           }   
-                                       }
+                                         onClick={async () => {
+                                            let getToken = JSON.parse(
+                                              localStorage.getItem("currentUser")
+                                            );
+                                            let token = getToken.token;
+                                            const deleteFunction = await fetch(
+                                              `https://just-original.herokuapp.com/api/v1/talents/${talent.id}`,
+                                              {
+                                                method: "DELETE",
+                                                headers: {
+                                                  Accept: "application/json",
+                                                  Authorization: "Bearer " + token,
+                                                  "Content-Type": "application/json",
+                                                },
+                                              }
+                                            );
+                                            if (deleteFunction.status === 200) {
+                                              Swal.fire({
+                                                title: "Successful!",
+                                                text: "Project Deleted",
+                                                icon: "success",
+                                                confirmButtonText: "Continue",
+                                              }).then(function () {
+                                                window.location.reload();
+                                              });
+                                            }
+                                          }}
                                     >Yes</button>
                                 </div>
                             </div>
@@ -233,9 +254,6 @@ export const TalentCard = ({ Talents, setTalents }) => {
 
                 </div>
             ))}
-            <div>
-                {status}
-            </div>
         </>
     )
 }

@@ -37,9 +37,11 @@
 .navbar-links {
     display: flex;
     justify-content: space-between;
+    align-items:center;
+    height:50px;
     list-style: none;
     width: 40%;
-    padding: 0 10px;
+    padding: 20px 10px 0 10px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -47,8 +49,16 @@
     line-height: 21px;
     /* color:#fff; */
 }
+.navbar-links-item {
+    display:flex;
+    justify-content :center;
+    align-items:center;
+    height:100%;
+    width:100%;
+}
 .navbar-links-item a {
     text-decoration: none;
+    
 }
 a:active {
     color: #5BE2FF !important;

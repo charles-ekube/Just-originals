@@ -1,134 +1,23 @@
-/* .slide-container {
-    width: 10% !important;
-} */
-.each-fade {
-    display: flex;
-    width: 93%;
-    height: 500px;
-    
-  }
-  
-  .each-fade > div {
-    width: 90%;
-  }
-  
-  .each-fade > div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .each-fade h4 {
-    font-size: 16px;
-    padding: 0;
-    margin: 5px 0;
-    color: #7008F4;
-
-  }
-  .each-fade p {
-    font-size: 14px;
-    padding: 0;
-    margin: 0;
-  }
-  .image-container {
-      position: relative;
-      left: 17.5px;
-      box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  }
-  .slidee-container {
-    width: 100%;
-  }
-  .name-holder {
-    position: absolute;
-    width: 150px;
-    height: 110px;
-    background: #5BE2FF;
-    border-radius: 3px;
-    z-index: 5;
-    bottom: 30px;
-    left: 20px;
-    padding-left: 29px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-.loader {
-  background: inherit;
-  height: 100px;
-  width: 100px;
-  border: 5px solid red;
-  border-radius: 50%;
-  position: relative;
-  left: 37%;
-  top: 37%;
+.slide-container {
+  padding-left: 130px;
 }
-
-  @media only screen 
-  and (min-device-width: 280px) 
-  and (max-device-width: 400px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .each-fade {
-      display: flex;
-      width: 100%;
-      height: 500px;
-    }
-  }
-  
-  @media only screen 
-  and (min-device-width: 401px) 
-  and (max-device-width: 500px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .image-container {
-      position: relative;
-      left: -2px;
-      box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  } 
-  .each-fade { 
-    width: 100%;
-    margin: 0;
-    height: 500px;
-
-    
-  }
-  .each-fade > div {
-    width: 95%;
-    margin: 0 auto;
-    
-  }
-  
-  }
-
-
-  @media only screen 
-  and (min-device-width: 501px) 
-  and (max-device-width: 768px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-  
-    .each-fade {
-      display: flex;
-      width: 95%;
-      margin: 0 auto;
-      height: 900px;
-      
-      
-    }
-    
-    .each-fade > div {
-      width: 100%;
-    }
-    
-    .each-fade > div img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .image-container {
-      position: relative;
-      left: 0;
-      box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  } 
-  
-  }
-
-  
+.image-container {
+   width: 55%;
+   position: relative;
+   left: 140px;
+}
+.image-container  img{ 
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.slide-text {
+  display: flex;
+  justify-content:content;
+  align-items: center;
+  font-family: Roboto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 50px;
+  color:#fff;
+}

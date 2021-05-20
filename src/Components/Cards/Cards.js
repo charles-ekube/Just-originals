@@ -120,17 +120,18 @@ export const ExploreCards = () => {
     return (
         <>
         {Talents && Talents.map(talent => (
-            <section className='explore-card-container' data-aos="fade-up"  data-aos-duration="1000" key={talent.id} onClick={(props) =>
-                history.push({
-                    pathname : `/exploredisplay/${talent.id}`,
-                    state : {
-                            title :  `${talent.name}`,
-                            avatar : `${talent.avatar}`,
-                            talent_id : `${talent.id}`,
-                            services : `${talent.services}`
-                            }
-                })
-            }>
+            <section className='explore-card-container' data-aos="fade-up"  data-aos-duration="1000" key={talent.id}
+            //  onClick={(props) =>
+            //     history.push({
+            //         pathname : `/exploredisplay/${talent.id}`,
+            //         state : {
+            //                 title :  `${talent.name}`,
+            //                 avatar : `${talent.avatar}`,
+            //                 talent_id : `${talent.id}`,
+            //                 services : `${talent.services}`
+            //                 }
+            //     })}
+            >
                 <div className='explore-card-image'>
                 <img src={talent.avatar} alt='poster' />
                 </div>

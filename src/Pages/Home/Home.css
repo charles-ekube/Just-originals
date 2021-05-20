@@ -4,6 +4,7 @@
     grid-template-columns: 70% 30%;
     width: 100%;
     height: 720px;
+    position: relative;
 }
 .home-text {
     background: #7008F4;
@@ -34,11 +35,9 @@
 }
 .home-carousel-content {
     height: 400px;
-    width: 400px;
-    position: relative;
-    left: -85px;
-    top: 140px;
-
+    width: 100%;
+    position: absolute;
+    right: 0;
 }
 
 .why-join-us-container {

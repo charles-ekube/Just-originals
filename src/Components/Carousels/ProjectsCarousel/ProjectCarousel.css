@@ -1,24 +1,12 @@
-.rec.rec-arrow {
-    display: none;
+.swiper-wrapper {
+    width: 100%;
 }
-
-
-button.rec-dot {
-    width:272px;
-    margin: 0;
-    height: 0;
-    border-radius: 0 2px 2px 0;
-    border: none;
-    padding: 0;
-    background: inherit;
-    
-}
-button.rec-dot:active {
-    background: #7008F4;
+.swiper-slide {
+    margin-right: 0;
 }
 .carousel-main-container {
     padding: 80px 130px;
-    position: relative;
+
 }
 .carousel-main-container-text h2{
     width: 446px;
