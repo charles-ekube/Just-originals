@@ -14,6 +14,7 @@ export const ProjectCards = () => {
     AOS.init();  
 
     const [ProjectCards, setProjectCards] = React.useState([]);
+    const [EmptyState, setEmptyState] = React.useState("");
 
         useEffect(() => {
     
@@ -26,8 +27,8 @@ export const ProjectCards = () => {
                   const lists = Object.values(item);
                   setProjectCards(lists);
                 }
-                else {
-                    return <div>No projects found</div>
+                if(!item) {
+                    setEmptyState(" No Projects Found");
                 }
                 
                 
@@ -44,6 +45,7 @@ export const ProjectCards = () => {
 
     return (
         <>
+        <section className='cards-grid'>
         {ProjectCards && ProjectCards.map(project  => (
             <section className='project-card-container' data-aos="fade-up"  data-aos-duration="1000"  data-aos-mirror="true" onClick={handleChange} key={project.id}>
                 <div className='project-card-image'>
@@ -53,13 +55,16 @@ export const ProjectCards = () => {
                 <div className='project-card-footer'>
                     <ul className='project-card-footer-links'>
                         <li>{project.title}</li>
-                        <li>3</li>
                     </ul>
                 </div>
             </section>
               )) 
                
               } 
+               <div className='empty_state'>
+                {EmptyState}
+            </div>
+          </section>    
         </>
     )
 }
@@ -88,6 +93,7 @@ export const ExploreCards = () => {
     AOS.init();
 
     const [Talents, setTalents] = React.useState([]);
+    const [EmptyState, setEmptyState] = React.useState("");
 
     useEffect(() => {
 
@@ -101,8 +107,8 @@ export const ExploreCards = () => {
                 const list = Object.values(item);
                 setTalents(list);    
               }
-              else {
-                  return <div>No projects found</div>
+              if(!item) {
+                  setEmptyState(" No Talents Found");
               }
             // const list = Object.values(item);
 
@@ -119,6 +125,7 @@ export const ExploreCards = () => {
 
     return (
         <>
+        <section className='cards-grid'>
         {Talents && Talents.map(talent => (
             <section className='explore-card-container' data-aos="fade-up"  data-aos-duration="1000" key={talent.id}
             //  onClick={(props) =>
@@ -139,12 +146,14 @@ export const ExploreCards = () => {
                 <div className='explore-card-footer'>
                     <ul className='explore-card-footer-links'>
                         <li>{talent.name}</li>
-                        <li>3</li>
                     </ul>
                 </div>
             </section>
             ))}
-            {/* <ExploreDisplay Talents={Talents}/> */}
+            <div className='empty_state'>
+                {EmptyState}
+            </div>
+        </section>
         </>
     )
 }
@@ -159,7 +168,7 @@ const Cards = (props) => {
         
     }
     const [CarouselCards, setCarouselCards] = React.useState([]);
-
+    const [EmptyState, setEmptyState] = React.useState("");
         useEffect(() => {
     
             const fetchCarouselCards = async (carouselcard) => {
@@ -173,8 +182,8 @@ const Cards = (props) => {
                   setSelectedProject(carouselcard);
                   
                 }
-                else {
-                    return <div>No projects found</div>
+                if(!item) {
+                    setEmptyState("No Projects Found")
                 }
                 // const lists = Object.values(item);
                 
@@ -191,6 +200,7 @@ const Cards = (props) => {
     
     return (
         <>
+        <section className='cards-grid'>
         {CarouselCards && CarouselCards.map(carouselcard => (
             <section className='card-container' data-aos="fade-up"  data-aos-duration="1000">
                 <div className='card-image-container'>
@@ -206,6 +216,10 @@ const Cards = (props) => {
             </section>
             ))}
             <Modal showModal={showModal} setShowModal={setShowModal} handleNext={handleNext}  CarouselCards={selectedProject}/> 
+            <div className='empty_state'>
+                {EmptyState}
+            </div>
+            </section>
         </>
     )
 }

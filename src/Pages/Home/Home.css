@@ -10,7 +10,8 @@
     background: #7008F4;
     display: flex;
     align-items: center;
-     padding-left: 130px; 
+    position: relative; 
+
 }
 .home-text h1 {
     width: 650px;
@@ -34,10 +35,19 @@
     background: #fff;
 }
 .home-carousel-content {
-    height: 400px;
+    height: 100%;
     width: 100%;
     position: absolute;
-    right: 0;
+    left: 0;
+    top: 0;
+    background:transparent;
+    padding-top: 140px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 70px;
+    color: #FFFDFF; 
 }
 
 .why-join-us-container {

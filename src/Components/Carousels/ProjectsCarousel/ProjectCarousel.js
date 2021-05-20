@@ -75,12 +75,12 @@ const ProjectCarousel = () => {
           >
             {CarouselCards &&
               CarouselCards.map((carouselcard) => (
-                <SwiperSlide key={carouselcard.id}>
-                    <div style={{border:'1px solid red', height:'290px', width:'250px'}}>
-                      <div style={{height:'250px'}}>
-                        <img src={carouselcard.avatar}  alt='poster' style={{width:"100%", height:'100%', objectFit:'cover'}}/>
+                <SwiperSlide key={carouselcard.id} style={{marginRight:'0', padding:'30px 0'}}>
+                    <div className='home-pro-card'>
+                      <div className='home-pro-card-img'>
+                        <img src={carouselcard.avatar}  alt='poster' />
                       </div>
-                      <div>
+                      <div className='home-pro-card-footer'>
                         <h5>
                           {carouselcard.title}
                         </h5>

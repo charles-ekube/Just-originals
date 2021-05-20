@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './Blog.css';
 import {Footer, Navbar} from '../../Widgets';
 import { Link } from 'react-router-dom';
@@ -10,11 +10,27 @@ import { Loader } from '../../Components';
 const Blog = () => {
     AOS.init();
 
-    const [ spinner, setSpinner ] = React.useState(true);
-  
-    React.useEffect(() => {
-        setTimeout(() => setSpinner(false), 5000)
-    },[setSpinner])
+    const [Blogs, setBlogs] = useState([]);
+  const [EmptyState, setEmptyState] = useState("");
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const response = await fetch(
+        `https://just-original.herokuapp.com/api/v1/blogs`
+      );
+      const data = await response.json();
+      const item = data.data;
+      if (item) {
+        const lists = Object.values(item);
+        setBlogs(lists);
+      }
+      if (!item) {
+        setEmptyState("No Blogs Found.");
+      }
+    };
+    fetchBlogs();
+  }, []);
+
 
     return (
         <>
@@ -23,60 +39,27 @@ const Blog = () => {
             <Navbar navColor='black' logoBg='#000'/>
             <main className='blog-main-container'>
                 <section className='recent-blog-container'>
-                    <article className='recent-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
+
+                    {Blogs && Blogs.map(blog => (
+                        <article className='recent-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
                         <div className='recent-blog-post-image'>
-                            <img src={Builder} alt='poster'/>
+                            <img src={blog.avatar} alt='poster'/>
                         </div>
                         <div className='recent-blog-post-text'>
                             <ul>
-                                <li>Dec 20, 2021</li>
-                                <li>Painting</li>
+                                <li>{blog.created_at}</li>
+                                <li>{blog.writer}</li>
                             </ul>
                             <p>
-                                How to mix several colors to achieve a 
-                                unique color for painting.
+                                {blog.title}
                             </p>
                             <Link to='/blogpage'>
                                 Read Article
                             </Link>
                         </div>
-                    </article>
-                    <article className='recent-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
-                        <div className='recent-blog-post-image'>
-                            <img src={Builder} alt='poster'/>
-                        </div>
-                        <div className='recent-blog-post-text'>
-                            <ul>
-                                <li>Dec 20, 2021</li>
-                                <li>Painting</li>
-                            </ul>
-                            <p>
-                                How to mix several colors to achieve a 
-                                unique color for painting.
-                            </p>
-                            <Link to='/blogpage'>
-                                Read Article
-                            </Link>
-                        </div>
-                    </article>
-                    <article className='recent-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">
-                        <div className='recent-blog-post-image'>
-                            <img src={Builder} alt='poster'/>
-                        </div>
-                        <div className='recent-blog-post-text'>
-                            <ul>
-                                <li>Dec 20, 2021</li>
-                                <li>Painting</li>
-                            </ul>
-                            <p>
-                                How to mix several colors to achieve a 
-                                unique color for painting.
-                            </p>
-                            <Link to='/blogpage'>
-                                Read Article
-                            </Link>
-                        </div>
-                    </article>
+                        </article>
+                    ))}
+                    
                 </section>
                 <section className='old-blog-post-main-container'>
                 <article className='old-blog-post-content' data-aos="fade-right"  data-aos-duration="1000">

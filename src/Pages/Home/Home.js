@@ -75,15 +75,11 @@ const Home = () => {
         <main data-aos="fade-down" data-aos-duration="2000">
           <Navbar navColor="white" logoBg="#fff" />
           <section className="home-container">
-            <section className="home-text">
-              <div
-                className="home-carousel-content"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
+            <section className="home-text" data-aos="fade-up" data-aos-duration="2000"></section>
+            <section></section>
+            <div className="home-carousel-content" data-aos="fade-up" data-aos-duration="2000">
                 <IntroCarousel Clients={Clients} />
               </div>
-            </section>
           </section>
           <section className="why-join-us-container">
             <JoinUs />

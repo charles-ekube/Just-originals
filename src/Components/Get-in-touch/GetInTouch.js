@@ -1,40 +1,51 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./GetInTouch.css";
 
 const GetInTouch = () => {
+
+  const Swal = require("sweetalert2");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [sender, setSender] = useState("");
-  const [user, setUser] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const user = { email, message, phone, sender };
-    // send the username and password to the server
+    e.preventDefault();
+    console.log(email, phone, message, sender);
+    const formData = new FormData();
+    formData.append("email", email);
+    formData.append("sender", sender);
+    formData.append("phone", phone);
+    formData.append("message", message);
+   
     let getToken = JSON.parse(localStorage.getItem("currentUser"));
     let token = getToken.token;
-    const response = await axios.post(
-      "https://just-original.herokuapp.com/api/v1/messages",
+    let result = await fetch(
+      `https://just-original.herokuapp.com/api/v1/messages`,
       {
-        user,
+        method: "POST",
         headers: {
           Authorization: "Bearer " + token,
         },
+        body: formData,
       }
     );
-    // set the state of the user
-    setUser(response.data);
-    // store the user in localStorage
-    localStorage.setItem("user", response.data);
-    // let userInfo = response.data
-  };
 
-  if (user) {
-    return `<div>Done</div>`;
+    if(result.status === 201) {
+        Swal.fire({
+            title: "Success!",
+            text: "Message Sent",
+            icon: "success",
+            confirmButtonText: "Continue",
+          }).then(() => {
+            window.location.reload();
+          })
+    }
+  
+
   }
 
   return (

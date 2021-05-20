@@ -11,8 +11,7 @@ export const HomeScreen = () => {
   const [avatar, setAvatar] = useState("");
   const [business_type, setBusiness_Type] = useState("");
   const [bio, setBio] = useState("");
-  // const [category_id, setCategory_id] = useState("");
-  // const [content, setContent] = useState("");
+  
 
   const handleClientUpdate = async (e) => {
     e.preventDefault();
@@ -21,9 +20,8 @@ export const HomeScreen = () => {
     formData.append("name", name);
     formData.append("bio", bio);
     formData.append("business_type", business_type);
-    // formData.append("category_id", category_id);
     formData.append("avatar", avatar);
-    // formData.append("content", content);
+    
    
     let getToken = JSON.parse(localStorage.getItem("currentUser"));
     let token = getToken.token;

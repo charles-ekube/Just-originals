@@ -267,6 +267,11 @@ code {
     border: none;
     color: #d7d5d590
   }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 30px;
+  }
   
   .homeScreen_add>*:last-child {
     font-weight: bold;
@@ -327,6 +332,11 @@ code {
 and (min-device-width: 280px) 
 and (max-device-width: 765px) 
 and (-webkit-min-device-pixel-ratio: 1) {
+  .cards-grid {
+    display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+  }
   .sidenav {     
     width: 100vw;
     height: 100vh;
