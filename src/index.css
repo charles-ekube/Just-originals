@@ -38,6 +38,17 @@ code {
   font-weight: bold;
   font-style: normal;
 }
+.back-btn-container {
+  position: fixed;
+  top:0;
+  padding: 10px;
+  background: inherit;
+  color:#000;
+}
+.back-btn {
+  background: inherit;
+  border: none;
+}
 .pages-container {
   padding: 50px;
   overflow: hidden;
@@ -271,6 +282,12 @@ code {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 30px;
+  }
+  .logout-btn, 
+  .homepage-btn {
+    background: inherit;
+    border: none;
+
   }
   
   .homeScreen_add>*:last-child {

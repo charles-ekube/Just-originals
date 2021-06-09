@@ -19,15 +19,18 @@
     height:100%; 
     object-fit:cover;
 }
-.home-pro-card-footer {
+.home-pro-card-footer { 
     background:#fff;
     padding: 5px 2px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: normal;
+    font-size: 14px;
     line-height: 28px;
     color: #7008F4;
+}
+.home-pro-card-footer h5{
+    font-size: 16px;
 }
 .carousel-main-container {
     padding: 80px 130px;

@@ -65,13 +65,29 @@ const ProjectCarousel = () => {
           <Swiper
             spaceBetween={20}
             slidesPerView={4}
-            navigation
+            // navigation
             scrollbar={{ draggable: true }}
             pagination={{
               "clickable": true
             }}
             onSlideChange={() => console.log("slide-change")}
             onSwiper={(swiper) => console.log(swiper)}
+            breakpoints={{
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20
+              },
+              // when window width is >= 768px
+              880: {
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+              1200: {
+                slidesPerView : 4,
+                spaceBetween: 10
+              }
+            }}
           >
             {CarouselCards &&
               CarouselCards.map((carouselcard) => (

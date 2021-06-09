@@ -99,13 +99,11 @@ export const HomeScreen = () => {
             NEW CLIENT
           </button>
         </div>
-        <p className={"my-2 ml-2"}>
-          <small>Note: All images must be in Jpeg format</small>
-        </p>
+        
 
       
         <div className={"my-5"}>
-          <UserCardBig  clients={Clients} setClients={setClients}/>
+          <UserCardBig  Clients={Clients} setClients={setClients}/>
           <div className="pt-5">{EmptyState}</div>
         </div>
 

@@ -97,13 +97,7 @@ const Navbar = ({navColor, logoBg}) => {
                             </Link>
                         </li>
                     </ul>
-                    <div className='navbar-search'>
-                        {showSearchBar ? <form className='navbar-search-input' data-aos="fade-in"  data-aos-duration="1000">
-                            <input  type='text' placeholder='Search'/>
-                            <button><MdSearch/></button>
-                        </form> : null}
-                        <span className='search-toggle'><FaSearch onClick={toggleSearch}/></span>
-                    </div>
+            
                     <div className='mobile-nav-btn'>
                         <FiMenu onClick={() => setShowMenu(!showMenu)}/>
                     </div>

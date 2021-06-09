@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import user from "../../../Assets/ex1.png";
 import Swal from "sweetalert2";
+import { BackToggle } from "../../../Components/toggle/backbtn";
 
 export const NewTalent = () => {
   const Swal = require("sweetalert2");
@@ -46,6 +47,7 @@ export const NewTalent = () => {
 
   return (
     <div className="px-4 container pb-5">
+      <BackToggle/>
       <h4 className="mt-5">
         <b>New Talent</b>
       </h4>

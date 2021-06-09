@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
+import { BackToggle } from "../../../Components/toggle/backbtn";
 
 export const AddProjects = (props) => {
   const Swal = require("sweetalert2");
@@ -64,6 +65,7 @@ export const AddProjects = (props) => {
 
   return (
     <div className="px-4 container pb-5">
+      <BackToggle/>
       <h4 className="mt-5">
         <b>Add Project</b>
       </h4>

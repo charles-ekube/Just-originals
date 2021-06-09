@@ -4,7 +4,7 @@
     
 }
 .get-in-touch-text {
-    padding: 90px 80px 0 80px;
+    padding: 90px 80px 0 130px;
     background: #EEEDEF;
     display: flex;
     flex-direction: column;
@@ -14,6 +14,7 @@
     width: 90px;
     border: 1px solid #121212;
     margin-bottom: 30px;
+    background: #121212;
 }
 .get-in-touch-text h2 {
     font-family: Roboto;

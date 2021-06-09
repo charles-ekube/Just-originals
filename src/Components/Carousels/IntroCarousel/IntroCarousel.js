@@ -20,41 +20,23 @@ const IntroCarousel = ({Clients}) => {
           <div className="slide-container">
       <Fade {...properties}>
         {Clients && Clients.map(client => (
-          <div className="each-fade" style={{display:'grid', gridTemplateColumns:'50% 50%'}}>
+          <div className="each-fade">
             <div className='slide-text'>
               <h2>{client.bio}</h2>
             </div>
           <div className="image-container">
+            <span className='name-holder'>
+              <ul>
+                <li className='first'>{client.name}</li>
+                <li className='second'>{client.business_type}</li>
+              </ul>
+            </span>
             <img src={client.avatar} alt='poster'/>
           </div>
-          {/* <h2>First Slide</h2> */}
         </div>
         ))} 
       </Fade>
     </div>
-{/*     
-         <div className="slide-container">
-           
-      <Fade {...properties}>
-      {Clients && Clients.map(talent => (
-
-          <div className="each-fade">
-           
-              <h1>{talent.bio}</h1> 
-            
-          <div className="image-container">
-          <img src={talent.avatar} alt='poster'  width='100%'/>
-          <span className='name-holder'>
-          <h4>{talent.name}</h4>
-            <p>Metal Bender</p>
-          </span>
-          </div>
-          </div>
-      
-      ))}
-      </Fade>
-  
-    </div> */}
         </>
     )
 }
