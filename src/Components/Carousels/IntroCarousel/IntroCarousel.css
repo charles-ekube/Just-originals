@@ -116,6 +116,8 @@
         font-size: 16px;
         line-height: 28px;
         color: #000;
+        outline: none;
+        overflow:hidden;
     }
     
   }
