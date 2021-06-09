@@ -29,7 +29,7 @@
   width:50%;
 }
 .name-holder {
-  background: blue;
+  background: #5AE0FD;
   position: absolute;
   height:100px;
   width:150px;
@@ -38,6 +38,7 @@
   flex-direction: column;
   justify-content:center;
   left: 20px;
+  padding-left: 10px;
 }
 .name-holder ul .first {
   font-family: Roboto;
@@ -53,7 +54,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 28px;
-    color: #fff;
+    color: #000;
 }
 
 
@@ -90,7 +91,6 @@
       color:#fff;
     }
     .name-holder {
-      background: blue;
       position: absolute;
       height:100px;
       width:150px;
@@ -106,7 +106,7 @@
         font-weight: bold;
         font-size: 20px;
         line-height: 28px;
-        color: #7008F4;
+      
     }
     .name-holder ul .second {
       font-family: Roboto;
@@ -114,7 +114,7 @@
         font-weight: normal;
         font-size: 16px;
         line-height: 28px;
-        color: #fff;
+        color: #000;
     }
     
   }

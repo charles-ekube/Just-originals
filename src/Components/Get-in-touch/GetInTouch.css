@@ -91,14 +91,14 @@
         padding: 30px 0 30px 0;
     }
     .get-in-touch-text h2, p{
-        padding-left: 20px;
+        padding-left: 10px;
     }
     .get-in-touch-text p {
         width: 280px;
         font-size: 20px;
     }
     .get-in-touch-text>span {
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .get-in-touch-form {
         width: 100%;
@@ -107,14 +107,14 @@
         grid-template-columns: repeat(1, 1fr);
     }
     .get-in-touch-form input {
-        width: 90%;
+        width: 95%;
         margin: auto auto;
     }
     .get-in-touch-form textarea {
-        width: 90%;
+        width: 95%;
     }
     .get-in-touch-form button {
-        width: 92%;
+        width: 95%;
         margin: 30px auto;
     }
   }
