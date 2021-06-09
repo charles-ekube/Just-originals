@@ -259,5 +259,6 @@ a:target {
     }
     .navbar-search {
         display: none;
+        color:red;
     }
   }
