@@ -193,6 +193,11 @@ a:target {
         margin:0;
        
     }
+    .navbar-logo {
+        display: flex;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
     
 #svg {
     height:70px; 
@@ -207,6 +212,8 @@ a:target {
     .mobile-nav-btn {
         color: black;
         display: block;
+        position: absolute;
+        right: 0;
     }
     .navbar-search {
         display: none;
@@ -228,6 +235,11 @@ a:target {
         margin:0;
        
     }
+    .navbar-logo {
+        display: flex;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
     
 #svg {
     height:90px; 
@@ -242,6 +254,8 @@ a:target {
     .mobile-nav-btn {
         color: black;
         display: block;
+        position: absolute;
+        right: 0;
     }
     .navbar-search {
         display: none;
