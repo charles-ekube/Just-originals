@@ -21,7 +21,7 @@ const SignUp = () => {
 			let response = await registerUser(dispatch, { email, password });
             // console.log(response)
 			if (!response) return;
-                history.push('/adminlogin');
+                history.push('/admin');
             
 		} catch (error) {
 			console.log(error);
