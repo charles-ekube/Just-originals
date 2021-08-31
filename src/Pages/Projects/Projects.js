@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Projects.css';
 import { GetInTouch, ProjectCards } from '../../Components'
 import { Footer, Navbar } from '../../Widgets';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Done, Done2, Done3, Done4, Temp4, Temp8 } from '../../Assets';
 
 const Projects = () => {
     AOS.init();
+
+    useEffect(()=> {
+        window.scrollTo(0,0);
+    },[])
 
     return (
         <>
@@ -29,9 +34,11 @@ const Projects = () => {
                         </div>
                     </section>
                    
-                        <section className='projects-grid'>
-                            <ProjectCards />
-
+                        <section className='projects-grid '>
+                            <ProjectCards  cardImage={Done}/>
+                            <ProjectCards cardImage={Done2}/>
+                            <ProjectCards cardImage={Temp8}/>
+                            <ProjectCards cardImage={Temp4}/>
                         </section>
                   
                 </main>

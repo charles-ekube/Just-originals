@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import {useHistory} from 'react-router-dom'
 import { ExploreCards, GetInTouch, Loader } from '../../Components';
 import { Footer, Navbar } from '../../Widgets';
 import './Explore.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Done, Done2, Temp4, Temp7 } from '../../Assets';
 
 
 const Explore = () => {
     AOS.init();
+
+    useEffect(()=> {
+        window.scrollTo(0,0);
+    },[])
 
     return (
         <>
@@ -32,7 +37,11 @@ const Explore = () => {
             </section>
             
             <section className='explore-grid'>
-                    <ExploreCards />
+                    <ExploreCards exploreImage={Done} />
+                    <ExploreCards  exploreImage={Done2}/>
+                    <ExploreCards exploreImage={Temp7}/>
+                    <ExploreCards exploreImage={Temp4}/>
+                    
             </section>  
             
         </main>  

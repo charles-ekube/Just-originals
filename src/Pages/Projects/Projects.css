@@ -31,7 +31,9 @@
 
 .projects-grid {
     padding: 50px 70px;
-    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.2));
+    /* filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.2)); */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 

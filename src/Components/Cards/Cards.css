@@ -87,6 +87,9 @@
 .explore-card-footer {
     background: #FFFDFF;
     border-radius: 0 0 3px 3px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    /* filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.2)); */
 }
 .project-card-footer-links {
     padding: 10px;

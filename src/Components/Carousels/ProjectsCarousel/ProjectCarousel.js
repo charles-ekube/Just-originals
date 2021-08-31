@@ -16,7 +16,7 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
-import { Builder } from "../../../Assets";
+import { Builder, Done, Done2, Done3, Done4, Temp1, Temp10, Temp12, Temp13, Temp2, Temp3, Temp4, Temp5, Temp6, Temp7, Temp8, Temp9 } from "../../../Assets";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -63,13 +63,11 @@ const ProjectCarousel = () => {
         </div>
         <div>
           <Swiper
-            spaceBetween={20}
-            slidesPerView={4}
+            spaceBetween={50}
+            slidesPerView={3}
             // navigation
             scrollbar={{ draggable: true }}
-            pagination={{
-              "clickable": true
-            }}
+            pagination={false}
             onSlideChange={() => console.log("slide-change")}
             onSwiper={(swiper) => console.log(swiper)}
             breakpoints={{
@@ -89,7 +87,7 @@ const ProjectCarousel = () => {
               }
             }}
           >
-            {CarouselCards &&
+            {/* {CarouselCards &&
               CarouselCards.map((carouselcard) => (
                 <SwiperSlide key={carouselcard.id} style={{marginRight:'0', padding:'30px 0'}}>
                     <div className='home-pro-card'>
@@ -103,7 +101,35 @@ const ProjectCarousel = () => {
                       </div>
                     </div>
                 </SwiperSlide>
-              ))}
+              ))} */}
+              <SwiperSlide>
+                  <img src={Done} alt='poster' style={{height:'250px', width:'250px', margin:'0 10px 20px 0'}}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <img src={Done2} alt='poster' style={{height:'250px', width:'250px', margin:'0 10px 20px 0'}}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <img src={Temp3} alt='poster' style={{height:'250px', width:'250px', margin:'0 10px 20px 0'}}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <img src={Temp4} alt='poster' style={{height:'250px', width:'250px', margin:'0 10px 20px 0'}}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <img src={Temp5} alt='poster' style={{height:'250px', width:'250px', margin:'0 10px 20px 0'}}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <img src={Temp6} alt='poster' style={{height:'250px', width:'250px', margin:'0 10px 20px 0'}}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <img src={Temp7} alt='poster' style={{height:'250px', width:'250px', margin:'0 10px 20px 0'}}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <img src={Temp8} alt='poster' style={{height:'250px', width:'250px', margin:'0 10px 20px 0'}}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <img src={Temp1} alt='poster' style={{height:'250px', width:'250px', margin:'0 10px 20px 0'}}/>
+              </SwiperSlide>
+            
           </Swiper>
         </div>
       </section>

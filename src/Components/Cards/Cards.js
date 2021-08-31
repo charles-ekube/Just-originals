@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Tailor } from '../../Assets';
+import { Done, Tailor } from '../../Assets';
 import { Modal } from '../Modals/Modal';
 import './Cards.css';
 import AOS from 'aos';
@@ -10,11 +10,12 @@ import { ExploreDisplay } from '../../Pages/Explore/ExploreDisplay';
 
 
 
-export const ProjectCards = () => {
+export const ProjectCards = (props) => {
     AOS.init();  
 
     const [ProjectCards, setProjectCards] = React.useState([]);
     const [EmptyState, setEmptyState] = React.useState("");
+    const {cardImage} = props;
 
         useEffect(() => {
     
@@ -46,7 +47,7 @@ export const ProjectCards = () => {
     return (
         <>
         <section className='cards-grid'>
-        {ProjectCards && ProjectCards.map(project  => (
+        {/* {ProjectCards && ProjectCards.map(project  => (
             <section className='project-card-container' data-aos="fade-up"  data-aos-duration="1000"  data-aos-mirror="true" onClick={handleChange} key={project.id}>
                 <div className='project-card-image'>
                 <img src={project.avatar} alt='poster' />
@@ -60,7 +61,18 @@ export const ProjectCards = () => {
             </section>
               )) 
                
-              } 
+              }  */}
+               <section className='project-card-container' data-aos="fade-up"  data-aos-duration="1000"  data-aos-mirror="true" onClick={handleChange}>
+                <div className='project-card-image'>
+                <img src={cardImage} alt='poster' />
+                </div>
+                
+                <div className='project-card-footer'>
+                    <ul className='project-card-footer-links'>
+                        <li>Project</li>
+                    </ul>
+                </div>
+            </section>
                <div className='empty_state'>
                 {EmptyState}
             </div>
@@ -89,11 +101,12 @@ export const ProjectDisplayCards = () => {
     )
 }
 
-export const ExploreCards = () => {
+export const ExploreCards = (props) => {
     AOS.init();
 
     const [Talents, setTalents] = React.useState([]);
     const [EmptyState, setEmptyState] = React.useState("");
+    const {exploreImage} = props;
 
     useEffect(() => {
 
@@ -126,7 +139,7 @@ export const ExploreCards = () => {
     return (
         <>
         <section className='cards-grid'>
-        {Talents && Talents.map(talent => (
+        {/* {Talents && Talents.map(talent => (
             <section className='explore-card-container' data-aos="fade-up"  data-aos-duration="1000" key={talent.id}
             //  onClick={(props) =>
             //     history.push({
@@ -149,7 +162,29 @@ export const ExploreCards = () => {
                     </ul>
                 </div>
             </section>
-            ))}
+            ))} */}
+              <section className='explore-card-container' data-aos="fade-up"  data-aos-duration="1000"  data-aos-mirror="true" 
+            //  onClick={(props) =>
+            //     history.push({
+            //         pathname : `/exploredisplay/${talent.id}`,
+            //         state : {
+            //                 title :  `${talent.name}`,
+            //                 avatar : `${talent.avatar}`,
+            //                 talent_id : `${talent.id}`,
+            //                 services : `${talent.services}`
+            //                 }
+            //     })}
+            >
+                <div className='explore-card-image'>
+                <img src={exploreImage} alt='poster' />
+                </div>
+                
+                <div className='explore-card-footer'>
+                    <ul className='explore-card-footer-links'>
+                        <li>Project</li>
+                    </ul>
+                </div>
+            </section>
             <div className='empty_state'>
                 {EmptyState}
             </div>

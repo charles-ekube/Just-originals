@@ -1,5 +1,5 @@
 import React from 'react'
-import {ImageTest, B, C} from '../../../Assets';
+import {ImageTest, B, C, Temp6, Done, Temp3, Done2} from '../../../Assets';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import './IntroCarousel.css';
@@ -19,7 +19,7 @@ const IntroCarousel = ({Clients}) => {
         <>
           <div className="slide-container">
       <Fade {...properties}>
-        {Clients && Clients.map(client => (
+        {/* {Clients && Clients.map(client => (
           <div className="each-fade">
             <div className='slide-text'>
               <h2>{client.bio}</h2>
@@ -34,9 +34,65 @@ const IntroCarousel = ({Clients}) => {
             <img src={client.avatar} alt='poster'/>
           </div>
         </div>
-        ))} 
+        ))}  */}
+        <div className="each-fade">
+            <div className='slide-text'>
+              <h2>From Concept Through Completion</h2>
+            </div>
+          <div className="image-container">
+            <span className='name-holder'>
+              <ul>
+                <li className='first'>Renovation</li>
+                <li className='second'>Renovation</li>
+              </ul>
+            </span>
+            <img src={Temp6} alt='poster'/>
+          </div>
+        </div>
+        <div className="each-fade">
+            <div className='slide-text'>
+              <h2>Making Your Vision Come True, That's What We Do</h2>
+            </div>
+          <div className="image-container">
+            <span className='name-holder'>
+              <ul>
+              <li className='first'>Renovation</li>
+                <li className='second'>Renovation</li>
+              </ul>
+            </span>
+            <img src={Done} alt='poster'/>
+          </div>
+        </div>
+        <div className="each-fade">
+            <div className='slide-text'>
+              <h2>No Job too Big. No Job Too Small</h2>
+            </div>
+          <div className="image-container">
+            <span className='name-holder'>
+              <ul>
+              <li className='first'>Renovation</li>
+                <li className='second'>Renovation</li>
+              </ul>
+            </span>
+            <img src={Temp3} alt='poster'/>
+          </div>
+        </div>
+        <div className="each-fade">
+            <div className='slide-text'>
+              <h2>No Loose Screws Here!</h2>
+            </div>
+          <div className="image-container">
+            <span className='name-holder'>
+              <ul>
+              <li className='first'>Renovation</li>
+                <li className='second'>Renovation</li>
+              </ul>
+            </span>
+            <img src={Done2} alt='poster'/>
+          </div>
+        </div>
       </Fade>
-    </div>
+    </div> 
         </>
     )
 }

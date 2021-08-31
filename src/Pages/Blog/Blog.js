@@ -12,6 +12,10 @@ const Blog = () => {
 
     const [Blogs, setBlogs] = useState([]);
   const [EmptyState, setEmptyState] = useState("");
+  useEffect(()=> {
+    window.scrollTo(0,0);
+},[])
+
 
   useEffect(() => {
     const fetchBlogs = async () => {
