@@ -191,6 +191,8 @@
     .explore-grid {
         
         padding: 30px 0;
+        grid-template-columns:repeat(1, 1fr);
+        
     }
 
     .explore-logo {
