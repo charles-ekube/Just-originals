@@ -110,9 +110,7 @@ a:target {
     font-style: normal;
     font-weight: normal;
 }
-.mobile-menu-list-item{
-    border: 1px solid #000;
-}
+
 .mobile-menu-list-item-content {
     color:black;
      width:100%;
