@@ -73,9 +73,6 @@ export const ProjectCards = (props) => {
                     </ul>
                 </div>
             </section>
-               <div className='empty_state'>
-                {EmptyState}
-            </div>
           </section>    
         </>
     )
@@ -185,9 +182,6 @@ export const ExploreCards = (props) => {
                     </ul>
                 </div>
             </section>
-            <div className='empty_state'>
-                {EmptyState}
-            </div>
         </section>
         </>
     )
